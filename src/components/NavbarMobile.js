@@ -27,8 +27,13 @@ const NavbarMobile = () => {
                 <Menu.Item
                     as='a'
                     header
+                    position="right"
                 >
-                    Sign In
+                    <Button
+                        color="orange"
+                    >
+                        Register
+                    </Button>
                 </Menu.Item>
             </Menu>
         </div>

@@ -1,3 +1,4 @@
+import Footer from "./Footer"
 import Navbar from "./Navbar"
 import NavbarMobile from "./NavbarMobile"
 
@@ -8,8 +9,11 @@ const Home = ({mobile}) => {
         )
     }else{
         return(
-            <Navbar />
-        )
+            <>
+                <Navbar />
+                <Footer />
+            </> 
+        )       
     }
 }
 

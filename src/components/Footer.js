@@ -1,4 +1,4 @@
-import { Container, Grid, Header, List, Segment } from "semantic-ui-react"
+import { Container, Divider, Grid, Header, List, Segment } from "semantic-ui-react"
 
 const Footer = () => {
 
@@ -19,7 +19,7 @@ const Footer = () => {
                     
                     <Grid.Column width={4}>
                         <Header 
-                            as='h5'
+                            as='h6'
                             inverted
                             content='VIDEO APP'
                         />
@@ -47,7 +47,7 @@ const Footer = () => {
 
                     <Grid.Column width={4}>
                         <Header 
-                            as='h5'
+                            as='h6'
                             inverted
                             content='SUPPORT'
                         />
@@ -70,7 +70,7 @@ const Footer = () => {
 
                     <Grid.Column width={4}>
                         <Header 
-                            as='h5'
+                            as='h6'
                             inverted
                             content='PRIVACY'
                         />
@@ -93,7 +93,7 @@ const Footer = () => {
 
                     <Grid.Column width={4}>
                         <Header 
-                            as='h5'
+                            as='h6'
                             inverted
                             content='PRESS'
                         />
@@ -115,6 +115,10 @@ const Footer = () => {
                         </List>
                     </Grid.Column>
                 </Grid>
+                <Divider section inverted />
+                <p style={{textAlign: 'center'}}>
+                    All Rights Reserved VIDEO APP &copy; 2025
+                </p>     
             </Container>
         </Segment>
     )

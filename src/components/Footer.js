@@ -19,13 +19,14 @@ const Footer = () => {
                     
                     <Grid.Column width={4}>
                         <Header 
-                            as='h6'
+                            as='h5'
                             inverted
                             content='VIDEO APP'
                         />
                         <List
                             link
                             inverted
+                            size="medium"
                         >
                             <List.Item
                                 as='a'
@@ -47,13 +48,14 @@ const Footer = () => {
 
                     <Grid.Column width={4}>
                         <Header 
-                            as='h6'
+                            as='h5'
                             inverted
                             content='SUPPORT'
                         />
                         <List
                             link
                             inverted
+                            size="medium"
                         >
                             <List.Item
                                 as='a'
@@ -70,13 +72,14 @@ const Footer = () => {
 
                     <Grid.Column width={4}>
                         <Header 
-                            as='h6'
+                            as='h5'
                             inverted
                             content='PRIVACY'
                         />
                         <List
                             link
                             inverted
+                            size="medium"
                         >
                             <List.Item
                                 as='a'
@@ -93,13 +96,14 @@ const Footer = () => {
 
                     <Grid.Column width={4}>
                         <Header 
-                            as='h6'
+                            as='h5'
                             inverted
                             content='PRESS'
                         />
                         <List
                             link
                             inverted
+                            size="medium"
                         >
                             <List.Item
                                 as='a'
@@ -117,7 +121,7 @@ const Footer = () => {
                 </Grid>
                 <Divider section inverted />
                 <p style={{textAlign: 'center'}}>
-                    All Rights Reserved VIDEO APP &copy; 2025
+                    All Rights Reserved Video App &copy; 2025
                 </p>     
             </Container>
         </Segment>

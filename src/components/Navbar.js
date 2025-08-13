@@ -53,7 +53,7 @@ const Navbar = () => {
                     <Menu.Item
                         as='a'
                     >
-                        Login
+                        Sign In
                     </Menu.Item>
                     
                 </Container>

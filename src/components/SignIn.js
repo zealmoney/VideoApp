@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
-import { Button, Form, Grid, Header, Message, Segment } from "semantic-ui-react";
-import Footer from "./Footer";
-import NavbarUser from "./NavbarUser";
+import { Button, Form, Grid, Header, Message, Segment } from "semantic-ui-react"
+import NavbarUser from "./NavbarUser"
+import { Link } from "react-router-dom"
+import Footer from "./Footer"
 
-const Register = () => (
+const SignIn = () => (
+
     <>
         <NavbarUser 
-            link_name="Sign In" 
-            link_route="/signin"
+            link_name="Register" 
+            link_route="/register"
         />
         <Segment
             vertical
@@ -28,7 +29,7 @@ const Register = () => (
                     <Header 
                         as='h3'
                         textAlign="center"
-                        content='Create An Account'
+                        content='Sign In To Your Account'
                         inverted
                     />
                     <Form
@@ -38,13 +39,6 @@ const Register = () => (
                             stacked
                             vertical
                         >
-                            <Form.Input 
-                                placeholder='First Name'
-                                fluid
-                                icon="user"
-                                iconPosition="left"
-                                type="text"
-                            />
                             <Form.Input 
                                 placeholder='Email Address'
                                 fluid
@@ -64,13 +58,13 @@ const Register = () => (
                                 size="large"
                                 color="orange"
                             >
-                                Register
+                                Sign In
                             </Button>
                         </Segment>
                     </Form>
                     <Message>
-                        Already have an account? &nbsp; 
-                        <Link to={'/signin'}>Sign In</Link>
+                        Don't have an account? &nbsp; 
+                        <Link to={'/register'}>Register</Link>
                     </Message>
                     
                 </Grid.Column>
@@ -80,4 +74,4 @@ const Register = () => (
     </>
 )
 
-export default Register
+export default SignIn

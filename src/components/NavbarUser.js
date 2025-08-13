@@ -1,6 +1,8 @@
+import { useState } from "react"
+import { Link } from "react-router-dom"
 import { Container, Menu } from "semantic-ui-react"
 
-const NavbarUser = () => {
+const NavbarUser = ({link_name, link_route}) => {
 
      return(
         <div>
@@ -20,7 +22,7 @@ const NavbarUser = () => {
                         as='a'
                         position='right'
                     >
-                        Login
+                        <Link to={link_route}>{link_name}</Link>
                     </Menu.Item>
                     
                 </Container>

@@ -15,9 +15,10 @@ const Footer = () => {
                     stackable
                     inverted
                     divided
+                    textAlign="center"
                 >
                     
-                    <Grid.Column width={4}>
+                    <Grid.Column width={4} textAlign="left">
                         <Header 
                             as='h5'
                             inverted
@@ -46,7 +47,7 @@ const Footer = () => {
                         </List>
                     </Grid.Column>
 
-                    <Grid.Column width={4}>
+                    <Grid.Column width={4} textAlign="left">
                         <Header 
                             as='h5'
                             inverted
@@ -70,7 +71,7 @@ const Footer = () => {
                         </List>
                     </Grid.Column>
 
-                    <Grid.Column width={4}>
+                    <Grid.Column width={4} textAlign="left">
                         <Header 
                             as='h5'
                             inverted
@@ -94,7 +95,7 @@ const Footer = () => {
                         </List>
                     </Grid.Column>
 
-                    <Grid.Column width={4}>
+                    <Grid.Column width={4} textAlign="left">
                         <Header 
                             as='h5'
                             inverted

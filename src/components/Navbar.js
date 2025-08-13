@@ -1,6 +1,10 @@
+import { useNavigate } from "react-router-dom"
 import { Button, Container, Dropdown, Menu } from "semantic-ui-react"
 
 const Navbar = () => {
+
+    const navigate = useNavigate()
+
     return(
         <div>
             <Menu
@@ -41,6 +45,7 @@ const Navbar = () => {
                     >
                         <Button
                             color="orange"
+                            onClick={() => navigate('/register') }
                         >
                             Register
                         </Button>

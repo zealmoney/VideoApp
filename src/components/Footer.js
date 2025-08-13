@@ -7,7 +7,7 @@ const Footer = () => {
             inverted
             vertical
             style={{
-                margin: '5em 0em 0em'
+                margin: '0em 0em 0em'
             }}
         >
             <Container>

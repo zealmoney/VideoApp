@@ -5,7 +5,11 @@ import NavbarMobile from "./NavbarMobile"
 const Home = ({mobile}) => {
     if(mobile){
         return(
-            <NavbarMobile />
+            <>
+                <NavbarMobile />
+                <Footer />
+            </>
+            
         )
     }else{
         return(

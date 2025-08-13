@@ -5,7 +5,6 @@ const NavbarUser = () => {
      return(
         <div>
             <Menu
-                fixed="top"
                 inverted
             >
                 <Container>

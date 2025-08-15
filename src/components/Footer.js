@@ -51,9 +51,9 @@ const Footer = () => {
                             content='SUPPORT'
                         />
                         <List
-                            link
                             inverted
                             size="medium"
+                            style={{textDecoration: 'none'}}
                         >
                             <List.Item
                                 as='a'

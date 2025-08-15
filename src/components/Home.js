@@ -1,3 +1,4 @@
+import CarouselComponent from "./CarouselComponent"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import NavbarMobile from "./NavbarMobile"
@@ -7,6 +8,7 @@ const Home = ({mobile}) => {
         return(
             <>
                 <NavbarMobile />
+                <CarouselComponent />
                 <Footer />
             </>
             
@@ -15,6 +17,7 @@ const Home = ({mobile}) => {
         return(
             <>
                 <Navbar />
+                <CarouselComponent />
                 <Footer />
             </> 
         )       

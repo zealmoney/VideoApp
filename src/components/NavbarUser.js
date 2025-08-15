@@ -14,7 +14,9 @@ const NavbarUser = ({link_name, link_route}) => {
                         as='a'
                         header
                     >
-                        VIDEO APP
+                        <Link to={'/'}>
+                            VIDEO APP
+                        </Link>  
                     </Menu.Item>
                     
 

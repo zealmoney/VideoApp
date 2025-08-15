@@ -6,9 +6,6 @@ const Footer = () => {
         <Segment
             inverted
             vertical
-            style={{
-                margin: '0em 0em 0em'
-            }}
         >
             <Container>
                 <Grid

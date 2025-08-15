@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Button, Container, Dropdown, Menu } from "semantic-ui-react"
 
 const Navbar = () => {
@@ -8,7 +8,6 @@ const Navbar = () => {
     return(
         <div>
             <Menu
-                fixed="top"
                 inverted
             >
                 <Container>
@@ -16,7 +15,9 @@ const Navbar = () => {
                         as='a'
                         header
                     >
-                        VIDEO APP
+                        <Link to={'/'}>
+                            VIDEO APP
+                        </Link>  
                     </Menu.Item>
                     <Menu.Item
                         as='a'
@@ -52,6 +53,7 @@ const Navbar = () => {
                     </Menu.Item>
                     <Menu.Item
                         as='a'
+                        onClick={() => navigate('/signin')}
                     >
                         Sign In
                     </Menu.Item>

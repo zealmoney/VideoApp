@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Button, Dropdown, Menu } from "semantic-ui-react"
 
 const NavbarMobile = () => {
@@ -15,7 +15,9 @@ const NavbarMobile = () => {
                     as='a'
                     header
                 >
-                    VIDEO APP
+                    <Link to={'/'}>
+                        VIDEO APP
+                    </Link>  
                 </Menu.Item>
                 <Dropdown
                     simple

@@ -2,6 +2,7 @@ import CarouselComponent from "./CarouselComponent"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import NavbarMobile from "./NavbarMobile"
+import Wallpaper from "./Wallpaper"
 
 const Home = ({mobile}) => {
     if(mobile){
@@ -17,7 +18,7 @@ const Home = ({mobile}) => {
         return(
             <>
                 <Navbar />
-                <CarouselComponent />
+                <Wallpaper />
                 <Footer />
             </> 
         )       

@@ -17,7 +17,7 @@ const Wallpaper = () => (
         style={{
             marginTop: '3em',
             marginBottom: 0,
-            fontSize: '3em'
+            fontSize: '2.5em'
         }}
     >
         VIDEO APP

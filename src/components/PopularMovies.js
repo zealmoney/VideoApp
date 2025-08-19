@@ -1,6 +1,6 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Card, Embed, Image } from 'semantic-ui-react';
+import { Card, Embed, Header, Image, Segment } from 'semantic-ui-react';
 import film1 from '../images/film1.webp'
 import film2 from '../images/film2.webp'
 import film3 from '../images/film3.webp'
@@ -33,51 +33,70 @@ const PopularMovies = () => {
     
     return(
 
-        <Carousel
-            responsive={responsive}
+        <Segment
+            vertical
+            inverted
+            style={{
+                padding: '50px 50px'
+            }}
         >
-            <div style={{}}>
-                    <img style={{width: 300, height: 400}} src={film1} />                
-            </div>
-            <div style={{}}>
-               
-                <img style={{width: 300, height: 400}} src={film2} />
-               
-            </div>
+            <Header
+                as="h1"
+                textAlign='center'
+                 style={{
+                    paddingBottom: 50,
+                    fontSize: '2em'
+                }}
+            >
+                Popular Movies
+            </Header>
 
-            <div style={{width: 300, height: 400}}>
+            <Carousel
+                responsive={responsive}
+            >
+                <div style={{}}>
+                        <img style={{width: 300, height: 400}} src={film1} />                
+                </div>
+                <div style={{}}>
+                
+                    <img style={{width: 300, height: 400}} src={film2} />
+                
+                </div>
 
-                    <Image style={{height: 400}} src={film3} />
+                <div style={{width: 300, height: 400}}>
 
-            </div>
-            <div style={{width: 300, height: 400}}>
-                
-                <Image style={{height: 400}} src={film4} />
-                
-            </div>
+                        <Image style={{height: 400}} src={film3} />
 
-            <div style={{width: 300, height: 400}}>
-                
-                <Image style={{height: 400}} src={film5} />
-                
-            </div>
-            <div style={{width: 300, height: 400}}>
-                
-                <Image style={{height: 400}} src={film6} />
-                
-            </div>
+                </div>
+                <div style={{width: 300, height: 400}}>
+                    
+                    <Image style={{height: 400}} src={film4} />
+                    
+                </div>
 
-            <div style={{width: 300, height: 400}}>
-                
-                <Image style={{height: 400}} src={film7} />
-                
-            </div>
-            <div style={{width: 300, height: 400}}>
-                
-                <Image style={{height: 400}} src={film8} />
-                
-            </div>
-        </Carousel>
+                <div style={{width: 300, height: 400}}>
+                    
+                    <Image style={{height: 400}} src={film5} />
+                    
+                </div>
+                <div style={{width: 300, height: 400}}>
+                    
+                    <Image style={{height: 400}} src={film6} />
+                    
+                </div>
+
+                <div style={{width: 300, height: 400}}>
+                    
+                    <Image style={{height: 400}} src={film7} />
+                    
+                </div>
+                <div style={{width: 300, height: 400}}>
+                    
+                    <Image style={{height: 400}} src={film8} />
+                    
+                </div>
+            </Carousel>
+        </Segment>
     )
 }
 

@@ -1,16 +1,19 @@
 import { Link, useNavigate } from "react-router-dom"
-import { Button, Container, Dropdown, Menu } from "semantic-ui-react"
+import { Button, Container, Dropdown, Menu, Segment } from "semantic-ui-react"
 
 const Navbar = () => {
 
     const navigate = useNavigate()
 
     return(
-        <div>
+        <Segment 
+            inverted 
+            vertical
+            style={{padding: '0px 50px'}}>
             <Menu
                 inverted
             >
-                <Container>
+                
                     <Menu.Item
                         as='a'
                         header
@@ -56,10 +59,8 @@ const Navbar = () => {
                     >
                         Sign In
                     </Menu.Item>
-                    
-                </Container>
             </Menu>
-        </div>
+        </Segment>
     )
 }
 

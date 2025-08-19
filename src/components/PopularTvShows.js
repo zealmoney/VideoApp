@@ -10,7 +10,7 @@ import film6 from '../images/film6.webp'
 import film7 from '../images/film7.webp'
 import film8 from '../images/film8.webp'
 
-const PopularMovies = () => {
+const PopularTvShows = () => {
 
     const responsive = {
         superLargeDesktop: {
@@ -47,7 +47,7 @@ const PopularMovies = () => {
                     fontSize: '2em'
                 }}
             >
-                Popular Movies
+                Popular TV Shows
                 <Icon name='angle right' size='mini' />
             </Header>
 
@@ -100,4 +100,4 @@ const PopularMovies = () => {
     )
 }
 
-export default PopularMovies
+export default PopularTvShows

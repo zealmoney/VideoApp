@@ -6,8 +6,9 @@ const Footer = () => {
         <Segment
             inverted
             vertical
+            style={{padding: '50px 50px'}}
         >
-            <Container>
+            
                 <Grid
                     stackable
                     inverted
@@ -121,7 +122,6 @@ const Footer = () => {
                 <p style={{textAlign: 'center'}}>
                     All Rights Reserved Video App &copy; 2025
                 </p>     
-            </Container>
         </Segment>
     )
 }

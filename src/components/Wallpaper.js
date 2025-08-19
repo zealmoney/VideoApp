@@ -7,7 +7,7 @@ const Wallpaper = () => (
     inverted
     textAlign="center"
     style={{
-        minHeight: 700
+        height: 400
     }}
  >
     <Container text>

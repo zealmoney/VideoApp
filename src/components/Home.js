@@ -2,6 +2,7 @@ import CarouselComponent from "./CarouselComponent"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import NavbarMobile from "./NavbarMobile"
+import PopularMovies from "./PopularMovies"
 import Wallpaper from "./Wallpaper"
 
 const Home = ({mobile}) => {
@@ -19,6 +20,7 @@ const Home = ({mobile}) => {
             <>
                 <Navbar />
                 <Wallpaper />
+                <PopularMovies />
                 <Footer />
             </> 
         )       

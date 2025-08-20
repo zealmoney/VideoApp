@@ -1,4 +1,5 @@
-import { Button, Container, Header, Segment } from "semantic-ui-react"
+import { Button, Container, Header, Image, Segment } from "semantic-ui-react"
+import war2 from '../images/War2.jpeg'
 
 const Wallpaper = () => (
 
@@ -6,40 +7,16 @@ const Wallpaper = () => (
     vertical
     inverted
     textAlign="center"
-    style={{
-        height: 400
-    }}
+    style={{}}
  >
-    <Container text>
-    <Header 
-        as="h1"
-        inverted
+    <div
         style={{
-            marginTop: '3em',
-            marginBottom: 0,
-            fontSize: '2.5em'
+            width: '100%',
+            height: 800
         }}
     >
-        VIDEO APP
-    </Header>
-    <Header
-        as="h2"
-        inverted
-        style={{
-            fontSize: '1.2em',
-            marginTop: '1.5em'
-        }}
-    >        
-        Watch trending movies and Tv shows with no hidden fee or subscription
-    </Header>
-
-    <Button
-        size="huge"
-        color="orange"
-    >
-        GET STARTED
-    </Button>
-    </Container>
+        <Image src={war2} fluid />
+    </div>
  </Segment>
 )
 

@@ -9,9 +9,10 @@ const Navbar = () => {
         <Segment 
             inverted 
             vertical
-            style={{padding: '0px 50px'}}>
+            style={{padding: '0px 80px'}}>
             <Menu
                 inverted
+                size="huge"
             >
                 
                     <Menu.Item

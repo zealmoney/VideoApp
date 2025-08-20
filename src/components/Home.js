@@ -11,7 +11,6 @@ const Home = ({mobile}) => {
         return(
             <>
                 <NavbarMobile />
-                <CarouselComponent />
                 <Footer />
             </>
             

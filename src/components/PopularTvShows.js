@@ -1,14 +1,14 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Header, Icon, Image, Segment } from 'semantic-ui-react';
-import film1 from '../images/film1.webp'
-import film2 from '../images/film2.webp'
-import film3 from '../images/film3.webp'
-import film4 from '../images/film4.webp'
-import film5 from '../images/film5.webp'
-import film6 from '../images/film6.webp'
-import film7 from '../images/film7.webp'
-import film8 from '../images/film8.webp'
+import pic from '../images/pic.webp'
+import pic2 from '../images/pic2.webp'
+import pic3 from '../images/pic3.webp'
+import pic4 from '../images/pic4.webp'
+import pic5 from '../images/pic5.webp'
+import pic6 from '../images/pic6.webp'
+import pic7 from '../images/pic7.webp'
+import pic8 from '../images/pic8.webp'
 
 const PopularTvShows = () => {
 
@@ -55,44 +55,44 @@ const PopularTvShows = () => {
                 responsive={responsive}
             >
                 <div style={{}}>
-                        <img style={{width: 270, height: 400}} src={film1} />                
+                        <img style={{width: 270, height: 400}} src={pic} />                
                 </div>
                 <div style={{}}>
                 
-                    <img style={{width: 270, height: 400}} src={film2} />
+                    <img style={{width: 270, height: 400}} src={pic2} />
                 
                 </div>
 
                 <div style={{width: 270, height: 400}}>
 
-                        <Image style={{height: 400}} src={film3} />
+                        <Image style={{height: 400}} src={pic3} />
 
                 </div>
                 <div style={{width: 270, height: 400}}>
                     
-                    <Image style={{height: 400}} src={film4} />
-                    
-                </div>
-
-                <div style={{width: 270, height: 400}}>
-                    
-                    <Image style={{height: 400}} src={film5} />
-                    
-                </div>
-                <div style={{width: 270, height: 400}}>
-                    
-                    <Image style={{height: 400}} src={film6} />
+                    <Image style={{height: 400}} src={pic4} />
                     
                 </div>
 
                 <div style={{width: 270, height: 400}}>
                     
-                    <Image style={{height: 400}} src={film7} />
+                    <Image style={{height: 400}} src={pic5} />
                     
                 </div>
                 <div style={{width: 270, height: 400}}>
                     
-                    <Image style={{height: 400}} src={film8} />
+                    <Image style={{height: 400}} src={pic6} />
+                    
+                </div>
+
+                <div style={{width: 270, height: 400}}>
+                    
+                    <Image style={{height: 400}} src={pic7} />
+                    
+                </div>
+                <div style={{width: 270, height: 400}}>
+                    
+                    <Image style={{height: 400}} src={pic8} />
                     
                 </div>
             </Carousel>

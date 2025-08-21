@@ -6,7 +6,7 @@ const Footer = () => {
         <Segment
             inverted
             vertical
-            style={{padding: '50px 50px'}}
+            style={{padding: '50px 80px'}}
         >
             
                 <Grid

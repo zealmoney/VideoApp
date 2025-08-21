@@ -37,13 +37,13 @@ const PopularMovies = () => {
             vertical
             inverted
             style={{
-                padding: '50px 80px'
+                padding: '20px 80px'
             }}
         >
             <Header
                 as="h1"
                  style={{
-                    paddingBottom: 10,
+                    //paddingBottom: 5,
                     fontSize: '2em'
                 }}
             >

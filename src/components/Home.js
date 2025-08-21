@@ -11,6 +11,9 @@ const Home = ({mobile}) => {
         return(
             <>
                 <NavbarMobile />
+                <Wallpaper />
+                <PopularMovies />
+                <PopularTvShows />
                 <Footer />
             </>
             

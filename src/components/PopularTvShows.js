@@ -43,7 +43,6 @@ const PopularTvShows = () => {
             <Header
                 as="h1"
                  style={{
-                    //paddingBottom: 10,
                     fontSize: '2em'
                 }}
             >

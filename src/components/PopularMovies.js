@@ -43,7 +43,6 @@ const PopularMovies = () => {
             <Header
                 as="h1"
                  style={{
-                    //paddingBottom: 5,
                     fontSize: '2em'
                 }}
             >

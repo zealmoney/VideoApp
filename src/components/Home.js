@@ -11,10 +11,10 @@ const Home = ({mobile}) => {
         return(
             <>
                 <NavbarMobile />
-                <Wallpaper />
-                <PopularMovies />
-                <PopularTvShows />
-                <Footer />
+                <Wallpaper mobile />
+                <PopularMovies mobile />
+                <PopularTvShows mobile />
+                <Footer mobile />
             </>
             
         )

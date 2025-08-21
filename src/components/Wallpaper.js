@@ -7,25 +7,25 @@ import love from '../images/love.jpeg'
 import lost from '../images/lost.jpeg'
 import { Image } from 'react-bootstrap';
 
-function Wallpaper() {
+function Wallpaper({mobile}) {
   return (
     <Carousel>
       <Carousel.Item>
-        <Image text="First slide" src={clash} style={{width: '100%', height: 800}} />
+        <Image text="First slide" src={clash} style={{width: mobile ? '100%' : '100%', height: mobile ? 400 : 800}} />
         <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <Image text="Second slide" src={love} style={{width: '100%', height: 800}} />
+        <Image text="Second slide" src={love} style={{width: mobile ? '100%' : '100%', height: mobile ? 400 : 800}} />
         <Carousel.Caption>
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <Image text="Third slide" src={ghost} style={{width: '100%', height: 800}} />
+        <Image text="Third slide" src={ghost} style={{width: mobile ? '100%' : '100%', height: mobile ? 400 : 800}} />
         <Carousel.Caption>
             <h3>Third slide label</h3>
             <p>
@@ -34,7 +34,7 @@ function Wallpaper() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <Image text="Third slide" src={War2} style={{width: '100%', height: 800}} />
+        <Image text="Third slide" src={War2} style={{width: mobile ? '100%' : '100%', height: mobile ? 400 : 800}} />
         <Carousel.Caption>
             <h3>Fourth slide label</h3>
             <p>
@@ -43,7 +43,7 @@ function Wallpaper() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <Image text="Third slide" src={horrified} style={{width: '100%', height: 800}} />
+        <Image text="Third slide" src={horrified} style={{width: mobile ? '100%' : '100%', height: mobile ? 400 : 800}} />
         <Carousel.Caption>
             <h3>Fifth slide label</h3>
             <p>
@@ -52,7 +52,7 @@ function Wallpaper() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <Image text="Third slide" src={lost} style={{width: '100%', height: 800}} />
+        <Image text="Third slide" src={lost} style={{width: mobile ? '100%' : '100%', height: mobile ? 400 : 800}} />
         <Carousel.Caption>
             <h3>Sixth slide label</h3>
             <p>

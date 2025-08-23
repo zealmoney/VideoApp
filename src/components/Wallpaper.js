@@ -13,7 +13,7 @@ function Wallpaper({mobile}) {
     <div>
     <Carousel>
       <Carousel.Item>
-        <div style={{width: '100%', backgroundColor: 'green'}}>
+        <div style={{}}>
             <Image fluid  src={clash}  />
             <Carousel.Caption>
                 <h3>First slide label</h3>
@@ -22,7 +22,7 @@ function Wallpaper({mobile}) {
         </div>
       </Carousel.Item>
       <Carousel.Item>
-        <div style={{width: '100%', backgroundColor: 'green'}}>
+        <div style={{}}>
             <Image fluid  src={love}  />
             <Carousel.Caption>
                 <h3>First slide label</h3>
@@ -31,7 +31,7 @@ function Wallpaper({mobile}) {
         </div>
       </Carousel.Item>
       <Carousel.Item>
-        <div style={{width: '100%', backgroundColor: 'green'}}>
+        <div style={{}}>
             <Image fluid  src={ghost}  />
             <Carousel.Caption>
                 <h3>First slide label</h3>
@@ -40,7 +40,7 @@ function Wallpaper({mobile}) {
         </div>
       </Carousel.Item>
       <Carousel.Item>
-        <div style={{width: '100%', backgroundColor: 'green'}}>
+        <div style={{}}>
             <Image fluid  src={War2}  />
             <Carousel.Caption>
                 <h3>First slide label</h3>
@@ -49,7 +49,7 @@ function Wallpaper({mobile}) {
         </div>
       </Carousel.Item>
       <Carousel.Item>
-        <div style={{width: '100%', backgroundColor: 'green'}}>
+        <div style={{}}>
             <Image fluid  src={horrified}  />
             <Carousel.Caption>
                 <h3>First slide label</h3>
@@ -58,7 +58,7 @@ function Wallpaper({mobile}) {
         </div>
       </Carousel.Item>
       <Carousel.Item>
-        <div style={{width: '100%', backgroundColor: 'green'}}>
+        <div style={{}}>
             <Image fluid  src={lost}  />
             <Carousel.Caption>
                 <h3>First slide label</h3>

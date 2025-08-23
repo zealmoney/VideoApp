@@ -27,7 +27,7 @@ const PopularMovies = ({mobile}) => {
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 2
+            items: 1
         },
     }
    
@@ -54,11 +54,11 @@ const PopularMovies = ({mobile}) => {
                 responsive={responsive}
             >
                 <div style={{}}>
-                        <img style={{width: 270, height: 400}} src={film1} />                
+                        <Image size={mobile ? 'huge' : ''} style={{width: 270, height: 400}} src={film1} />                
                 </div>
                 <div style={{}}>
                 
-                    <img style={{width: 270, height: 400}} src={film2} />
+                    <Image style={{width: 270, height: 400}} src={film2} />
                 
                 </div>
 

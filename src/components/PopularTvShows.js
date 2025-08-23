@@ -27,7 +27,7 @@ const PopularTvShows = ({mobile}) => {
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 2
+            items: 1
         },
     }
    
@@ -54,11 +54,11 @@ const PopularTvShows = ({mobile}) => {
                 responsive={responsive}
             >
                 <div style={{}}>
-                        <img style={{width: 270, height: 400}} src={pic} />                
+                        <Image style={{width: 270, height: 400}} src={pic} />                
                 </div>
                 <div style={{}}>
                 
-                    <img style={{width: 270, height: 400}} src={pic2} />
+                    <Image style={{width: 270, height: 400}} src={pic2} />
                 
                 </div>
 

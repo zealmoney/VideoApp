@@ -9,9 +9,10 @@ import { Image } from 'react-bootstrap';
 
 function Wallpaper({mobile}) {
   return (
+    <div>
     <Carousel>
       <Carousel.Item>
-        <Image text="First slide" src={clash} style={{width: mobile ? '100%' : '100%', height: mobile ? 400 : 800}} />
+        <Image text="First slide" src={clash} style={{width: mobile ? '100%' : '100%', height: mobile ? 500 : 800}} />
         <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -61,6 +62,7 @@ function Wallpaper({mobile}) {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    </div>
   );
 }
 

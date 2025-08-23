@@ -54,7 +54,7 @@ const PopularMovies = ({mobile}) => {
                 responsive={responsive}
             >
                 <div style={{}}>
-                        <img style={{width: 270, height: 400}} src={film1} />                
+                        <img style={{width: mobile ? '100%' : 270, height: 400}} src={film1} />                
                 </div>
                 <div style={{}}>
                 

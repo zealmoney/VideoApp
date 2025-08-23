@@ -10,7 +10,7 @@ import pic6 from '../images/pic6.webp'
 import pic7 from '../images/pic7.webp'
 import pic8 from '../images/pic8.webp'
 
-const PopularTvShows = () => {
+const PopularTvShows = ({mobile}) => {
 
     const responsive = {
         superLargeDesktop: {
@@ -37,7 +37,7 @@ const PopularTvShows = () => {
             vertical
             inverted
             style={{
-                padding: '20px 80px'
+                padding: mobile ? '20px 20px' : '20px 80px'
             }}
         >
             <Header

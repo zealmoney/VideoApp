@@ -10,7 +10,7 @@ import film6 from '../images/film6.webp'
 import film7 from '../images/film7.webp'
 import film8 from '../images/film8.webp'
 
-const PopularMovies = () => {
+const PopularMovies = ({mobile}) => {
 
     const responsive = {
         superLargeDesktop: {
@@ -37,7 +37,7 @@ const PopularMovies = () => {
             vertical
             inverted
             style={{
-                padding: '20px 80px'
+                padding: mobile ? '20px 20px' : '20px 80px'
             }}
         >
             <Header

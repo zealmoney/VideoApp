@@ -1,12 +1,12 @@
 import { Container, Divider, Grid, Header, List, Segment } from "semantic-ui-react"
 
-const Footer = () => {
+const Footer = ({mobile}) => {
 
     return(
         <Segment
             inverted
             vertical
-            style={{padding: '50px 80px'}}
+            style={{padding: mobile ? '20px 20px' : '50px 80px'}}
         >
             
                 <Grid

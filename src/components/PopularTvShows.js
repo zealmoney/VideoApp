@@ -54,44 +54,44 @@ const PopularTvShows = ({mobile}) => {
                 responsive={responsive}
             >
                 <div style={{}}>
-                        <Image  style={{width: 270, height: 400}} src={pic} />                
+                        <Image centered style={{width: 270, height: 400}} src={pic} />                
                 </div>
                 <div style={{}}>
                 
-                    <Image style={{width: 270, height: 400}} src={pic2} />
+                    <Image centered style={{width: 270, height: 400}} src={pic2} />
                 
                 </div>
 
                 <div style={{}}>
 
-                        <Image style={{width: 270, height: 400}} src={pic3} />
+                        <Image centered style={{width: 270, height: 400}} src={pic3} />
 
                 </div>
                 <div style={{}}>
                     
-                    <Image style={{width: 270, height: 400}} src={pic4} />
-                    
-                </div>
-
-                <div style={{}}>
-                    
-                    <Image style={{width: 270, height: 400}} src={pic5} />
-                    
-                </div>
-                <div style={{}}>
-                    
-                    <Image style={{width: 270, height: 400}} src={pic6} />
+                    <Image centered style={{width: 270, height: 400}} src={pic4} />
                     
                 </div>
 
                 <div style={{}}>
                     
-                    <Image style={{width: 270, height: 400}} src={pic7} />
+                    <Image centered style={{width: 270, height: 400}} src={pic5} />
                     
                 </div>
                 <div style={{}}>
                     
-                    <Image style={{width: 270, height: 400}} src={pic8} />
+                    <Image centered style={{width: 270, height: 400}} src={pic6} />
+                    
+                </div>
+
+                <div style={{}}>
+                    
+                    <Image centered style={{width: 270, height: 400}} src={pic7} />
+                    
+                </div>
+                <div style={{}}>
+                    
+                    <Image centered style={{width: 270, height: 400}} src={pic8} />
                     
                 </div>
             </Carousel>

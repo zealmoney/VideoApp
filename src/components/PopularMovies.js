@@ -58,40 +58,40 @@ const PopularMovies = ({mobile}) => {
                 </div>
                 <div style={{}}>
                 
-                    <Image style={{width: 270, height: 400}} src={film2} />
+                    <Image centered style={{width: 270, height: 400}} src={film2} />
                 
                 </div>
 
                 <div style={{}}>
 
-                        <Image style={{width: 270, height: 400}} src={film3} />
+                        <Image centered style={{width: 270, height: 400}} src={film3} />
 
                 </div>
                 <div style={{}}>
                     
-                    <Image style={{width: 270, height: 400}} src={film4} />
-                    
-                </div>
-
-                <div style={{}}>
-                    
-                    <Image style={{width: 270, height: 400}} src={film5} />
-                    
-                </div>
-                <div style={{}}>
-                    
-                    <Image style={{width: 270, height: 400}} src={film6} />
+                    <Image centered style={{width: 270, height: 400}} src={film4} />
                     
                 </div>
 
                 <div style={{}}>
                     
-                    <Image style={{width: 270, height: 400}} src={film7} />
+                    <Image centered style={{width: 270, height: 400}} src={film5} />
                     
                 </div>
                 <div style={{}}>
                     
-                    <Image style={{width: 270, height: 400}} src={film8} />
+                    <Image centered style={{width: 270, height: 400}} src={film6} />
+                    
+                </div>
+
+                <div style={{}}>
+                    
+                    <Image centered style={{width: 270, height: 400}} src={film7} />
+                    
+                </div>
+                <div style={{}}>
+                    
+                    <Image centered style={{width: 270, height: 400}} src={film8} />
                     
                 </div>
             </Carousel>

@@ -12,7 +12,7 @@ function Wallpaper({mobile}) {
     <div>
     <Carousel>
       <Carousel.Item>
-        <Image text="First slide" src={clash} style={{width: mobile ? '100%' : '100%', height: mobile ? 500 : 800}} />
+        <Image text="First slide" src={clash} style={{width: mobile ? '100%' : '100%', height: mobile ? 550 : 800}} />
         <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>

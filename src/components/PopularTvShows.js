@@ -54,7 +54,7 @@ const PopularTvShows = ({mobile}) => {
                 responsive={responsive}
             >
                 <div style={{}}>
-                        <Image style={{width: 270, height: 400}} src={pic} />                
+                        <Image  style={{width: 270, height: 400}} src={pic} />                
                 </div>
                 <div style={{}}>
                 

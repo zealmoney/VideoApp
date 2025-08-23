@@ -14,7 +14,7 @@ function Wallpaper({mobile}) {
     <Carousel>
       <Carousel.Item>
         <div style={{}}>
-            <Image fluid  src={clash}  />
+            <Image style={{height: mobile ? 400 : ''}} fluid  src={clash}  />
             <Carousel.Caption>
                 <h3>First slide label</h3>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>

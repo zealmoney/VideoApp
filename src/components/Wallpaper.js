@@ -5,61 +5,66 @@ import horrified from '../images/horrified.jpeg'
 import War2 from '../images/War2.jpeg'
 import love from '../images/love.jpeg'
 import lost from '../images/lost.jpeg'
-import { Image } from 'react-bootstrap';
+import { Image } from 'semantic-ui-react';
+//import Image  from 'react-bootstrap/Image';
 
 function Wallpaper({mobile}) {
   return (
     <div>
     <Carousel>
       <Carousel.Item>
-        <Image text="First slide" src={clash} style={{width: mobile ? '100%' : '100%', height: mobile ? 550 : 800}} />
-        <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
+        <div style={{width: '100%', backgroundColor: 'green'}}>
+            <Image fluid  src={clash}  />
+            <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+        </div>
       </Carousel.Item>
       <Carousel.Item>
-        <Image text="Second slide" src={love} style={{width: mobile ? '100%' : '100%', height: mobile ? 400 : 800}} />
-        <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
+        <div style={{width: '100%', backgroundColor: 'green'}}>
+            <Image fluid  src={love}  />
+            <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+        </div>
       </Carousel.Item>
       <Carousel.Item>
-        <Image text="Third slide" src={ghost} style={{width: mobile ? '100%' : '100%', height: mobile ? 400 : 800}} />
-        <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-        </Carousel.Caption>
+        <div style={{width: '100%', backgroundColor: 'green'}}>
+            <Image fluid  src={ghost}  />
+            <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+        </div>
       </Carousel.Item>
       <Carousel.Item>
-        <Image text="Third slide" src={War2} style={{width: mobile ? '100%' : '100%', height: mobile ? 400 : 800}} />
-        <Carousel.Caption>
-            <h3>Fourth slide label</h3>
-            <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-        </Carousel.Caption>
+        <div style={{width: '100%', backgroundColor: 'green'}}>
+            <Image fluid  src={War2}  />
+            <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+        </div>
       </Carousel.Item>
       <Carousel.Item>
-        <Image text="Third slide" src={horrified} style={{width: mobile ? '100%' : '100%', height: mobile ? 400 : 800}} />
-        <Carousel.Caption>
-            <h3>Fifth slide label</h3>
-            <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-        </Carousel.Caption>
+        <div style={{width: '100%', backgroundColor: 'green'}}>
+            <Image fluid  src={horrified}  />
+            <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+        </div>
       </Carousel.Item>
       <Carousel.Item>
-        <Image text="Third slide" src={lost} style={{width: mobile ? '100%' : '100%', height: mobile ? 400 : 800}} />
-        <Carousel.Caption>
-            <h3>Sixth slide label</h3>
-            <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-        </Carousel.Caption>
+        <div style={{width: '100%', backgroundColor: 'green'}}>
+            <Image fluid  src={lost}  />
+            <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+        </div>
       </Carousel.Item>
     </Carousel>
     </div>

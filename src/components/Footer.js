@@ -23,22 +23,24 @@ const Footer = ({mobile}) => {
                             content='VIDEO APP'
                         />
                         <List
-                            link
                             inverted
                             size="medium"
                         >
                             <List.Item
                                 as='a'
+                                style={{textDecoration: 'none'}}
                             >
                                 About Us
                             </List.Item>
                             <List.Item
                                 as='a'
+                                style={{textDecoration: 'none'}}
                             >
                                 Contact Us
                             </List.Item>
                             <List.Item
                                 as='a'
+                                style={{textDecoration: 'none'}}
                             >
                                 Partner With Us
                             </List.Item>
@@ -58,11 +60,13 @@ const Footer = ({mobile}) => {
                         >
                             <List.Item
                                 as='a'
+                                style={{textDecoration: 'none'}}
                             >
                                 Help
                             </List.Item>
                             <List.Item
                                 as='a'
+                                style={{textDecoration: 'none'}}
                             >
                                 Contact Support
                             </List.Item>
@@ -82,11 +86,13 @@ const Footer = ({mobile}) => {
                         >
                             <List.Item
                                 as='a'
+                                style={{textDecoration: 'none'}}
                             >
                                 Privacy Policy
                             </List.Item>
                             <List.Item
                                 as='a'
+                                style={{textDecoration: 'none'}}
                             >
                                 Terms of Use
                             </List.Item>
@@ -106,11 +112,13 @@ const Footer = ({mobile}) => {
                         >
                             <List.Item
                                 as='a'
+                                style={{textDecoration: 'none'}}
                             >
                                 Press Release
                             </List.Item>
                             <List.Item
                                 as='a'
+                                style={{textDecoration: 'none'}}
                             >
                                 Video App News
                             </List.Item>

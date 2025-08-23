@@ -37,7 +37,7 @@ const PopularMovies = ({mobile}) => {
             vertical
             inverted
             style={{
-                padding: mobile ? '20px 20px' : '20px 80px'
+                padding: mobile ? '20px 0px' : '20px 80px'
             }}
         >
             <Header
@@ -54,7 +54,7 @@ const PopularMovies = ({mobile}) => {
                 responsive={responsive}
             >
                 <div style={{}}>
-                        <Image href='/play' centered style={{width: 270, height: 400, cursor: 'pointer'}} src={film1} />                
+                        <Image centered style={{width: 270, height: 400}} src={film1} />                
                 </div>
                 <div style={{}}>
                 

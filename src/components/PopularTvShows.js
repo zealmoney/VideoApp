@@ -37,7 +37,7 @@ const PopularTvShows = ({mobile}) => {
             vertical
             inverted
             style={{
-                padding: mobile ? '20px 20px' : '20px 80px'
+                padding: mobile ? '20px 0px' : '20px 80px'
             }}
         >
             <Header

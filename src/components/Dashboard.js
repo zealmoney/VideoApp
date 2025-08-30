@@ -26,6 +26,9 @@ const Dashboard = ({mobile}) => {
                                             <Header
                                                 as='h2'
                                                 inverted
+                                                style={{
+                                                    marginTop: 40
+                                                }}
                                             >
                                                 My List
                                                 <Header.Subheader>

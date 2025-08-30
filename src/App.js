@@ -26,7 +26,7 @@ function App() {
             <Route path='/register'  element={<Register />} />
             <Route path='/signin'  element={<SignIn />} />
             <Route path='/play'  element={<PlayVideo />} />
-            <Route path='/dashboard'  element={<Dashboard />} />
+            <Route path='/dashboard'  element={<Dashboard  mobile />} />
             <Route path='/accountsettings'  element={<AccountSettings />} />
           </Routes>
         </BrowserRouter>

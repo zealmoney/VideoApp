@@ -53,6 +53,13 @@ const Register = () => (
                                 type="email"
                             />
                             <Form.Input 
+                                placeholder='Gender'
+                                fluid
+                                icon="male"
+                                iconPosition="left"
+                                type="text"
+                            />
+                            <Form.Input 
                                 placeholder='Password'
                                 fluid
                                 icon="lock"

@@ -1,6 +1,7 @@
-import { Dropdown, Form, Grid, Header, Image, Segment } from "semantic-ui-react"
+import { Button, Dropdown, Form, Grid, Header, Image, Message, Segment } from "semantic-ui-react"
 import DashboardNavbar from "./DashboardNavbar"
 import Footer from "./Footer"
+import { useState } from "react"
 
  const Gender = [
     {
@@ -17,6 +18,31 @@ import Footer from "./Footer"
 
 
 const AccountSettings = ({mobile}) => {
+
+    const [firstname, setFirstname] = useState(localStorage.getItem("firstname"))
+    const [email, setEmail] = useState(localStorage.getItem("email"))
+    const [gender, setGender] = useState(localStorage.getItem("gender"))
+
+    const [firstnameError, setFirstnameError] = useState(false)
+    const [emailError, setEmailError] = useState(false)
+    const [genderError, setGenderError] = useState(false)
+
+    const handleFirstname = e => setFirstname(e.target.value)
+    const handleEmail = e => setEmail(e.target.value)
+    const handleGender = e => setGender(e.target.value)
+
+    const [msg, setMsg] = useState(false)
+    const [errorMessage, setErrorMessage] = useState("")
+
+    const saveClick = () => {
+        if(firstname === ''){
+            setErrorMessage("Please enter a valid first name")
+            setMsg(true)
+        }else if(email === ''){
+            setErrorMessage("Please enter your email address")
+            setMsg(true)
+        }
+    }
 
     return(
         <>
@@ -50,35 +76,65 @@ const AccountSettings = ({mobile}) => {
                         <Form
                             size="huge"
                         >
+                            <Segment inverted>
+                                {
+                                    msg ?
+                                    <Message negative>
+                                        <Message.Content>{errorMessage}</Message.Content>
+                                    </Message>: ""
+                                }
+                            </Segment>
                             <Segment stacked inverted>
                             <Form.Input 
-                                value={localStorage.getItem('firstname')}
+                                value={firstname}
                                 inverted
                                 style={{
                                     height: 50,
                                     borderRadius: 10
                                 }}
+                                error={firstnameError}
+                                onChange={handleFirstname}
+                                onClick={() => setMsg(false)}
                             />
                             </Segment>
                             <Segment stacked inverted>
                             <Form.Input 
-                                value={localStorage.getItem('email')}
+                                value={email}
                                 inverted
                                 style={{
                                     height: 50,
                                     borderRadius: 10
                                 }}
+                                error={emailError}
+                                onChange={handleEmail}
+                                onClick={() => setMsg(false)}
                             />
                             </Segment>
                             <Segment stacked inverted>
                             <Form.Input 
-                                value='Male'
+                                value="male"
                                 inverted
                                 style={{
                                     height: 50,
                                     borderRadius: 10
                                 }}
+                                error={genderError}
+                                onChange={handleGender}
+                                onClick={() => setGenderError(false)}
                             />
+                            </Segment>
+                            <Segment stacked inverted>
+                            <Button 
+                                fluid 
+                                color="orange"
+                                onClick={saveClick}
+                                style={{
+                                    height: 50,
+                                    borderRadius: 10
+                                }}
+                            >
+                                Save
+                            </Button>
                             </Segment>
                         </Form>
                     </Grid.Column>

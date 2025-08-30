@@ -11,12 +11,14 @@ const SignIn = () => {
             "id": "1",
             "firstname": "sodiq",
             "email" : "sodiq@gmail.com",
+            "gender": "male",
             "password" : "school"
         },
         {
             "id": "2",
             "firstname": "dave",
             "email" : "dave@yahoo.com",
+            "gender": "male",
             "password" : "schoolboy"
         }
     ]

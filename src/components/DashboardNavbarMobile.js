@@ -19,9 +19,7 @@ const DashboardNavbarMobile = () => {
                         VIDEO APP
                     </Link>  
                 </Menu.Item>
-                <Menu.Item position="right">
-                    <Search size="mini" />
-                </Menu.Item>
+                <Menu.Item position="right"></Menu.Item>
                 <Dropdown
                     simple
                     item
@@ -30,6 +28,7 @@ const DashboardNavbarMobile = () => {
                     <Dropdown.Menu>
                         <Dropdown.Item>Movies</Dropdown.Item>
                         <Dropdown.Item>TV Shows</Dropdown.Item>
+                        <Dropdown.Item><Search size="mini" /></Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </Menu>

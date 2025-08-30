@@ -48,24 +48,38 @@ const AccountSettings = ({mobile}) => {
                             </Header.Subheader>
                         </Header>
                         <Form
-                            size="large"
+                            size="huge"
                         >
+                            <Segment stacked inverted>
                             <Form.Input 
                                 value={localStorage.getItem('firstname')}
-                                transparent
                                 inverted
+                                style={{
+                                    height: 50,
+                                    borderRadius: 10
+                                }}
                             />
+                            </Segment>
+                            <Segment stacked inverted>
                             <Form.Input 
                                 value={localStorage.getItem('email')}
-                                transparent
                                 inverted
+                                style={{
+                                    height: 50,
+                                    borderRadius: 10
+                                }}
                             />
+                            </Segment>
+                            <Segment stacked inverted>
                             <Form.Input 
                                 value='Male'
-                                transparent
                                 inverted
+                                style={{
+                                    height: 50,
+                                    borderRadius: 10
+                                }}
                             />
-                            <Form.Input />
+                            </Segment>
                         </Form>
                     </Grid.Column>
                 </Grid>

@@ -5,6 +5,10 @@ const DashboardNavbar = () => {
 
     const navigate = useNavigate()
 
+    const signoutClick = () => {
+        navigate('/signin')
+    }
+
     return(
         <Segment 
             inverted 
@@ -50,14 +54,24 @@ const DashboardNavbar = () => {
                         
                             <Dropdown 
                                 icon='user outline'
-                                simple
-                                inline
                                 floating
                                 direction="left"
+                                labeled
+                                className='icon'
                             >
                                 <Dropdown.Menu>
-                                    <Dropdown.Item>Account Settings</Dropdown.Item>
-                                    <Dropdown.Item>Signout</Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() => navigate('/accountsettings')}
+                                    >
+                                        <Icon name='setting' />
+                                        Account Settings
+                                    </Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={signoutClick}
+                                    >
+                                        <Icon name="sign-out" />
+                                        Signout
+                                    </Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
                         

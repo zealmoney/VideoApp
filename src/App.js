@@ -6,6 +6,7 @@ import Register from './components/Register';
 import SignIn from './components/SignIn';
 import PlayVideo from './components/PlayVideo';
 import Dashboard from './components/Dashboard';
+import AccountSettings from './components/AccountSettings';
 
 const { Media, MediaContextProvider } = createMedia({
   breakpoints: {
@@ -26,6 +27,7 @@ function App() {
             <Route path='/signin'  element={<SignIn />} />
             <Route path='/play'  element={<PlayVideo />} />
             <Route path='/dashboard'  element={<Dashboard />} />
+            <Route path='/accountsettings'  element={<AccountSettings />} />
           </Routes>
         </BrowserRouter>
       </Media>
@@ -37,6 +39,7 @@ function App() {
             <Route path='/signin'  element={<SignIn />} />
             <Route path='/play'  element={<PlayVideo />} />
             <Route path='/dashboard'  element={<Dashboard />} />
+            <Route path='/accountsettings'  element={<AccountSettings />} />
           </Routes>
         </BrowserRouter>
       </Media>

@@ -23,7 +23,7 @@ function Wallpaper({mobile}) {
       </Carousel.Item>
       <Carousel.Item>
         <div style={{}}>
-            <Image fluid  src={love}  />
+            <Image style={{height: mobile ? 400 : ''}} fluid  src={love}  />
             <Carousel.Caption>
                 <h3>First slide label</h3>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -32,7 +32,7 @@ function Wallpaper({mobile}) {
       </Carousel.Item>
       <Carousel.Item>
         <div style={{}}>
-            <Image fluid  src={ghost}  />
+            <Image style={{height: mobile ? 400 : ''}} fluid  src={ghost}  />
             <Carousel.Caption>
                 <h3>First slide label</h3>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -41,7 +41,7 @@ function Wallpaper({mobile}) {
       </Carousel.Item>
       <Carousel.Item>
         <div style={{}}>
-            <Image fluid  src={War2}  />
+            <Image style={{height: mobile ? 400 : ''}} fluid  src={War2}  />
             <Carousel.Caption>
                 <h3>First slide label</h3>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -50,7 +50,7 @@ function Wallpaper({mobile}) {
       </Carousel.Item>
       <Carousel.Item>
         <div style={{}}>
-            <Image fluid  src={horrified}  />
+            <Image style={{height: mobile ? 400 : ''}} fluid  src={horrified}  />
             <Carousel.Caption>
                 <h3>First slide label</h3>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -59,7 +59,7 @@ function Wallpaper({mobile}) {
       </Carousel.Item>
       <Carousel.Item>
         <div style={{}}>
-            <Image fluid  src={lost}  />
+            <Image style={{height: mobile ? 400 : ''}} fluid  src={lost}  />
             <Carousel.Caption>
                 <h3>First slide label</h3>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>

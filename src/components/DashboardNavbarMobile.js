@@ -28,7 +28,6 @@ const DashboardNavbarMobile = () => {
                     <Dropdown.Menu>
                         <Dropdown.Item>Movies</Dropdown.Item>
                         <Dropdown.Item>TV Shows</Dropdown.Item>
-                        <Dropdown.Item><Search size="mini" /></Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </Menu>

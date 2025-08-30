@@ -35,12 +35,12 @@ const Dashboard = ({mobile}) => {
                                                     This space contains all your favorite movies, TV shows, e.t.c..
                                                 </Header.Subheader>
                                             </Header>
-                                            <MyList />
+                                            <MyList mobile />
                                         </Segment>
                                     </Grid.Column>
                                 </Grid>
                         </Segment>
-                        <Footer />
+                        <Footer mobile />
                     </>
                 )
             }else{

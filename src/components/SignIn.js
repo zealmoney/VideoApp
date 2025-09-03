@@ -3,25 +3,9 @@ import NavbarUser from "./NavbarUser"
 import { Link, useNavigate } from "react-router-dom"
 import Footer from "./Footer"
 import { useState } from "react"
+import { useGetRegisteredUsersQuery } from "../features/api/apiSlice"
 
 const SignIn = () => {
-
-    const users = [
-        {
-            "id": "1",
-            "firstname": "sodiq",
-            "email" : "sodiq@gmail.com",
-            "gender": "male",
-            "password" : "school"
-        },
-        {
-            "id": "2",
-            "firstname": "dave",
-            "email" : "dave@yahoo.com",
-            "gender": "male",
-            "password" : "schoolboy"
-        }
-    ]
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -31,11 +15,13 @@ const SignIn = () => {
 
     const [loading, setLoading] = useState(false)
 
+    const handleEmail = e => setEmail(e.target.value)
+    const handlePassword = e => setPassword(e.target.value)
 
     const navigate = useNavigate()
 
-    const handleEmail = e => setEmail(e.target.value)
-    const handlePassword = e => setPassword(e.target.value)
+    const {data: users, isSuccess, refetch} = useGetRegisteredUsersQuery()
+
 
     const signin = () => {
         const user = users.filter(u => u.email === email && u.password === password)[0]

@@ -34,12 +34,32 @@ const Navbar = () => {
                     </Menu.Item>
                    
                     <Dropdown
-                        item
-                        simple
+                        className="links item"
                         text="Browse" 
+                        pointing='left'
                     >
                         <Dropdown.Menu>
-                            <Dropdown.Item>Genres</Dropdown.Item>
+                            <Dropdown.Item>
+                                <Dropdown text="Genres">
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item
+                                            onClick={() => navigate('/action')}
+                                        >
+                                            Action
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                             onClick={() => navigate('/drama')}
+                                        >
+                                            Drama
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                             onClick={() => navigate('/comedy')}
+                                        >
+                                            Comedy
+                                        </Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </Dropdown.Item>
                             <Dropdown.Item>All Categories</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>

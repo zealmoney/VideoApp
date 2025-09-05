@@ -6,6 +6,8 @@ const DashboardNavbar = () => {
     const navigate = useNavigate()
 
     const signoutClick = () => {
+        localStorage.removeItem("email")
+        localStorage.removeItem("firstname")
         navigate('/signin')
     }
 
@@ -43,7 +45,21 @@ const DashboardNavbar = () => {
                         text="Browse" 
                     >
                         <Dropdown.Menu>
-                            <Dropdown.Item>Genres</Dropdown.Item>
+                            <Dropdown.Item>
+                                <Dropdown text="Genres">
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item>
+                                            Action
+                                        </Dropdown.Item>
+                                        <Dropdown.Item>
+                                            Drama
+                                        </Dropdown.Item>
+                                        <Dropdown.Item>
+                                            Comedy
+                                        </Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </Dropdown.Item>
                             <Dropdown.Item>All Categories</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>

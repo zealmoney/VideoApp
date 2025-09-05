@@ -1,4 +1,6 @@
 import CarouselComponent from "./CarouselComponent"
+import DashboardNavbar from "./DashboardNavbar"
+import DashboardNavbarMobile from "./DashboardNavbarMobile"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import NavbarMobile from "./NavbarMobile"
@@ -10,7 +12,11 @@ const Home = ({mobile}) => {
     if(mobile){
         return(
             <>
-                <NavbarMobile />
+                {
+                    localStorage.getItem("email") ?
+                    <DashboardNavbarMobile /> :
+                    <NavbarMobile />
+                }
                 <Wallpaper mobile />
                 <PopularMovies mobile />
                 <PopularTvShows mobile />
@@ -21,7 +27,11 @@ const Home = ({mobile}) => {
     }else{
         return(
             <>
-                <Navbar />
+                {
+                    localStorage.getItem("email") ?
+                    <DashboardNavbar /> :
+                    <Navbar />
+                }
                 <Wallpaper />
                 <PopularMovies />
                 <PopularTvShows />

@@ -7,6 +7,9 @@ import SignIn from './components/SignIn';
 import PlayVideo from './components/PlayVideo';
 import Dashboard from './components/Dashboard';
 import AccountSettings from './components/AccountSettings';
+import Action from './components/Action';
+import Drama from './components/Drama';
+import Comedy from './components/Comedy';
 
 const { Media, MediaContextProvider } = createMedia({
   breakpoints: {
@@ -28,6 +31,8 @@ function App() {
             <Route path='/play'  element={<PlayVideo />} />
             <Route path='/dashboard'  element={<Dashboard  mobile />} />
             <Route path='/accountsettings'  element={<AccountSettings />} />
+            <Route path='/action'  element={<Action />} />
+            <Route path='/drama'  element={<Drama />} />
           </Routes>
         </BrowserRouter>
       </Media>
@@ -40,6 +45,9 @@ function App() {
             <Route path='/play'  element={<PlayVideo />} />
             <Route path='/dashboard'  element={<Dashboard />} />
             <Route path='/accountsettings'  element={<AccountSettings />} />
+            <Route path='/action'  element={<Action />} />
+            <Route path='/drama'  element={<Drama />} />
+            <Route path='/comedy'  element={<Comedy />} />
           </Routes>
         </BrowserRouter>
       </Media>

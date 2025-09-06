@@ -122,7 +122,7 @@ const AllCategories = ({mobile}) => {
                                     basic
                                     padded
                                     color="orange"
-                                    onClick={() => navigate('/drama')}
+                                    onClick={() => navigate('/comedy')}
                                     style={{
                                         cursor: 'pointer'
                                     }}
@@ -149,7 +149,7 @@ const AllCategories = ({mobile}) => {
                                     basic
                                     padded
                                     color="orange"
-                                    onClick={() => navigate('/drama')}
+                                    onClick={() => navigate('/horror')}
                                     style={{
                                         cursor: 'pointer'
                                     }}
@@ -178,7 +178,7 @@ const AllCategories = ({mobile}) => {
                                     basic
                                     padded
                                     color="orange"
-                                    onClick={() => navigate('/action')}
+                                    onClick={() => navigate('/romance')}
                                     style={{
                                         cursor: 'pointer'
                                     }}
@@ -205,7 +205,7 @@ const AllCategories = ({mobile}) => {
                                     basic
                                     padded
                                     color="orange"
-                                    onClick={() => navigate('/drama')}
+                                    onClick={() => navigate('/scifi')}
                                     style={{
                                         cursor: 'pointer'
                                     }}
@@ -232,7 +232,7 @@ const AllCategories = ({mobile}) => {
                                     basic
                                     padded
                                     color="orange"
-                                    onClick={() => navigate('/drama')}
+                                    onClick={() => navigate('/documentary')}
                                     style={{
                                         cursor: 'pointer'
                                     }}
@@ -259,7 +259,7 @@ const AllCategories = ({mobile}) => {
                                     basic
                                     padded
                                     color="orange"
-                                    onClick={() => navigate('/drama')}
+                                    onClick={() => navigate('/thrillers')}
                                     style={{
                                         cursor: 'pointer'
                                     }}

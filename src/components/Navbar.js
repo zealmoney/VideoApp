@@ -57,6 +57,31 @@ const Navbar = () => {
                                         >
                                             Comedy
                                         </Dropdown.Item>
+                                        <Dropdown.Item
+                                             onClick={() => navigate('/horror')}
+                                        >
+                                            Horror
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                             onClick={() => navigate('/romance')}
+                                        >
+                                            Romance
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                             onClick={() => navigate('/scifi')}
+                                        >
+                                            Sci-fi
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                             onClick={() => navigate('/documentary')}
+                                        >
+                                            Documentary
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                             onClick={() => navigate('/thrillers')}
+                                        >
+                                            Thrillers
+                                        </Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </Dropdown.Item>

@@ -11,6 +11,11 @@ import Action from './components/Action';
 import Drama from './components/Drama';
 import Comedy from './components/Comedy';
 import AllCategories from './components/AllCategories';
+import Horror from './components/Horror';
+import Romance from './components/Romance';
+import Scifi from './components/Scifi';
+import Documentary from './components/Documentary';
+import Thrillers from './components/Thrillers';
 
 const { Media, MediaContextProvider } = createMedia({
   breakpoints: {
@@ -51,6 +56,11 @@ function App() {
             <Route path='/drama'  element={<Drama />} />
             <Route path='/comedy'  element={<Comedy />} />
             <Route path='/allcategories'  element={<AllCategories />} />
+            <Route path='/horror'  element={<Horror />} />
+            <Route path='/romance'  element={<Romance />} />
+            <Route path='/scifi'  element={<Scifi />} />
+            <Route path='/documentary'  element={<Documentary />} />
+            <Route path='/thrillers'  element={<Thrillers />} />
           </Routes>
         </BrowserRouter>
       </Media>

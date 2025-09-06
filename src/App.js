@@ -10,6 +10,7 @@ import AccountSettings from './components/AccountSettings';
 import Action from './components/Action';
 import Drama from './components/Drama';
 import Comedy from './components/Comedy';
+import AllCategories from './components/AllCategories';
 
 const { Media, MediaContextProvider } = createMedia({
   breakpoints: {
@@ -33,6 +34,7 @@ function App() {
             <Route path='/accountsettings'  element={<AccountSettings />} />
             <Route path='/action'  element={<Action />} />
             <Route path='/drama'  element={<Drama />} />
+            <Route path='/allcategories'  element={<AllCategories />} />
           </Routes>
         </BrowserRouter>
       </Media>
@@ -48,6 +50,7 @@ function App() {
             <Route path='/action'  element={<Action />} />
             <Route path='/drama'  element={<Drama />} />
             <Route path='/comedy'  element={<Comedy />} />
+            <Route path='/allcategories'  element={<AllCategories />} />
           </Routes>
         </BrowserRouter>
       </Media>

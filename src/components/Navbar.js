@@ -60,7 +60,11 @@ const Navbar = () => {
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </Dropdown.Item>
-                            <Dropdown.Item>All Categories</Dropdown.Item>
+                            <Dropdown.Item
+                                onClick={() => navigate('/allcategories')}
+                            >
+                                All Categories
+                            </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                     <Menu.Item

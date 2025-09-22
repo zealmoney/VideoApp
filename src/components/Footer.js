@@ -1,0 +1,137 @@
+import { Container, Divider, Grid, Header, List, Segment } from "semantic-ui-react"
+
+const Footer = ({mobile}) => {
+
+    return(
+        <Segment
+            inverted
+            vertical
+            style={{padding: mobile ? '20px 20px' : '50px 80px'}}
+        >
+            
+                <Grid
+                    stackable
+                    inverted
+                    divided
+                    textAlign="center"
+                >
+                    
+                    <Grid.Column width={4} textAlign="left">
+                        <Header 
+                            as='h5'
+                            inverted
+                            content='VIDEO APP'
+                        />
+                        <List
+                            inverted
+                            size="medium"
+                        >
+                            <List.Item
+                                as='a'
+                                style={{textDecoration: 'none'}}
+                            >
+                                About Us
+                            </List.Item>
+                            <List.Item
+                                as='a'
+                                style={{textDecoration: 'none'}}
+                            >
+                                Contact Us
+                            </List.Item>
+                            <List.Item
+                                as='a'
+                                style={{textDecoration: 'none'}}
+                            >
+                                Partner With Us
+                            </List.Item>
+                        </List>
+                    </Grid.Column>
+
+                    <Grid.Column width={4} textAlign="left">
+                        <Header 
+                            as='h5'
+                            inverted
+                            content='SUPPORT'
+                        />
+                        <List
+                            inverted
+                            size="medium"
+                            style={{textDecoration: 'none'}}
+                        >
+                            <List.Item
+                                as='a'
+                                style={{textDecoration: 'none'}}
+                            >
+                                Help
+                            </List.Item>
+                            <List.Item
+                                as='a'
+                                style={{textDecoration: 'none'}}
+                            >
+                                Contact Support
+                            </List.Item>
+                        </List>
+                    </Grid.Column>
+
+                    <Grid.Column width={4} textAlign="left">
+                        <Header 
+                            as='h5'
+                            inverted
+                            content='PRIVACY'
+                        />
+                        <List
+                            link
+                            inverted
+                            size="medium"
+                        >
+                            <List.Item
+                                as='a'
+                                style={{textDecoration: 'none'}}
+                            >
+                                Privacy Policy
+                            </List.Item>
+                            <List.Item
+                                as='a'
+                                style={{textDecoration: 'none'}}
+                            >
+                                Terms of Use
+                            </List.Item>
+                        </List>
+                    </Grid.Column>
+
+                    <Grid.Column width={4} textAlign="left">
+                        <Header 
+                            as='h5'
+                            inverted
+                            content='PRESS'
+                        />
+                        <List
+                            link
+                            inverted
+                            size="medium"
+                        >
+                            <List.Item
+                                as='a'
+                                style={{textDecoration: 'none'}}
+                            >
+                                Press Release
+                            </List.Item>
+                            <List.Item
+                                as='a'
+                                style={{textDecoration: 'none'}}
+                            >
+                                Video App News
+                            </List.Item>
+                            
+                        </List>
+                    </Grid.Column>
+                </Grid>
+                <Divider section inverted />
+                <p style={{textAlign: 'center'}}>
+                    All Rights Reserved Video App &copy; 2025
+                </p>     
+        </Segment>
+    )
+}
+
+export default Footer

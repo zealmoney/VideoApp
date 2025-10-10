@@ -2,7 +2,7 @@ import _ from "lodash"
 import { useCallback, useEffect, useReducer, useRef, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { Button, Container, Dropdown, Icon, Menu, Search, Segment } from "semantic-ui-react"
-import { useGetVideosQuery } from "../features/api/apiSlice"
+import { useGetPopularMoviesQuery, useGetVideosQuery } from "../features/api/apiSlice"
 import getPopularMovies, { getPopularTvshow } from "../api"
 
 const intialState = {
@@ -29,16 +29,31 @@ const intialState = {
 
 const DashboardNavbar = () => {
 
-    const [videos, setVideos] = useState([])
+    let source = []
 
-    useEffect(() => {
+    {/*useEffect(() => {
         getAllVideos()
     }, [])
 
+    const [source, setVideos] = useState([])
+
     const getAllVideos = () => {
-        getPopularTvshow().get("/")
+        getPopularMovies().get("/")
          .then((res) => setVideos(res.data))
           .catch(console.log('An error has occured'))
+    }*/}
+
+    const {data: popularmovies, isSuccess} = useGetPopularMoviesQuery()
+    if(isSuccess){
+        popularmovies.map((p) => {
+            source.push({
+                'id': p.id,
+                'title': p.title,
+                'description': p.description,
+                'image': p.image,
+                'videoUrl': p.videoUrl
+            })
+        })
     }
     
         const [state, dispatch] = useReducer(searchReducer, intialState)
@@ -47,6 +62,7 @@ const DashboardNavbar = () => {
         const timeoutRef = useRef()
 
         const handleSearchChange = useCallback((e, data) => {
+            console.log(source)
             clearTimeout(timeoutRef.current)
             dispatch({type: 'START_SEARCH', query: data.value})
 
@@ -61,7 +77,7 @@ const DashboardNavbar = () => {
 
                 dispatch({
                     type: 'FINISH_SEARCH',
-                    results: _.filter(videos, isMatch)
+                    results: _.filter(source, isMatch)
                 })
             }, 300)
         }, [])
@@ -93,11 +109,13 @@ const DashboardNavbar = () => {
                     </Menu.Item>
                     <Menu.Item
                         as='a'
+                        onClick={() => navigate('/movies')}
                     >
                         Movies
                     </Menu.Item>
                     <Menu.Item
                         as='a'
+                        onClick={() => navigate('/tvshow')}
                     >
                         TV Shows
                     </Menu.Item>

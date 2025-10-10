@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
     reducerPath: 'api',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:8000/api/'}),
+    baseQuery: fetchBaseQuery({baseUrl: 'https://videoapp-backend-blond.vercel.app/api/'}),
 
     endpoints: builder => ({
         addRegister: builder.mutation({
@@ -15,6 +15,9 @@ export const apiSlice = createApi({
         getRegisteredUsers: builder.query({
             query: () => 'registers'
         }),
+        getPopularMovies: builder.query({
+            query: () => '/popularmovies'
+        }),
         getVideos: builder.query({
             query: () => '/videos'
         })
@@ -24,5 +27,6 @@ export const apiSlice = createApi({
 export const {
     useAddRegisterMutation, 
     useGetRegisteredUsersQuery,
+    useGetPopularMoviesQuery,
     useGetVideosQuery
 } = apiSlice

@@ -1,10 +1,9 @@
-import { Container, Divider, Grid, Header, List, Segment } from "semantic-ui-react"
+import { Container, Grid, Header, List, Segment } from "semantic-ui-react"
 import Footer from "./Footer"
-import Navbar from "./Navbar"
-import MyList from "./MyList"
 import DashboardNavbar from "./DashboardNavbar"
 import DashboardNavbarMobile from "./DashboardNavbarMobile"
-import NavbarMobile from "./NavbarMobile"
+import ActionList from "./ActionList"
+import HorrorList from "./HorrorList"
 
 const Horror = ({mobile}) => {
         
@@ -12,11 +11,7 @@ const Horror = ({mobile}) => {
 
                 return(
                     <>
-                        {
-                            localStorage.getItem("email") ?
-                            <DashboardNavbarMobile /> :
-                            <NavbarMobile />
-                        }
+                        <DashboardNavbarMobile /> 
                         <Segment
                             vertical
                             inverted
@@ -32,15 +27,15 @@ const Horror = ({mobile}) => {
                                                 as='h2'
                                                 inverted
                                                 style={{
-                                                    marginTop: 40,
+                                                    marginTop: 40
                                                 }}
                                             >
-                                                Horror
+                                                Horror Movies
                                                 <Header.Subheader>
                                                     Horrific and gory scenes that will get you at the edge of your seat...
                                                 </Header.Subheader>
                                             </Header>
-                                            <MyList mobile />
+                                            <HorrorList mobile />
                                         </Segment>
                                     </Grid.Column>
                                 </Grid>
@@ -51,11 +46,7 @@ const Horror = ({mobile}) => {
             }else{
                 return(
                     <>
-                        {
-                            localStorage.getItem("email") ?
-                            <DashboardNavbar /> :
-                            <Navbar />
-                        }
+                        <DashboardNavbar /> 
                         <Segment
                             vertical
                             inverted
@@ -70,17 +61,13 @@ const Horror = ({mobile}) => {
                                             <Header
                                                 as='h2'
                                                 inverted
-                                                style={{
-                                                    fontSize: 40
-                                                }}
                                             >
-                                                Horror
+                                                Horror Movies
                                                 <Header.Subheader>
-                                                    Horrific and gory scenes that will get you at the edge of your seat...
+                                                   Horrific and gory scenes that will get you at the edge of your seat...
                                                 </Header.Subheader>
                                             </Header>
-                                            <Divider />
-                                            <MyList />
+                                            <ActionList />
                                         </Segment>
                                     </Grid.Column>
                                 </Grid>

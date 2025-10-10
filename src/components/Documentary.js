@@ -1,10 +1,8 @@
-import { Container, Divider, Grid, Header, List, Segment } from "semantic-ui-react"
+import { Container, Grid, Header, List, Segment } from "semantic-ui-react"
 import Footer from "./Footer"
-import Navbar from "./Navbar"
-import MyList from "./MyList"
 import DashboardNavbar from "./DashboardNavbar"
 import DashboardNavbarMobile from "./DashboardNavbarMobile"
-import NavbarMobile from "./NavbarMobile"
+import DocumentaryList from "./DocumentaryList"
 
 const Documentary = ({mobile}) => {
         
@@ -12,11 +10,7 @@ const Documentary = ({mobile}) => {
 
                 return(
                     <>
-                        {
-                            localStorage.getItem("email") ?
-                            <DashboardNavbarMobile /> :
-                            <NavbarMobile />
-                        }
+                        <DashboardNavbarMobile /> 
                         <Segment
                             vertical
                             inverted
@@ -32,15 +26,15 @@ const Documentary = ({mobile}) => {
                                                 as='h2'
                                                 inverted
                                                 style={{
-                                                    marginTop: 40,
+                                                    marginTop: 40
                                                 }}
                                             >
-                                                Documentary
+                                                Documentary Movies
                                                 <Header.Subheader>
                                                     Detailed accounts of real life events brought to you TV screens
                                                 </Header.Subheader>
                                             </Header>
-                                            <MyList mobile />
+                                            <DocumentaryList mobile />
                                         </Segment>
                                     </Grid.Column>
                                 </Grid>
@@ -51,11 +45,7 @@ const Documentary = ({mobile}) => {
             }else{
                 return(
                     <>
-                        {
-                            localStorage.getItem("email") ?
-                            <DashboardNavbar /> :
-                            <Navbar />
-                        }
+                        <DashboardNavbar /> 
                         <Segment
                             vertical
                             inverted
@@ -70,17 +60,13 @@ const Documentary = ({mobile}) => {
                                             <Header
                                                 as='h2'
                                                 inverted
-                                                style={{
-                                                    fontSize: 40
-                                                }}
                                             >
-                                                Documentary
+                                                Documentary Movies
                                                 <Header.Subheader>
                                                     Detailed accounts of real life events brought to you TV screens
                                                 </Header.Subheader>
                                             </Header>
-                                            <Divider />
-                                            <MyList />
+                                            <DocumentaryList />
                                         </Segment>
                                     </Grid.Column>
                                 </Grid>

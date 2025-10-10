@@ -1,10 +1,8 @@
-import { Container, Divider, Grid, Header, List, Segment } from "semantic-ui-react"
+import { Container, Grid, Header, List, Segment } from "semantic-ui-react"
 import Footer from "./Footer"
-import Navbar from "./Navbar"
-import MyList from "./MyList"
 import DashboardNavbar from "./DashboardNavbar"
 import DashboardNavbarMobile from "./DashboardNavbarMobile"
-import NavbarMobile from "./NavbarMobile"
+import DramaList from "./DramaList"
 
 const Drama = ({mobile}) => {
         
@@ -12,11 +10,7 @@ const Drama = ({mobile}) => {
 
                 return(
                     <>
-                        {
-                            localStorage.getItem("email") ?
-                            <DashboardNavbarMobile /> :
-                            <NavbarMobile />
-                        }
+                        <DashboardNavbarMobile /> 
                         <Segment
                             vertical
                             inverted
@@ -35,12 +29,12 @@ const Drama = ({mobile}) => {
                                                     marginTop: 40
                                                 }}
                                             >
-                                                Drama
+                                                Drama Movies
                                                 <Header.Subheader>
                                                     Fun-filled scenes full of suspense...
                                                 </Header.Subheader>
                                             </Header>
-                                            <MyList mobile />
+                                            <DramaList mobile />
                                         </Segment>
                                     </Grid.Column>
                                 </Grid>
@@ -51,11 +45,7 @@ const Drama = ({mobile}) => {
             }else{
                 return(
                     <>
-                        {
-                            localStorage.getItem("email") ?
-                            <DashboardNavbar /> :
-                            <Navbar />
-                        }
+                        <DashboardNavbar /> 
                         <Segment
                             vertical
                             inverted
@@ -70,17 +60,13 @@ const Drama = ({mobile}) => {
                                             <Header
                                                 as='h2'
                                                 inverted
-                                                style={{
-                                                    fontSize: 40
-                                                }}
                                             >
-                                                Drama
+                                                Drama Movies
                                                 <Header.Subheader>
                                                     Fun-filled scenes full of suspense...
                                                 </Header.Subheader>
                                             </Header>
-                                            <Divider />
-                                            <MyList />
+                                            <DramaList />
                                         </Segment>
                                     </Grid.Column>
                                 </Grid>

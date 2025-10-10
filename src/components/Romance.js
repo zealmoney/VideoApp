@@ -1,10 +1,8 @@
-import { Container, Divider, Grid, Header, List, Segment } from "semantic-ui-react"
+import { Container, Grid, Header, List, Segment } from "semantic-ui-react"
 import Footer from "./Footer"
-import Navbar from "./Navbar"
-import MyList from "./MyList"
 import DashboardNavbar from "./DashboardNavbar"
 import DashboardNavbarMobile from "./DashboardNavbarMobile"
-import NavbarMobile from "./NavbarMobile"
+import RomanceList from "./RomanceList"
 
 const Romance = ({mobile}) => {
         
@@ -12,11 +10,7 @@ const Romance = ({mobile}) => {
 
                 return(
                     <>
-                        {
-                            localStorage.getItem("email") ?
-                            <DashboardNavbarMobile /> :
-                            <NavbarMobile />
-                        }
+                        <DashboardNavbarMobile /> 
                         <Segment
                             vertical
                             inverted
@@ -32,15 +26,15 @@ const Romance = ({mobile}) => {
                                                 as='h2'
                                                 inverted
                                                 style={{
-                                                    marginTop: 40,
+                                                    marginTop: 40
                                                 }}
                                             >
-                                                Romance
+                                                Romance Movies
                                                 <Header.Subheader>
                                                     Explore love and romantic scenes in this category
                                                 </Header.Subheader>
                                             </Header>
-                                            <MyList mobile />
+                                            <RomanceList mobile />
                                         </Segment>
                                     </Grid.Column>
                                 </Grid>
@@ -51,11 +45,7 @@ const Romance = ({mobile}) => {
             }else{
                 return(
                     <>
-                        {
-                            localStorage.getItem("email") ?
-                            <DashboardNavbar /> :
-                            <Navbar />
-                        }
+                        <DashboardNavbar /> 
                         <Segment
                             vertical
                             inverted
@@ -70,17 +60,13 @@ const Romance = ({mobile}) => {
                                             <Header
                                                 as='h2'
                                                 inverted
-                                                style={{
-                                                    fontSize: 40
-                                                }}
                                             >
-                                                Romance
+                                                Romance Movies
                                                 <Header.Subheader>
                                                     Explore love and romantic scenes in this category
                                                 </Header.Subheader>
                                             </Header>
-                                            <Divider />
-                                            <MyList />
+                                            <RomanceList />
                                         </Segment>
                                     </Grid.Column>
                                 </Grid>

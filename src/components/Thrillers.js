@@ -1,10 +1,9 @@
-import { Container, Divider, Grid, Header, List, Segment } from "semantic-ui-react"
+import { Container, Grid, Header, List, Segment } from "semantic-ui-react"
 import Footer from "./Footer"
-import Navbar from "./Navbar"
-import MyList from "./MyList"
 import DashboardNavbar from "./DashboardNavbar"
 import DashboardNavbarMobile from "./DashboardNavbarMobile"
-import NavbarMobile from "./NavbarMobile"
+import ActionList from "./ActionList"
+import ThrillerList from "./ThrillerList"
 
 const Thrillers = ({mobile}) => {
         
@@ -12,11 +11,7 @@ const Thrillers = ({mobile}) => {
 
                 return(
                     <>
-                        {
-                            localStorage.getItem("email") ?
-                            <DashboardNavbarMobile /> :
-                            <NavbarMobile />
-                        }
+                        <DashboardNavbarMobile /> 
                         <Segment
                             vertical
                             inverted
@@ -32,7 +27,7 @@ const Thrillers = ({mobile}) => {
                                                 as='h2'
                                                 inverted
                                                 style={{
-                                                    marginTop: 40,
+                                                    marginTop: 40
                                                 }}
                                             >
                                                 Thrillers
@@ -40,7 +35,7 @@ const Thrillers = ({mobile}) => {
                                                     Action mixed with suspense that will keep you glued to your seat
                                                 </Header.Subheader>
                                             </Header>
-                                            <MyList mobile />
+                                            <ThrillerList mobile />
                                         </Segment>
                                     </Grid.Column>
                                 </Grid>
@@ -51,11 +46,7 @@ const Thrillers = ({mobile}) => {
             }else{
                 return(
                     <>
-                        {
-                            localStorage.getItem("email") ?
-                            <DashboardNavbar /> :
-                            <Navbar />
-                        }
+                        <DashboardNavbar /> 
                         <Segment
                             vertical
                             inverted
@@ -70,17 +61,13 @@ const Thrillers = ({mobile}) => {
                                             <Header
                                                 as='h2'
                                                 inverted
-                                                style={{
-                                                    fontSize: 40
-                                                }}
                                             >
                                                 Thrillers
                                                 <Header.Subheader>
                                                     Action mixed with suspense that will keep you glued to your seat
                                                 </Header.Subheader>
                                             </Header>
-                                            <Divider />
-                                            <MyList />
+                                            <ThrillerList />
                                         </Segment>
                                     </Grid.Column>
                                 </Grid>

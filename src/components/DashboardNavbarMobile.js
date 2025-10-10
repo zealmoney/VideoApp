@@ -26,8 +26,16 @@ const DashboardNavbarMobile = () => {
                     text="Watch Movies"
                 >
                     <Dropdown.Menu>
-                        <Dropdown.Item>Movies</Dropdown.Item>
-                        <Dropdown.Item>TV Shows</Dropdown.Item>
+                        <Dropdown.Item
+                            onClick={() => navigate('/movies')}
+                        >
+                            Movies
+                        </Dropdown.Item>
+                        <Dropdown.Item
+                            onClick={() => navigate('/tvshow')}
+                        >
+                            TV Shows
+                        </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </Menu>

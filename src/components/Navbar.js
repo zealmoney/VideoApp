@@ -24,11 +24,13 @@ const Navbar = () => {
                     </Menu.Item>
                     <Menu.Item
                         as='a'
+                        onClick={() => navigate('/movies')}
                     >
                         Movies
                     </Menu.Item>
                     <Menu.Item
                         as='a'
+                        onClick={() => navigate('/tvshow')}
                     >
                         TV Shows
                     </Menu.Item>

@@ -16,6 +16,8 @@ import Romance from './components/Romance';
 import Scifi from './components/Scifi';
 import Documentary from './components/Documentary';
 import Thrillers from './components/Thrillers';
+import Movies from './components/Movies';
+import TvShows from './components/TvShows';
 
 const { Media, MediaContextProvider } = createMedia({
   breakpoints: {
@@ -34,12 +36,14 @@ function App() {
             <Route index element={<Home mobile />} />
             <Route path='/register'  element={<Register />} />
             <Route path='/signin'  element={<SignIn />} />
-            <Route path='/play'  element={<PlayVideo />} />
+            <Route path='/play:videoid'  element={<PlayVideo />} />
             <Route path='/dashboard'  element={<Dashboard  mobile />} />
             <Route path='/accountsettings'  element={<AccountSettings />} />
             <Route path='/action'  element={<Action />} />
             <Route path='/drama'  element={<Drama />} />
             <Route path='/allcategories'  element={<AllCategories />} />
+            <Route path='movies'  element={<Movies />} />
+            <Route path='tvshow'  element={<TvShows />} />
           </Routes>
         </BrowserRouter>
       </Media>
@@ -61,6 +65,8 @@ function App() {
             <Route path='scifi'  element={<Scifi />} />
             <Route path='documentary'  element={<Documentary />} />
             <Route path='thrillers'  element={<Thrillers />} />
+            <Route path='movies'  element={<Movies />} />
+            <Route path='tvshow'  element={<TvShows />} />
           </Routes>
         </BrowserRouter>
       </Media>

@@ -2,13 +2,16 @@ import { Button, Form, Grid, Header, Message, Segment } from "semantic-ui-react"
 import NavbarUser from "./NavbarUser"
 import { Link, useNavigate } from "react-router-dom"
 import Footer from "./Footer"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useGetRegisteredUsersQuery } from "../features/api/apiSlice"
+import getUsers from "../api"
 
 const SignIn = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+    const [users, setUsers] = useState([])  
 
     const [emailError, setEmailError] = useState(false)
     const [passwordError, setPasswordError] = useState(false)
@@ -20,7 +23,17 @@ const SignIn = () => {
 
     const navigate = useNavigate()
 
-    const {data: users, isSuccess, refetch} = useGetRegisteredUsersQuery()
+    //const {data: users, isSuccess, refetch} = useGetRegisteredUsersQuery()
+
+    useEffect(() => {
+        getallUsers()
+    }, [])
+
+    const getallUsers = () => {
+        getUsers().get('/')
+        .then(res => setUsers(res.data))
+        .catch(console.log('An error has occured'))
+    }
 
 
     const signin = () => {

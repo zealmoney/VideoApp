@@ -1,6 +1,18 @@
 import axios from "axios";
 
-export default function getVideos(){
+export default function getUsers(){
+    return(
+        axios.create({
+            baseURL: "https://videoapp-backend-blond.vercel.app/api/registers/",
+            headers: {
+                Accept: 'application/json',
+                "Content-Type": 'application/json'
+            }
+        })
+    )
+}
+
+export function getVideos(){
     return(
         axios.create({
             baseURL: "https://videoapp-backend-blond.vercel.app/api/videos/",

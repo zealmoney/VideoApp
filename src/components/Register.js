@@ -72,7 +72,7 @@ const Register = () => {
                     //dispatch({type: 'open', size: 'mini'})
                     //alert("Register was successful")
                     setMsg(true)
-                    navigate('/signin')
+                    //navigate('/signin')
             }
         }
     }

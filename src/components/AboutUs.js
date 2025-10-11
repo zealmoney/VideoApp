@@ -3,6 +3,7 @@ import DashboardNavbarMobile from "./DashboardNavbarMobile"
 import NavbarMobile from "./NavbarMobile"
 import DashboardNavbar from "./DashboardNavbar"
 import Navbar from "./Navbar"
+import Footer from "./Footer"
 
 const AboutUs = ({mobile}) => {
 
@@ -51,6 +52,7 @@ const AboutUs = ({mobile}) => {
                         versions of Lorem Ipsum.
                     </p>
                 </Segment>
+                <Footer />
             </>
         )
     }else{
@@ -98,6 +100,7 @@ const AboutUs = ({mobile}) => {
                         versions of Lorem Ipsum.
                     </p>
                 </Segment>
+                <Footer />
             </>
             
         )

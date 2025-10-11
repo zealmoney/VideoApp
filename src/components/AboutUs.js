@@ -52,7 +52,7 @@ const AboutUs = ({mobile}) => {
                         versions of Lorem Ipsum.
                     </p>
                 </Segment>
-                <Footer />
+                <Footer mobile />
             </>
         )
     }else{

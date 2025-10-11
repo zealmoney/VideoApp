@@ -43,6 +43,8 @@ const Register = () => {
 
     const [loading, setLoading] = useState(false)
 
+    const [msg, setMsg] = useState('')
+
     const [addRegister, {isLoading}] = useAddRegisterMutation()
     const saveRegister = [firstname, email, gender, password].every(Boolean) && !isLoading
 
@@ -66,7 +68,8 @@ const Register = () => {
                     setPassword("")
                     setLoading(false)
                     //dispatch({type: 'open', size: 'mini'})
-                    alert("Register was successful")
+                    //alert("Register was successful")
+                    setMsg('Register was successful')
             }
         }
     }
@@ -99,6 +102,9 @@ const Register = () => {
                             content='Create An Account'
                             inverted
                         />
+                        <Message>
+                            {msg}
+                        </Message>
                         <Form
                             size="large"
                         >

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Form, Grid, Header, Icon, Message, Modal, Segment } from "semantic-ui-react";
 import Footer from "./Footer";
 import NavbarUser from "./NavbarUser";
@@ -43,7 +43,9 @@ const Register = () => {
 
     const [loading, setLoading] = useState(false)
 
-    const [msg, setMsg] = useState('')
+    const [msg, setMsg] = useState(false)
+
+    const navigate = useNavigate()
 
     const [addRegister, {isLoading}] = useAddRegisterMutation()
     const saveRegister = [firstname, email, gender, password].every(Boolean) && !isLoading
@@ -69,7 +71,8 @@ const Register = () => {
                     setLoading(false)
                     //dispatch({type: 'open', size: 'mini'})
                     //alert("Register was successful")
-                    setMsg('Register was successful')
+                    setMsg(true)
+                    navigate('/signin')
             }
         }
     }
@@ -102,9 +105,12 @@ const Register = () => {
                             content='Create An Account'
                             inverted
                         />
-                        <Message>
-                            {msg}
-                        </Message>
+                        {
+                            msg ? <Message>
+                                Registration Successful
+                            </Message> : ""
+                        }
+                        
                         <Form
                             size="large"
                         >

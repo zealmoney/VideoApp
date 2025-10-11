@@ -1,4 +1,4 @@
-import { Segment } from "semantic-ui-react"
+import { Header, Segment } from "semantic-ui-react"
 import DashboardNavbarMobile from "./DashboardNavbarMobile"
 import NavbarMobile from "./NavbarMobile"
 import DashboardNavbar from "./DashboardNavbar"
@@ -14,7 +14,12 @@ const AboutUs = ({mobile}) => {
                     <DashboardNavbarMobile /> :
                     <NavbarMobile />
                 }
-                <Segment vertical inverted>
+                <Segment 
+                    vertical 
+                    inverted
+                    style={{padding: mobile ? '20px 20px' : '50px 80px'}}
+                >
+                    <Header as='h2' textAlign="center" content="About Us" size="large" />
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -56,7 +61,12 @@ const AboutUs = ({mobile}) => {
                         <DashboardNavbar /> :
                         <Navbar />
                 }
-                <Segment vertical inverted>
+                <Segment 
+                    vertical 
+                    inverted
+                    style={{padding: mobile ? '20px 20px' : '50px 80px'}}
+                >
+                    <Header as='h2' textAlign="center" content="About Us" size="large" />
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 

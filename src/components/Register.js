@@ -106,8 +106,9 @@ const Register = () => {
                             inverted
                         />
                         {
-                            msg ? <Message>
-                                Registration Successful
+                            msg ? <Message color="red">
+                                Registration Successful <br/>
+                                Please <Link to={'/signin'}>Sign In</Link> to continue
                             </Message> : ""
                         }
                         

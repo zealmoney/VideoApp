@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom"
 import { Container, Divider, Grid, Header, List, Segment } from "semantic-ui-react"
 
 const Footer = ({mobile}) => {
+
+    const navigate = useNavigate()
 
     return(
         <Segment
@@ -29,6 +32,7 @@ const Footer = ({mobile}) => {
                             <List.Item
                                 as='a'
                                 style={{textDecoration: 'none'}}
+                                onClick={() => navigate('/aboutus')}
                             >
                                 About Us
                             </List.Item>
@@ -63,12 +67,6 @@ const Footer = ({mobile}) => {
                                 style={{textDecoration: 'none'}}
                             >
                                 Help
-                            </List.Item>
-                            <List.Item
-                                as='a'
-                                style={{textDecoration: 'none'}}
-                            >
-                                Contact Support
                             </List.Item>
                         </List>
                     </Grid.Column>

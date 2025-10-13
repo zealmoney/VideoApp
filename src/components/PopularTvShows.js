@@ -3,6 +3,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Header, Icon, Image, Segment } from 'semantic-ui-react';
 import { getPopularTvshow } from '../api';
+import { useNavigate } from 'react-router-dom';
 
 const PopularTvShows = ({mobile}) => {
 
@@ -36,6 +37,8 @@ const PopularTvShows = ({mobile}) => {
         .then((res) => setPopularTvshows(res.data))
         .catch(console.log('An error has occured'))
     }
+
+    const navigate = useNavigate()
    
     return(
 
@@ -63,7 +66,14 @@ const PopularTvShows = ({mobile}) => {
                     popularTvshows.map((v) => {
                         return(
                             <div>
-                                <Image centered style={{width: 270, height: 400}} src={v.image} />                
+                                <Image 
+                                    centered 
+                                    id={v.id}
+                                    source={v.videoUrl}
+                                    style={{width: 270, height: 400, cursor: 'pointer'}} 
+                                    src={v.image} 
+                                    onClick={() => navigate('/play/' + v.id)}
+                                />                
                             </div>
                         )
                     })

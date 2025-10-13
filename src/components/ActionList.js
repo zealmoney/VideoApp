@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import Carousel from "react-multi-carousel"
-import { Embed, Image, Reveal, RevealContent, Segment } from "semantic-ui-react"
+import { Embed, Image, Segment } from "semantic-ui-react"
 import { getActionMovies } from "../api"
 import { useNavigate } from "react-router-dom"
 

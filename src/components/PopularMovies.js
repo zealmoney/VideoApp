@@ -1,8 +1,9 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Header, Icon, Image, Segment } from 'semantic-ui-react';
+import { Embed, Header, Icon, Image, Segment } from 'semantic-ui-react';
 import { useEffect, useState } from 'react';
 import getPopularMovies from '../api';
+import { useNavigate } from 'react-router-dom';
 
 const PopularMovies = ({mobile}) => {
 
@@ -36,6 +37,8 @@ const PopularMovies = ({mobile}) => {
         .then((res) => setPopularMovies(res.data))
         .catch(console.log('An error has occured'))
     }
+
+    const navigate = useNavigate()  
    
     return(
 

@@ -38,6 +38,11 @@ const PopularMovies = ({mobile}) => {
         .catch(console.log('An error has occured'))
     }
 
+    const show = popularMovies.filter((m) => m.id === 2)[0]
+    if(show){
+        console.log(show.videoUrl)
+    }
+
     const navigate = useNavigate()  
    
     return(
@@ -66,7 +71,14 @@ const PopularMovies = ({mobile}) => {
                     popularMovies.map((v) => {
                         return(
                             <div>
-                                <Image centered style={{width: 270, height: 400}} src={v.image} />
+                                <Image 
+                                    centered 
+                                    id={v.id}
+                                    source={v.videoUrl}
+                                    style={{width: 270, height: 400, cursor: 'pointer'}} 
+                                    src={v.image} 
+                                    onClick={() => navigate('/play/' + v.id)}
+                                />      
                             </div>
                         )
                     })

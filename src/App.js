@@ -19,6 +19,10 @@ import Thrillers from './components/Thrillers';
 import Movies from './components/Movies';
 import TvShows from './components/TvShows';
 import AboutUs from './components/AboutUs';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfUse from './components/TermsOfUse';
+import ContactUs from './components/ContactUs';
+import PartnerWithUs from './components/PartnerWithUs';
 
 const { Media, MediaContextProvider } = createMedia({
   breakpoints: {
@@ -46,6 +50,10 @@ function App() {
             <Route path='movies'  element={<Movies />} />
             <Route path='tvshow'  element={<TvShows />} />
             <Route path='aboutus'  element={<AboutUs mobile />} />
+            <Route path='privacypolicy'  element={<PrivacyPolicy mobile />} />
+            <Route path='termsofuse'  element={<TermsOfUse mobile />} />
+            <Route path='contactus'  element={<ContactUs mobile />} />
+            <Route path='partnerwithus'  element={<PartnerWithUs mobile />} />
           </Routes>
         </BrowserRouter>
       </Media>
@@ -70,6 +78,10 @@ function App() {
             <Route path='movies'  element={<Movies />} />
             <Route path='tvshow'  element={<TvShows />} />
             <Route path='aboutus'  element={<AboutUs />} />
+            <Route path='privacypolicy'  element={<PrivacyPolicy />} />
+            <Route path='termsofuse'  element={<TermsOfUse />} />
+            <Route path='contactus'  element={<ContactUs />} />
+            <Route path='partnerwithus'  element={<PartnerWithUs />} />
           </Routes>
         </BrowserRouter>
       </Media>

@@ -39,12 +39,14 @@ const Footer = ({mobile}) => {
                             <List.Item
                                 as='a'
                                 style={{textDecoration: 'none'}}
+                                onClick={() => navigate('/contactus')}
                             >
                                 Contact Us
                             </List.Item>
                             <List.Item
                                 as='a'
                                 style={{textDecoration: 'none'}}
+                                onClick={() => navigate('/partnerwithus')}
                             >
                                 Partner With Us
                             </List.Item>
@@ -85,12 +87,14 @@ const Footer = ({mobile}) => {
                             <List.Item
                                 as='a'
                                 style={{textDecoration: 'none'}}
+                                onClick={() => navigate('/privacypolicy')}
                             >
                                 Privacy Policy
                             </List.Item>
                             <List.Item
                                 as='a'
                                 style={{textDecoration: 'none'}}
+                                onClick={() => navigate('/termsofuse')}
                             >
                                 Terms of Use
                             </List.Item>

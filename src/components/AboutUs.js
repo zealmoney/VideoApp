@@ -57,22 +57,32 @@ const AboutUs = ({mobile}) => {
         )
     }else{
         return(
-            <>
+            <Segment
+                vertical
+                inverted
+            >
                 {
                         localStorage.getItem("email") ?
                         <DashboardNavbar /> :
                         <Navbar />
                 }
-                <Segment 
+                <Segment
                     style={{
                         padding: mobile ? '20px 20px' : '50px 80px',
                         margin: '100px 100px',
                         borderRadius: '15px',
-                        backgoundColor: 'orange'
+                        backgroundColor: 'orange'
                     }}
                 >
                     <Header as='h2' textAlign="center" content="About Us" size="large" />
-                    <p>
+                    <p
+                        style={{
+                            fontFamily: "Inter",
+                            fontWeight: 400,
+                            fontStyle: "normal",
+                            fontSize: 16
+                        }}
+                    >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type 
@@ -104,7 +114,7 @@ const AboutUs = ({mobile}) => {
                     </p>
                 </Segment>
                 <Footer />
-            </>
+            </Segment>
             
         )
     }

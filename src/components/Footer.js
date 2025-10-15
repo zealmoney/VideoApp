@@ -6,20 +6,18 @@ const Footer = ({mobile}) => {
     const navigate = useNavigate()
 
     return(
-        <Segment
-            inverted
-            vertical
-            style={{padding: mobile ? '20px 20px' : '50px 80px'}}
-        >
+        <>
+            <Container>
             
                 <Grid
                     stackable
-                    inverted
                     divided
-                    textAlign="center"
+                    //style={{
+                       // padding: mobile ? '20px 10px' : '20px 80px',
+                    //}}
                 >
                     
-                    <Grid.Column width={4} textAlign="left">
+                    <Grid.Column width={4}>
                         <Header 
                             as='h5'
                             inverted
@@ -53,7 +51,7 @@ const Footer = ({mobile}) => {
                         </List>
                     </Grid.Column>
 
-                    <Grid.Column width={4} textAlign="left">
+                    <Grid.Column width={4}>
                         <Header 
                             as='h5'
                             inverted
@@ -73,7 +71,7 @@ const Footer = ({mobile}) => {
                         </List>
                     </Grid.Column>
 
-                    <Grid.Column width={4} textAlign="left">
+                    <Grid.Column width={4}>
                         <Header 
                             as='h5'
                             inverted
@@ -101,7 +99,7 @@ const Footer = ({mobile}) => {
                         </List>
                     </Grid.Column>
 
-                    <Grid.Column width={4} textAlign="left">
+                    <Grid.Column width={4}>
                         <Header 
                             as='h5'
                             inverted
@@ -127,12 +125,13 @@ const Footer = ({mobile}) => {
                             
                         </List>
                     </Grid.Column>
-                </Grid>
-                <Divider section inverted />
+                </Grid> 
+            </Container>  
+            <Divider section inverted />
                 <p style={{textAlign: 'center'}}>
                     All Rights Reserved Video App &copy; 2025
-                </p>     
-        </Segment>
+                </p>  
+        </>
     )
 }
 

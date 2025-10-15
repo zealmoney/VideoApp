@@ -6,8 +6,14 @@ const Footer = ({mobile}) => {
     const navigate = useNavigate()
 
     return(
-        <>
-            <Container>
+        <Segment 
+            inverted 
+            vertical
+            style={{
+                padding: '100px 0px',
+            }}
+        >
+            <Container >
             
                 <Grid
                     stackable
@@ -131,7 +137,7 @@ const Footer = ({mobile}) => {
                 <p style={{textAlign: 'center'}}>
                     All Rights Reserved Video App &copy; 2025
                 </p>  
-        </>
+        </Segment>
     )
 }
 

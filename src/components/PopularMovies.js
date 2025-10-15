@@ -2,8 +2,8 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Embed, Header, Icon, Image, Segment } from 'semantic-ui-react';
 import { useEffect, useState } from 'react';
-import getPopularMovies from '../api';
 import { useNavigate } from 'react-router-dom';
+import { getPopularMovies } from '../api';
 
 const PopularMovies = ({mobile}) => {
 
@@ -26,7 +26,8 @@ const PopularMovies = ({mobile}) => {
         },
     }
 
-    const [popularMovies, setPopularMovies] = useState([])
+    //const [popularMovies, setPopularMovies] = useState([])
+    const [popularShows, setPopularShows] = useState([])
 
     useEffect(() => {
         allPopularMovies()
@@ -34,14 +35,14 @@ const PopularMovies = ({mobile}) => {
 
     const allPopularMovies = () => {
         getPopularMovies().get("/")
-        .then((res) => setPopularMovies(res.data))
-        .catch(console.log('An error has occured'))
+        .then((res) => setPopularShows(res.data))
+        .catch(error => (console.log('An error has occured' + error)))
     }
 
-    const show = popularMovies.filter((m) => m.id === 2)[0]
+    {/*const show = popularMovies.filter((m) => m.id === 2)[0]
     if(show){
         console.log(show.videoUrl)
-    }
+    }*/}
 
     const navigate = useNavigate()  
    
@@ -67,23 +68,23 @@ const PopularMovies = ({mobile}) => {
             <Carousel
                 responsive={responsive}
             >
-                {
-                    popularMovies.map((v) => {
-                        return(
-                            <div>
-                                <Image 
-                                    centered 
-                                    id={v.id}
-                                    source={v.videoUrl}
-                                    style={{width: 270, height: 400, cursor: 'pointer'}} 
-                                    src={v.image} 
-                                    onClick={() => navigate('/play/' + v.id)}
-                                />      
-                            </div>
-                        )
-                    })
-                }
-            </Carousel>
+                            {
+                                popularShows.map((v) => {
+                                    return(
+                                        <div>
+                                            <Image 
+                                                centered 
+                                                id={v.id}
+                                                source={v.videoUrl}
+                                                style={{width: 270, height: 400, cursor: 'pointer'}} 
+                                                src={v.image} 
+                                                onClick={() => navigate('/play/' + v.id)}
+                                            />                
+                                        </div>
+                                    )
+                                })
+                            }
+                        </Carousel>
         </Segment>
     )
 }

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import Carousel from "react-multi-carousel"
-import { Embed, Image, Segment } from "semantic-ui-react"
+import { Embed, Image, Reveal, RevealContent, Segment } from "semantic-ui-react"
 import { getActionMovies } from "../api"
 import { useNavigate } from "react-router-dom"
+import pic from '../images/pic.webp'
+import pic2 from '../images/pic2.webp'
 
 
 const ActionList = ({mobile}) => {
@@ -55,15 +57,23 @@ const ActionList = ({mobile}) => {
                     {
                         actionMovies.map((a) => {
                             return(  
-                                <div>                          
-                                    <Image
+                                <div>  
+                                    <Reveal animated='fade'>
+                                        <RevealContent visible>
+                                            <Image src={pic} />
+                                            </RevealContent>
+                                            <RevealContent hidden>
+                                            <Image src={pic2} size='small' />
+                                        </RevealContent>
+                                    </Reveal>                        
+                                    {/*<Image
                                         as={Embed}
                                         id={a.id}
                                         placeholder={a.image}
                                         source={a.videoUrl}
                                         style={{width: 270, height: 400, cursor: 'pointer'}}
                                         onClick={() => navigate('/play/' + a.id)}
-                                    />
+                                    />*/}
                                     
                                 </div> 
                             )

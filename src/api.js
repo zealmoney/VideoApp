@@ -143,3 +143,15 @@ export function getThrillers(){
         })
     )
 }
+
+export function getMyList(){
+    return(
+        axios.create({
+            baseURL: "https://videoapp-backend-blond.vercel.app/api/mylists/",
+            headers: {
+                Accept: 'application/json',
+                "Content-Type": 'application/json'
+            }
+        })
+    )
+}

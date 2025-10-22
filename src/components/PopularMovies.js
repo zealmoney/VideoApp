@@ -1,9 +1,10 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Embed, Header, Icon, Image, Segment } from 'semantic-ui-react';
+import { Button, Embed, Header, Icon, Image, Segment } from 'semantic-ui-react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getPopularMovies } from '../api';
+import { getMyList, getPopularMovies } from '../api';
+import '../css/style.css'
 
 const PopularMovies = ({mobile}) => {
 
@@ -39,10 +40,12 @@ const PopularMovies = ({mobile}) => {
         .catch(error => (console.log('An error has occured' + error)))
     }
 
-    {/*const show = popularMovies.filter((m) => m.id === 2)[0]
-    if(show){
-        console.log(show.videoUrl)
-    }*/}
+    const addToList = (title, description, image, videoUrl, details) => () => {
+        let item = {title, description, image, videoUrl, details, email: localStorage.getItem("email")}
+        getMyList().post("/", item)
+         .then(() => alert(`${title} has been added to your list`))
+            .catch(console.log('An error has occured'))
+    }
 
     const navigate = useNavigate()  
    
@@ -71,16 +74,41 @@ const PopularMovies = ({mobile}) => {
                             {
                                 popularShows.map((v) => {
                                     return(
-                                        <div>
-                                            <Image 
-                                                centered 
+                                        <div 
+                                            class='container'
+                                            style={{textAlign: 'center'}} 
+                                            key={v.id}
+                                        >                         
+                                            <img
+                                                class='image'
                                                 id={v.id}
-                                                source={v.videoUrl}
-                                                style={{width: 270, height: 400, cursor: 'pointer'}} 
-                                                src={v.image} 
-                                                onClick={() => navigate('/play/' + v.id)}
-                                            />                
-                                        </div>
+                                                src={v.image}
+                                                style={{
+                                                    width: '100%', 
+                                                    height: 400
+                                                }}
+                                            />
+
+                                            <div class='middle'>
+                                                <Icon 
+                                                    link
+                                                    name='play circle outline'
+                                                    color='orange'
+                                                    size='huge'
+                                                    onClick={() => navigate('/play/' + v.id)}
+                                                />
+                                            </div>  
+
+                                            <div class='down'>
+                                                <Button
+                                                    fluid   
+                                                    color="orange"
+                                                    onClick={addToList(v.title, v.description, v.image, v.videoUrl, v.details)}
+                                                >
+                                                    Add to My List
+                                                </Button>
+                                            </div>      
+                                        </div> 
                                     )
                                 })
                             }

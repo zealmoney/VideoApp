@@ -138,7 +138,7 @@ const PlayVideo = ({mobile}) => {
                                 <ReactPlayer 
                                     slot="media"
                                     controls={false}
-                                    src={videoUrl}
+                                    src="https://www.youtube.com/watch?v=IFlXeFwA_2A"
                                     style={{
                                         width: '100%',
                                         height: '100%',

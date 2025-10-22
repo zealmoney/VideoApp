@@ -20,6 +20,9 @@ export const apiSlice = createApi({
         }),
         getVideos: builder.query({
             query: () => '/videos'
+        }),
+        getMymovieList: builder.query({
+            query: () => '/mylists'
         })
     })
 })
@@ -28,5 +31,6 @@ export const {
     useAddRegisterMutation, 
     useGetRegisteredUsersQuery,
     useGetPopularMoviesQuery,
-    useGetVideosQuery
+    useGetVideosQuery,
+    useGetMymovieListQuery
 } = apiSlice

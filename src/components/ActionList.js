@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react"
 import Carousel from "react-multi-carousel"
-import { Embed, Image, Reveal, RevealContent, Segment } from "semantic-ui-react"
-import { getActionMovies } from "../api"
+import { Button, Embed, Icon, Image, Reveal, RevealContent, Segment } from "semantic-ui-react"
+import { getActionMovies, getMyList } from "../api"
 import { useNavigate } from "react-router-dom"
-import pic from '../images/pic.webp'
-import pic2 from '../images/pic2.webp'
+import '../css/style.css'
 
 
 const ActionList = ({mobile}) => {
@@ -30,6 +29,13 @@ const ActionList = ({mobile}) => {
 
     const [actionMovies, setActionMovies] = useState([])
 
+    const [title, setTitle] = useState("")
+    const [description, setDescription] = useState("")
+    const [image, setImage] = useState("")
+    const [videoUrl, setVideoUrl] = useState("")
+    const [details, setDetails] = useState("")
+    const [email, setEmail] = useState("")
+
     useEffect(() => {
         getAllActionMovies()
     }, [])
@@ -38,6 +44,13 @@ const ActionList = ({mobile}) => {
         getActionMovies().get("/")
          .then((res) => setActionMovies(res.data))
           .catch(console.log('An error has occured'))
+    }
+
+    const addToList = (title, description, image, videoUrl, details) => () => {
+        let item = {title, description, image, videoUrl, details, email: localStorage.getItem("email")}
+        getMyList().post("/", item)
+        .then(() => alert(`${title} has been added to your list`))
+        .catch(console.log('An error has occured'))
     }
 
     const navigate = useNavigate()
@@ -51,36 +64,54 @@ const ActionList = ({mobile}) => {
                     padding: mobile ? '20px 0px' : '50px 80px'
                 }}
             >
+            
+                
                 <Carousel
                     responsive={responsive}
                 >
                     {
                         actionMovies.map((a) => {
                             return(  
-                                <div>  
-                                    <Reveal animated='fade'>
-                                        <RevealContent visible>
-                                            <Image src={pic} />
-                                            </RevealContent>
-                                            <RevealContent hidden>
-                                            <Image src={pic2} size='small' />
-                                        </RevealContent>
-                                    </Reveal>                        
-                                    {/*<Image
-                                        as={Embed}
+                                <div 
+                                    class='container'
+                                    style={{textAlign: 'center'}} 
+                                    key={a.id}
+                                >                         
+                                    <img
+                                        class='image'
                                         id={a.id}
-                                        placeholder={a.image}
-                                        source={a.videoUrl}
-                                        style={{width: 270, height: 400, cursor: 'pointer'}}
-                                        onClick={() => navigate('/play/' + a.id)}
-                                    />*/}
-                                    
+                                        src={a.image}
+                                        style={{
+                                            width: '100%', 
+                                            height: 400
+                                        }}
+                                    />
+
+                                    <div class='middle'>
+                                        <Icon 
+                                            link
+                                            name='play circle outline'
+                                            color='orange'
+                                            size='huge'
+                                            onClick={() => navigate('/play/' + a.id)}
+                                        />
+                                    </div> 
+
+                                    <div class='down'>
+                                        <Button
+                                            fluid   
+                                            color="orange"
+                                            onClick={addToList(a.title, a.description, a.image, a.videoUrl, a.details)}
+                                        >
+                                            Add to My List
+                                        </Button>
+                                    </div>    
                                 </div> 
                             )
                         })
                     }
-                    
-                </Carousel>
+
+                </Carousel>            
             </Segment>
         </>
     )

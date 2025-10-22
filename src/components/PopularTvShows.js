@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Header, Icon, Image, Segment } from 'semantic-ui-react';
-import { getPopularTvshow } from '../api';
+import { Button, Header, Icon, Image, Segment } from 'semantic-ui-react';
+import { getMyList, getPopularTvshow } from '../api';
 import { useNavigate } from 'react-router-dom';
 
 const PopularTvShows = ({mobile}) => {
@@ -38,6 +38,13 @@ const PopularTvShows = ({mobile}) => {
         .catch(console.log('An error has occured'))
     }
 
+    const addToList = (title, description, image, videoUrl, details) => () => {
+        let item = {title, description, image, videoUrl, details, email: localStorage.getItem("email")}
+        getMyList().post("/", item)
+         .then(() => alert(`${title} has been added to your list`))
+            .catch(console.log('An error has occured'))
+        }
+
     const navigate = useNavigate()
    
     return(
@@ -65,16 +72,41 @@ const PopularTvShows = ({mobile}) => {
                 {
                     popularTvshows.map((v) => {
                         return(
-                            <div>
-                                <Image 
-                                    centered 
-                                    id={v.id}
-                                    source={v.videoUrl}
-                                    style={{width: 270, height: 400, cursor: 'pointer'}} 
-                                    src={v.image} 
-                                    onClick={() => navigate('/play/' + v.id)}
-                                />                
-                            </div>
+                            <div 
+                                            class='container'
+                                            style={{textAlign: 'center'}} 
+                                            key={v.id}
+                                        >                         
+                                            <img
+                                                class='image'
+                                                id={v.id}
+                                                src={v.image}
+                                                style={{
+                                                    width: '100%', 
+                                                    height: 400
+                                                }}
+                                            />
+
+                                            <div class='middle'>
+                                                <Icon 
+                                                    link
+                                                    name='play circle outline'
+                                                    color='orange'
+                                                    size='huge'
+                                                    onClick={() => navigate('/play/' + v.id)}
+                                                />
+                                            </div>  
+
+                                            <div class='down'>
+                                                <Button
+                                                    fluid   
+                                                    color="orange"
+                                                    onClick={addToList(v.title, v.description, v.image, v.videoUrl, v.details)}
+                                                >
+                                                    Add to My List
+                                                </Button>
+                                            </div>      
+                                        </div> 
                         )
                     })
                 }

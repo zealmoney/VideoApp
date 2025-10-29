@@ -1,4 +1,4 @@
-import { Container, Divider, Grid, GridColumn, GridRow, Header, Image, Segment } from "semantic-ui-react"
+import { Button, Container, Divider, Grid, GridColumn, GridRow, Header, Image, Segment } from "semantic-ui-react"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import { MediaController,
@@ -17,7 +17,7 @@ import { use, useEffect, useState } from "react"
 import DashboardNavbar from "./DashboardNavbar"
 import DashboardNavbarMobile from "./DashboardNavbarMobile"
 import NavbarMobile from "./NavbarMobile"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import getVideos from "../api"
 import { useGetVideosQuery } from "../features/api/apiSlice"
 //import { useGetVideosQuery } from "../features/api/apiSlice"
@@ -27,6 +27,8 @@ const PlayVideo = ({mobile}) => {
     const [url, setUrl] = useState()
 
     const params = useParams()
+
+    const navigate = useNavigate()
 
     const {data: videos , isSuccess} = useGetVideosQuery()
     let videoUrl = ""
@@ -39,10 +41,7 @@ const PlayVideo = ({mobile}) => {
 
     if(isSuccess){
         const video = videos.filter((v) => v.id === parseInt(params.videoid))[0]
-        //console.log("This are the Videos " + video)
-        //console.log("These are the Videos " + JSON.stringify(videos))
-        //const video = videos.filter((v) => v.id == 2)[0]
-        //console.log("This is the Video " + JSON.stringify(video))
+        
         if(video){
             titleUrl = video.title
             imageUrl = video.image
@@ -70,11 +69,30 @@ const PlayVideo = ({mobile}) => {
                 <DashboardNavbar /> :
                 <Navbar />
             }
-            <Segment vertical inverted>
+            <Segment 
+                vertical 
+                inverted
+            >
                 <Container>
                 <Grid>
                     <GridRow>
-                        <GridColumn width={16}>
+                        <GridColumn 
+                            width={16}
+                            style={{
+                                marginTop: 40
+                            }}
+                        >
+                            <Button
+                                color="orange"
+                                size="big"
+                                floated="right"
+                                style={{
+                                    marginBottom: 20
+                                }}
+                                onClick={() => navigate('/')}
+                            >
+                                Back
+                            </Button>
                             <MediaController
                                     style={{
                                         width: '100%',

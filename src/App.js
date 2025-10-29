@@ -23,6 +23,7 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfUse from './components/TermsOfUse';
 import ContactUs from './components/ContactUs';
 import PartnerWithUs from './components/PartnerWithUs';
+import Login from './components/Login';
 
 const { Media, MediaContextProvider } = createMedia({
   breakpoints: {
@@ -40,8 +41,8 @@ function App() {
           <Routes>
             <Route index element={<Home mobile />} />
             <Route path='/register'  element={<Register />} />
-            <Route path='/signin'  element={<SignIn />} />
-            <Route path='/play:videoid'  element={<PlayVideo />} />
+            <Route path='/signin'  element={<SignIn mobile />} />
+            <Route path='/play/:videoid'  element={<PlayVideo mobile />} />
             <Route path='/dashboard'  element={<Dashboard  mobile />} />
             <Route path='/accountsettings'  element={<AccountSettings />} />
             <Route path='/action'  element={<Action />} />
@@ -54,6 +55,7 @@ function App() {
             <Route path='termsofuse'  element={<TermsOfUse mobile />} />
             <Route path='contactus'  element={<ContactUs mobile />} />
             <Route path='partnerwithus'  element={<PartnerWithUs mobile />} />
+            <Route path='/login'  element={<Login  />} />
           </Routes>
         </BrowserRouter>
       </Media>
@@ -62,7 +64,7 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path='register'  element={<Register />} />
-            <Route path='signin'  element={<SignIn />} />
+            <Route path='/signin'  element={<SignIn />} />
             <Route path='/play/:videoid'  element={<PlayVideo />} />
             <Route path='dashboard'  element={<Dashboard />} />
             <Route path='accountsettings'  element={<AccountSettings />} />
@@ -82,6 +84,7 @@ function App() {
             <Route path='termsofuse'  element={<TermsOfUse />} />
             <Route path='contactus'  element={<ContactUs />} />
             <Route path='partnerwithus'  element={<PartnerWithUs />} />
+            <Route path='/login'  element={<Login />} />
           </Routes>
         </BrowserRouter>
       </Media>

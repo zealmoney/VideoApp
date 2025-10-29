@@ -107,7 +107,7 @@ const Navbar = () => {
                     </Menu.Item>
                     <Menu.Item
                         as='a'
-                        onClick={() => navigate('/signin')}
+                        onClick={() => navigate('/login')}
                     >
                         Sign In
                     </Menu.Item>

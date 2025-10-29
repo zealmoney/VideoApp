@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Carousel from "react-multi-carousel"
-import { Embed, Image, Segment } from "semantic-ui-react"
-import { getHorror } from "../api"
+import { Button, Embed, Icon, Image, Segment } from "semantic-ui-react"
+import { getHorror, getMyList } from "../api"
 import { useNavigate } from "react-router-dom"
 
 
@@ -38,6 +38,13 @@ const HorrorList = ({mobile}) => {
           .catch(console.log('An error has occured'))
     }
 
+    const addToList = (title, description, image, videoUrl, details) => () => {
+            let item = {title, description, image, videoUrl, details, email: localStorage.getItem("email")}
+            getMyList().post("/", item)
+             .then(() => alert(`${title} has been added to your list`))
+                .catch(console.log('An error has occured'))
+        }
+
     const navigate = useNavigate()
 
     return(
@@ -55,15 +62,41 @@ const HorrorList = ({mobile}) => {
                     {
                         HorrorMovies.map((h) => {
                             return(
-                             <div>
-                                <Embed 
-                                    id={h.id}
-                                    placeholder={h.image}
-                                    source={h.videoUrl}
-                                    style={{width: 270, height: 400, cursor: 'pointer'}}
-                                    onClick={() => navigate('/play/' + h.id)}
-                                />
-                             </div>
+                                <div 
+                                    class='container'
+                                    style={{textAlign: 'center'}} 
+                                    key={h.id}
+                                >                         
+                                    <img
+                                        class='image'
+                                        id={h.id}
+                                        src={h.image}
+                                        style={{
+                                            width: '100%', 
+                                            height: 400
+                                        }}
+                                    />
+
+                                    <div class='middle'>
+                                        <Icon 
+                                            link
+                                            name='play circle outline'
+                                            color='orange'
+                                            size='huge'
+                                            onClick={() => navigate('/play/' + h.id)}
+                                        />
+                                    </div>  
+
+                                    <div class='down'>
+                                        <Button
+                                            fluid   
+                                            color="orange"
+                                            onClick={addToList(h.title, h.description, h.image, h.videoUrl, h.details)}
+                                        >
+                                            Add to My List
+                                        </Button>
+                                    </div>      
+                                </div> 
                             )
                         })
                     }

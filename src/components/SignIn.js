@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 import { useGetRegisteredUsersQuery } from "../features/api/apiSlice"
 import getUsers from "../api"
 
-const SignIn = () => {
+const SignIn = ({mobile}) => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -36,7 +36,7 @@ const SignIn = () => {
     }
 
 
-    const signin = () => {
+    const signinClick = () => {
         const user = users.filter(u => u.email === email && u.password === password)[0]
         if(email === ''){
             setEmailError({content: 'Email address is required', pointing: 'below'})
@@ -54,81 +54,37 @@ const SignIn = () => {
     }
 
     return(
-        <>
-            <NavbarUser 
-                link_name="Register" 
-                link_route="/register"
-            />
+        <div>
+            
             <Segment
-                vertical
-                inverted
+                style={{padding: '100px'}}
             >
                 <Grid
                     textAlign="center"
                     verticalAlign="middle"
                     style={{
-                        height: '100vh'
-                    }}
+                        //height: '100vh'
+                    }} 
                 >
                     <Grid.Column
                         style={{
                             maxWidth: 450
                         }}
                     >
+                        <p>
+                            Sign In To Your Account
+                        </p>
                         <Header 
-                            as='h3'
-                            textAlign="center"
-                            content='Sign In To Your Account'
                             inverted
+                            as="h3"
+                            textAlign="center"
+                            content="Sign In To Your Account"
                         />
-                        <Form
-                            size="large"
-                        >
-                            <Segment
-                                stacked
-                                vertical
-                            >
-                                <Form.Input 
-                                    placeholder='Email Address'
-                                    fluid
-                                    icon="mail"
-                                    iconPosition="left"
-                                    type="email"
-                                    onChange={handleEmail}
-                                    error={emailError}
-                                    onClick={() => setEmailError(false)}
-                                />
-                                <Form.Input 
-                                    placeholder='Password'
-                                    fluid
-                                    icon="lock"
-                                    iconPosition="left"
-                                    type="password"
-                                    onChange={handlePassword}
-                                    error={passwordError}
-                                    onClick={() => setPasswordError(false)}
-                                />
-                                <Button
-                                    fluid
-                                    size="large"
-                                    color="orange"
-                                    onClick={signin}
-                                    loading={loading}
-                                >
-                                    Sign In
-                                </Button>
-                            </Segment>
-                        </Form>
-                        <Message>
-                            Don't have an account? &nbsp; 
-                            <Link to={'/register'}>Register</Link>
-                        </Message>
-                        
                     </Grid.Column>
                 </Grid>
-            </Segment>
-            <Footer />
-        </>
+            </Segment> 
+            
+        </div>
     )
 }
 

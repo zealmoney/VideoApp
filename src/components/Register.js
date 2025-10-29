@@ -81,7 +81,7 @@ const Register = () => {
         <>
             <NavbarUser 
                 link_name="Sign In" 
-                link_route="/signin"
+                link_route="/login"
             />
             <Segment
                 vertical
@@ -89,10 +89,7 @@ const Register = () => {
             >
                 <Grid
                     textAlign="center"
-                    verticalAlign="middle"
-                    style={{
-                        height: '100vh'
-                    }}
+                    //verticalAlign="middle"
                 >
                     <Grid.Column
                         style={{
@@ -104,6 +101,10 @@ const Register = () => {
                             textAlign="center"
                             content='Create An Account'
                             inverted
+                            style={{
+                                marginTop: 180,
+                                marginBottom: 20
+                            }}
                         />
                         {
                             msg ? <Message color="red">
@@ -170,7 +171,11 @@ const Register = () => {
                                 </Button>
                             </Segment>
                         </Form>
-                        <Message>
+                        <Message
+                            style={{
+                                marginBottom: 70
+                            }}
+                        >
                             Already have an account? &nbsp; 
                             <Link to={'/signin'}>Sign In</Link>
                         </Message>

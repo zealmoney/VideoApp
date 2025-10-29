@@ -43,9 +43,9 @@ const DashboardNavbar = () => {
           .catch(console.log('An error has occured'))
     }*/}
 
-    const {data: popularmovies, isSuccess} = useGetPopularMoviesQuery()
+    const {data: videos, isSuccess} = useGetVideosQuery()
     if(isSuccess){
-        popularmovies.map((p) => {
+        videos.map((p) => {
             source.push({
                 'id': p.id,
                 'title': p.title,
@@ -184,7 +184,6 @@ const DashboardNavbar = () => {
                             loading={loading}
                             placeholder='Search Movies'
                             onResultSelect = {(e, data) =>{
-                                //dispatch({type: 'UPDATE_SELECTION', selection: data.result.title})
                                 navigate('/play/' + data.result.id)
                             }}
                             onSearchChange={handleSearchChange}

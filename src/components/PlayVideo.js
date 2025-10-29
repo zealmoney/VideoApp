@@ -1,4 +1,4 @@
-import { Grid, GridColumn, GridRow, Header, Image, Segment } from "semantic-ui-react"
+import { Container, Divider, Grid, GridColumn, GridRow, Header, Image, Segment } from "semantic-ui-react"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import { MediaController,
@@ -34,174 +34,92 @@ const PlayVideo = ({mobile}) => {
     let titleUrl = ""
     let descriptionUrl = ""
     let detailsUrl = ""
+
+    let videoDetails
+
     if(isSuccess){
         const video = videos.filter((v) => v.id === parseInt(params.videoid))[0]
         //console.log("This are the Videos " + video)
+        //console.log("These are the Videos " + JSON.stringify(videos))
+        //const video = videos.filter((v) => v.id == 2)[0]
+        //console.log("This is the Video " + JSON.stringify(video))
         if(video){
-            videoUrl = video.videoUrl
-            imageUrl = video.image
             titleUrl = video.title
+            imageUrl = video.image
             descriptionUrl = video.description
             detailsUrl = video.details
+             videoDetails = <ReactPlayer 
+                                    slot="media"
+                                    controls={false}
+                                    src={video.videoUrl}
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        "--controls": "none"
+                                    }}
+                            >
+
+                            </ReactPlayer>
         }
     }
-    
-   
-    
-
-    if(mobile){
-        return(
-            <>
-               {
-                    localStorage.getItem("email") ?
-                    <DashboardNavbarMobile /> :
-                    <NavbarMobile />
-                }
-                <Segment
-                    inverted
-                    vertical
-                >
-                    <Grid 
-                        textAlign="center" 
-                        verticalAlign="middle"
-                        style={{
-                            height: '100vh'
-                        }}
-                    >
-                        <Grid.Column width={12}>
-                            <Header 
-                                content={params.videoid}
-                            />
+  
+    return(
+        <>
+            {
+                localStorage.getItem("email") ?
+                <DashboardNavbar /> :
+                <Navbar />
+            }
+            <Segment vertical inverted>
+                <Container>
+                <Grid>
+                    <GridRow>
+                        <GridColumn width={16}>
                             <MediaController
-                                style={{
-                                    width: '100%',
-                                    aspectRatio: '16/9'
-                                }}
-                            >
-                                <ReactPlayer 
-                                    slot="media"
-                                    controls={false}
-                                    src={videoUrl}
                                     style={{
                                         width: '100%',
-                                        height: '100%',
-                                        "--controls": "none"
+                                        aspectRatio: '16/9'
                                     }}
                                 >
-
-                                </ReactPlayer>
-                                <MediaControlBar>
-                                    <MediaPlayButton />
-                                    <MediaSeekBackwardButton seekOffset={10} />
-                                    <MediaSeekForwardButton seekOffset={10} />
-                                    <MediaTimeRange />
-                                    <MediaTimeDisplay showDuration />
-                                    <MediaMuteButton />
-                                    <MediaVolumeRange />
-                                    <MediaPlaybackRateButton />
-                                    <MediaFullscreenButton />
-                                </MediaControlBar>
-                            </MediaController>
-                        </Grid.Column>
-                    </Grid>
-                </Segment>
-                <Footer />
-            </>
-        )
-    }else{
-        return(
-            <>
-                {
-                    localStorage.getItem("email") ?
-                    <DashboardNavbar /> :
-                    <Navbar />
-                }
-                <Segment
-                    inverted
-                    vertical
-                >
-                    <Grid 
-                        textAlign="center" 
-                        verticalAlign="middle"
-                        style={{
-                            //height: '100vh'
-                        }}
-                    >
-                        <GridRow>
-                        <Grid.Column width={12}>
-                            <MediaController
+                                    {videoDetails}
+                                    <MediaControlBar>
+                                        <MediaPlayButton />
+                                        <MediaSeekBackwardButton seekOffset={10} />
+                                        <MediaSeekForwardButton seekOffset={10} />
+                                        <MediaTimeRange />
+                                        <MediaTimeDisplay showDuration />
+                                        <MediaMuteButton />
+                                        <MediaVolumeRange />
+                                        <MediaPlaybackRateButton />
+                                        <MediaFullscreenButton />
+                                    </MediaControlBar>
+                                </MediaController>
+                                    
+                        </GridColumn>
+                    </GridRow>
+                    <Divider inverted />
+                    <GridRow>
+                        <GridColumn width={4}>
+                            <Image fluid src={imageUrl} />                
+                        </GridColumn>
+                        <GridColumn width={6}>
+                            <Header inverted as='h2' content={titleUrl} />
+                            <p 
                                 style={{
-                                    width: '100%',
-                                    aspectRatio: '16/9'
+                                    fontSize: '1.5em',
                                 }}
                             >
-                                <ReactPlayer 
-                                    slot="media"
-                                    controls={false}
-                                    src="https://www.youtube.com/watch?v=IFlXeFwA_2A"
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        "--controls": "none"
-                                    }}
-                                >
-
-                                </ReactPlayer>
-                                <MediaControlBar>
-                                    <MediaPlayButton />
-                                    <MediaSeekBackwardButton seekOffset={10} />
-                                    <MediaSeekForwardButton seekOffset={10} />
-                                    <MediaTimeRange />
-                                    <MediaTimeDisplay showDuration />
-                                    <MediaMuteButton />
-                                    <MediaVolumeRange />
-                                    <MediaPlaybackRateButton />
-                                    <MediaFullscreenButton />
-                                </MediaControlBar>
-                            </MediaController>
-                        </Grid.Column>
-                        </GridRow>
-                        <GridRow>
-                            <GridColumn width={4}>
-                                <Image size="large" src={imageUrl} />
-                            </GridColumn>
-                            <GridColumn 
-                                width={8}
-                                textAlign="left"
-                            >
-                                <Header
-                                    inverted
-                                    as="h1"
-                                    style={{
-                                        fontSize: '2em',
-                                        marginTop: '0.5em'
-                                    }}
-                                >
-                                    {titleUrl}
-                                </Header> 
-                                <Header 
-                                    inverted
-                                    as="h2"
-                                    style={{
-                                        fontSize: '1.2em',
-                                    }}
-                                    content={descriptionUrl}
-                                />
-                                <p 
-                                    style={{
-                                        fontSize: '1.5em',
-                                    }}
-                                >
-                                    {detailsUrl}    
-                                </p>  
-                            </GridColumn>
-                        </GridRow>
-                    </Grid>
-                </Segment>
-                <Footer />
-            </>
-        )
-    }
+                                {detailsUrl}    
+                            </p>                 
+                        </GridColumn>
+                    </GridRow>
+                </Grid>
+                </Container>
+            </Segment>
+            <Footer />
+        </>
+    )
+    
 }
 
 export default PlayVideo

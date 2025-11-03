@@ -37,9 +37,6 @@ function Wallpaper({mobile}) {
             </h3>
             <Segment
               inverted
-              style={{
-                backgroundColor: 'orange',
-              }}
             >
             <p 
               style={{

@@ -37,12 +37,13 @@ function Wallpaper({mobile}) {
             </h3>
             <Segment
               inverted
+              secondary
             >
             <p 
               style={{
                 fontFamily: 'Momo Trust Display',
                 fontWeight: 400,
-                fontSize: 20,
+                fontSize: 16,
                 fontStyle: 'normal'
               }}
             >

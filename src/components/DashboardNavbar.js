@@ -87,7 +87,7 @@ const DashboardNavbar = () => {
     const signoutClick = () => {
         localStorage.removeItem("email")
         localStorage.removeItem("firstname")
-        navigate('/signin')
+        navigate('/login')
     }
 
     return(

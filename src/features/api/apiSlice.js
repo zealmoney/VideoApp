@@ -23,7 +23,11 @@ export const apiSlice = createApi({
         }),
         getMymovieList: builder.query({
             query: () => '/mylists'
+        }), 
+        getWallpaper: builder.query({
+            query: () => '/wallpapers' 
         })
+
     })
 })
 
@@ -32,5 +36,6 @@ export const {
     useGetRegisteredUsersQuery,
     useGetPopularMoviesQuery,
     useGetVideosQuery,
-    useGetMymovieListQuery
+    useGetMymovieListQuery,
+    useGetWallpaperQuery
 } = apiSlice

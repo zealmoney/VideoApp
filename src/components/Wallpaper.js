@@ -5,68 +5,64 @@ import horrified from '../images/horrified.jpeg'
 import War2 from '../images/War2.jpeg'
 import love from '../images/love.jpeg'
 import lost from '../images/lost.jpeg'
-import { Image } from 'semantic-ui-react';
-//import Image  from 'react-bootstrap/Image';
+import { Image, Segment } from 'semantic-ui-react';
+import { useGetWallpaperQuery } from '../features/api/apiSlice';
+import { useNavigate } from 'react-router-dom';
 
 function Wallpaper({mobile}) {
+
+  const navigate = useNavigate()
+
+  const {data: wallpapers, isSuccess} = useGetWallpaperQuery()
+  let wallpaperDetails
+  if(isSuccess){
+    wallpaperDetails = wallpapers.map((w) => (    
+        <Carousel.Item>
+          <Image 
+            style={{height: mobile ? 400 : ''}} 
+            fluid  
+            src={w.image}  
+            onClick={() => navigate('/play/' + w.id)}
+          />
+          <Carousel.Caption>
+            <h3 
+              style={{
+                fontFamily: 'Irish Grover',
+                fontWeight: 700,
+                fontSize: 60,
+                fontStyle: 'normal'
+                }}
+            >
+              {w.title}
+            </h3>
+            <Segment
+              inverted
+              style={{
+                backgroundColor: 'orange',
+              }}
+            >
+            <p 
+              style={{
+                fontFamily: 'Momo Trust Display',
+                fontWeight: 400,
+                fontSize: 20,
+                fontStyle: 'normal'
+              }}
+            >
+              {w.details}
+            </p>
+            </Segment>
+          </Carousel.Caption>
+        </Carousel.Item>
+    ))
+                       
+  }
+
   return (
     <div>
-    <Carousel>
-      <Carousel.Item>
-        <div style={{}}>
-            <Image style={{height: mobile ? 400 : ''}} fluid  src={clash}  />
-            <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div style={{}}>
-            <Image style={{height: mobile ? 400 : ''}} fluid  src={love}  />
-            <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div style={{}}>
-            <Image style={{height: mobile ? 400 : ''}} fluid  src={ghost}  />
-            <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div style={{}}>
-            <Image style={{height: mobile ? 400 : ''}} fluid  src={War2}  />
-            <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div style={{}}>
-            <Image style={{height: mobile ? 400 : ''}} fluid  src={horrified}  />
-            <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div style={{}}>
-            <Image style={{height: mobile ? 400 : ''}} fluid  src={lost}  />
-            <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-        </div>
-      </Carousel.Item>
-    </Carousel>
+      <Carousel>        
+        {wallpaperDetails}
+      </Carousel>
     </div>
   );
 }

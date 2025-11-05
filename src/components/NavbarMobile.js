@@ -14,6 +14,7 @@ const NavbarMobile = () => {
                 <Menu.Item
                     as='a'
                     header
+                    position="left"
                 >
                     <Link to={'/'}>
                         VIDEO APP
@@ -32,6 +33,7 @@ const NavbarMobile = () => {
                         </Dropdown.Item>
                         <Dropdown.Item
                             onClick={() => navigate('/tvshow')}
+                            position="left"
                         >
                             TV Shows
                         </Dropdown.Item>

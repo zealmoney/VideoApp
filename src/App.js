@@ -48,8 +48,8 @@ function App() {
             <Route path='/action'  element={<Action />} />
             <Route path='/drama'  element={<Drama />} />
             <Route path='/allcategories'  element={<AllCategories />} />
-            <Route path='movies'  element={<Movies />} />
-            <Route path='tvshow'  element={<TvShows />} />
+            <Route path='movies'  element={<Movies mobile />} />
+            <Route path='tvshow'  element={<TvShows mobile />} />
             <Route path='aboutus'  element={<AboutUs mobile />} />
             <Route path='privacypolicy'  element={<PrivacyPolicy mobile />} />
             <Route path='termsofuse'  element={<TermsOfUse mobile />} />

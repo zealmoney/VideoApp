@@ -37,16 +37,18 @@ function Wallpaper({mobile}) {
             </h3>
             <Segment
               inverted
+              color='orange'
               style={{
                 padding: 50,
-                backgroundColor: '#CC5500'
+                opacity: 0.7
+                //backgroundColor: '#3B3B3B'
               }}
             >
             <p 
               style={{
                 fontFamily: 'Momo Trust Display',
                 fontWeight: 400,
-                fontSize: 18,
+                fontSize: 22,
                 fontStyle: 'normal'
               }}
             >

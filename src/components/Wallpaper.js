@@ -47,7 +47,7 @@ function Wallpaper({mobile}) {
               style={{
                 fontFamily: 'Momo Trust Display',
                 fontWeight: 400,
-                fontSize: 22,
+                fontSize: mobile ? 14:  22,
                 fontStyle: 'normal',
                 color: '#fff'
               }}

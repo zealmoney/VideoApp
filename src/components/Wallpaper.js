@@ -38,7 +38,8 @@ function Wallpaper({mobile}) {
             <Segment
               inverted
               style={{
-                padding: 50
+                padding: 50,
+                backgroundColor: '#CC5500'
               }}
             >
             <p 

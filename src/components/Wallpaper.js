@@ -37,7 +37,6 @@ function Wallpaper({mobile}) {
             </h3>
             <Segment
               inverted
-              color='orange'
               style={{
                 padding: 50,
                 opacity: 0.7

@@ -39,7 +39,7 @@ function Wallpaper({mobile}) {
               inverted
               style={{
                 padding: 50,
-                opacity: 0.7
+                opacity: 0.4
                 //backgroundColor: '#3B3B3B'
               }}
             >

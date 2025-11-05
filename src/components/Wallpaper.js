@@ -19,7 +19,10 @@ function Wallpaper({mobile}) {
     wallpaperDetails = wallpapers.map((w) => (    
         <Carousel.Item>
           <Image 
-            style={{height: mobile ? 400 : ''}} 
+            style={{
+              height: mobile ? 400 : '',
+              marginTop: mobile ? 50 : '',
+            }} 
             fluid  
             src={w.image}  
             onClick={() => navigate('/play/' + w.id)}

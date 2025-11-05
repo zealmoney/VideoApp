@@ -29,7 +29,7 @@ function Wallpaper({mobile}) {
               style={{
                 fontFamily: 'Irish Grover',
                 fontWeight: 700,
-                fontSize: 60,
+                fontSize: mobile ? 30 : 60,
                 fontStyle: 'normal'
                 }}
             >
@@ -38,7 +38,7 @@ function Wallpaper({mobile}) {
             <Segment
               inverted
               style={{
-                padding: 50,
+                padding: mobile ? 25 : 50,
                 opacity: 0.5
                 //backgroundColor: '#3B3B3B'
               }}

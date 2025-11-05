@@ -39,7 +39,7 @@ function Wallpaper({mobile}) {
               inverted
               style={{
                 padding: 50,
-                opacity: 0.4
+                opacity: 0.5
                 //backgroundColor: '#3B3B3B'
               }}
             >
@@ -48,7 +48,8 @@ function Wallpaper({mobile}) {
                 fontFamily: 'Momo Trust Display',
                 fontWeight: 400,
                 fontSize: 22,
-                fontStyle: 'normal'
+                fontStyle: 'normal',
+                color: '#fff'
               }}
             >
               {w.details}

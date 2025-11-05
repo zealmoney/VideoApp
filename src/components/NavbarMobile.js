@@ -14,7 +14,6 @@ const NavbarMobile = () => {
                 <Menu.Item
                     as='a'
                     header
-                    position="left"
                 >
                     <Link to={'/'}>
                         VIDEO APP

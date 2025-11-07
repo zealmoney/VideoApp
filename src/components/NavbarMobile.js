@@ -19,6 +19,7 @@ const NavbarMobile = () => {
                         VIDEO APP
                     </Link>  
                 </Menu.Item>
+                <Menu.Item>
                 <Dropdown
                     simple
                     item
@@ -32,16 +33,16 @@ const NavbarMobile = () => {
                         </Dropdown.Item>
                         <Dropdown.Item
                             onClick={() => navigate('/tvshow')}
-                            position="left"
+
                         >
                             TV Shows
                         </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
+                </Menu.Item>
                 <Menu.Item
                     as='a'
                     header
-                    position="right"
                 >
                     <Button
                         color="orange"

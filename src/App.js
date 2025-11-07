@@ -40,7 +40,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route index element={<Home mobile />} />
-            <Route path='/register'  element={<Register />} />
+            <Route path='/register'  element={<Register mobile />} />
             <Route path='/signin'  element={<SignIn mobile />} />
             <Route path='/play/:videoid'  element={<PlayVideo mobile />} />
             <Route path='/dashboard'  element={<Dashboard  mobile />} />

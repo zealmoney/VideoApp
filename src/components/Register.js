@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Button, Form, Grid, Header, Icon, Message, Modal, Segment } from "semantic-ui-react";
+import { Button, Container, Form, Grid, Header, Icon, Message, Modal, Segment } from "semantic-ui-react";
 import Footer from "./Footer";
 import NavbarUser from "./NavbarUser";
 import { useReducer, useState } from "react";
@@ -21,7 +21,7 @@ import { useAddRegisterMutation } from "../features/api/apiSlice";
     }
  }
 
-const Register = () => {
+const Register = ({mobile}) => {
 
     const [state, dispatch] = useReducer(modalReducer, initialState)
     const {open, size} = state
@@ -87,9 +87,10 @@ const Register = () => {
                 vertical
                 inverted
             >
+                <Container>
                 <Grid
                     textAlign="center"
-                    //verticalAlign="middle"
+
                 >
                     <Grid.Column
                         style={{
@@ -102,7 +103,7 @@ const Register = () => {
                             content='Create An Account'
                             inverted
                             style={{
-                                marginTop: 180,
+                                marginTop: mobile ? 60 : 180,
                                 marginBottom: 20
                             }}
                         />
@@ -182,6 +183,7 @@ const Register = () => {
                         
                     </Grid.Column>
                 </Grid>
+                </Container>
             </Segment>      
             <Footer />
             <Modal

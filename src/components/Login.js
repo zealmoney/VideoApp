@@ -1,11 +1,11 @@
-import { Button, Form, FormInput, Grid, GridColumn, Header, Message, Segment } from "semantic-ui-react"
+import { Button, Container, Form, FormInput, Grid, GridColumn, Header, Message, Segment } from "semantic-ui-react"
 import Footer from "./Footer"
 import NavbarUser from "./NavbarUser"
 import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import getUsers from "../api"
 
-const Login = () => {
+const Login = ({mobile}) => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -60,6 +60,7 @@ const Login = () => {
                 inverted
                 vertical
             >
+                <Container>
                 <Grid
                     textAlign="center"
                 >
@@ -67,7 +68,7 @@ const Login = () => {
                         <Header 
                             inverted 
                             style={{
-                                marginTop: 180,
+                                marginTop: mobile ? 60 : 180,
                                 marginBottom: 20
                             }}
                         >
@@ -114,6 +115,7 @@ const Login = () => {
                         </Message>
                     </GridColumn>
                 </Grid>
+                </Container>
             </Segment>
             <Footer />
         </div>

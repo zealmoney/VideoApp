@@ -55,7 +55,7 @@ function App() {
             <Route path='termsofuse'  element={<TermsOfUse mobile />} />
             <Route path='contactus'  element={<ContactUs mobile />} />
             <Route path='partnerwithus'  element={<PartnerWithUs mobile />} />
-            <Route path='/login'  element={<Login  />} />
+            <Route path='/login'  element={<Login mobile  />} />
           </Routes>
         </BrowserRouter>
       </Media>

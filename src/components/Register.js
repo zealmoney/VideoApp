@@ -178,7 +178,7 @@ const Register = ({mobile}) => {
                             }}
                         >
                             Already have an account? &nbsp; 
-                            <Link to={'/signin'}>Sign In</Link>
+                            <Link to={'/login'}>Sign In</Link>
                         </Message>
                         
                     </Grid.Column>

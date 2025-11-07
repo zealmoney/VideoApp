@@ -19,7 +19,6 @@ const NavbarMobile = () => {
                         VIDEO APP
                     </Link>  
                 </Menu.Item>
-                <Menu.Item position="left">
                 <Dropdown
                     simple
                     item
@@ -39,7 +38,6 @@ const NavbarMobile = () => {
                         </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                </Menu.Item>
                 <Menu.Item
                     as='a'
                     header
@@ -47,6 +45,7 @@ const NavbarMobile = () => {
                 >
                     <Button
                         color="orange"
+                        size="tiny"
                         onClick={() => navigate('/register') }
                     >
                         Register

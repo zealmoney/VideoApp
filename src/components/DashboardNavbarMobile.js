@@ -20,7 +20,6 @@ const DashboardNavbarMobile = () => {
                         VIDEO APP
                     </Link>  
                 </Menu.Item>
-                <Menu.Item position="right"></Menu.Item>
                 <Dropdown
                     simple
                     item

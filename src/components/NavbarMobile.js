@@ -19,7 +19,7 @@ const NavbarMobile = () => {
                         VIDEO APP
                     </Link>  
                 </Menu.Item>
-                <Menu.Item>
+                <Menu.Item position="left">
                 <Dropdown
                     simple
                     item
@@ -43,6 +43,7 @@ const NavbarMobile = () => {
                 <Menu.Item
                     as='a'
                     header
+                    position="left"
                 >
                     <Button
                         color="orange"

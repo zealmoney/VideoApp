@@ -80,6 +80,7 @@ const PopularMovies = ({mobile}) => {
                                             key={v.id}
                                         >                         
                                             <img
+                                                alt="popularMovieImage"
                                                 class='image'
                                                 id={v.id}
                                                 src={v.image}

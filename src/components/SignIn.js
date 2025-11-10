@@ -1,25 +1,22 @@
-import { Button, Form, Grid, Header, Message, Segment } from "semantic-ui-react"
-import NavbarUser from "./NavbarUser"
-import { Link, useNavigate } from "react-router-dom"
-import Footer from "./Footer"
+import { Grid, Header, Segment } from "semantic-ui-react"
+import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { useGetRegisteredUsersQuery } from "../features/api/apiSlice"
 import getUsers from "../api"
 
 const SignIn = ({mobile}) => {
 
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    //const [email, setEmail] = useState('')
+    //const [password, setPassword] = useState('')
 
     const [users, setUsers] = useState([])  
 
-    const [emailError, setEmailError] = useState(false)
-    const [passwordError, setPasswordError] = useState(false)
+    //const [emailError, setEmailError] = useState(false)
+    //const [passwordError, setPasswordError] = useState(false)
 
-    const [loading, setLoading] = useState(false)
+    //const [loading, setLoading] = useState(false)
 
-    const handleEmail = e => setEmail(e.target.value)
-    const handlePassword = e => setPassword(e.target.value)
+    //const handleEmail = e => setEmail(e.target.value)
+    //const handlePassword = e => setPassword(e.target.value)
 
     const navigate = useNavigate()
 
@@ -36,7 +33,7 @@ const SignIn = ({mobile}) => {
     }
 
 
-    const signinClick = () => {
+    {/*const signinClick = () => {
         const user = users.filter(u => u.email === email && u.password === password)[0]
         if(email === ''){
             setEmailError({content: 'Email address is required', pointing: 'below'})
@@ -51,7 +48,7 @@ const SignIn = ({mobile}) => {
                 navigate("/dashboard")
             }, 3000)    
         }
-    }
+    }*/}
 
     return(
         <div>

@@ -68,6 +68,7 @@ const ThrillerList = ({mobile}) => {
                                     key={t.id}
                                 >                         
                                     <img
+                                        alt="thrillerImage"
                                         class='image'
                                         id={t.id}
                                         src={t.image}

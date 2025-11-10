@@ -68,6 +68,7 @@ const HorrorList = ({mobile}) => {
                                     key={h.id}
                                 >                         
                                     <img
+                                        alt="horrorImage"
                                         class='image'
                                         id={h.id}
                                         src={h.image}

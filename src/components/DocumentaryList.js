@@ -68,6 +68,7 @@ const DocumentaryList = ({mobile}) => {
                                     key={d.id}
                                 >                         
                                     <img
+                                        alt="documentaryImage"
                                         class='image'
                                         id={d.id}
                                         src={d.image}

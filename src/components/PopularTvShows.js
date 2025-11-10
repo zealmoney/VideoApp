@@ -78,6 +78,7 @@ const PopularTvShows = ({mobile}) => {
                                             key={v.id}
                                         >                         
                                             <img
+                                                alt="tvshowImage"
                                                 class='image'
                                                 id={v.id}
                                                 src={v.image}

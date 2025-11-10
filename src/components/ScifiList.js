@@ -68,6 +68,7 @@ const ScifiList = ({mobile}) => {
                                     key={s.id}
                                 >                         
                                     <img
+                                        alt="scifiImage"
                                         class='image'
                                         id={s.id}
                                         src={s.image}

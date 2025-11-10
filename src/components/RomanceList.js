@@ -68,6 +68,7 @@ const RomanceList = ({mobile}) => {
                                     key={r.id}
                                 >                         
                                     <img
+                                        alt="romanceImage"
                                         class='image'
                                         id={r.id}
                                         src={r.image}

@@ -68,6 +68,7 @@ const DramaList = ({mobile}) => {
                                     key={d.id}
                                 >                         
                                     <img
+                                        alt="dramaImage"
                                         class='image'
                                         id={d.id}
                                         src={d.image}

@@ -84,7 +84,7 @@ const PlayVideo = ({mobile}) => {
                         >
                             <Button
                                 color="orange"
-                                size="big"
+                                size={mobile ? "tiny" : "big"}
                                 floated="right"
                                 style={{
                                     marginBottom: 20
@@ -117,14 +117,14 @@ const PlayVideo = ({mobile}) => {
                     </GridRow>
                     <Divider inverted />
                     <GridRow>
-                        <GridColumn width={4}>
+                        <GridColumn width={6}>
                             <Image fluid src={imageUrl} />                
                         </GridColumn>
-                        <GridColumn width={6}>
+                        <GridColumn width={10}>
                             <Header inverted as='h2' content={titleUrl} />
                             <p 
                                 style={{
-                                    fontSize: '1.5em',
+                                    fontSize: mobile ? '0.7em' : '1.5em',
                                 }}
                             >
                                 {detailsUrl}    

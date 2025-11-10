@@ -41,7 +41,7 @@ const AllCategories = ({mobile}) => {
                 >
                     <Grid 
                         textAlign="center" 
-                        verticalAlign="middle"
+                        //verticalAlign="middle"
                     >
                         <Grid.Row>
                             <Grid.Column>

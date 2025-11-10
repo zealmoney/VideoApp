@@ -18,7 +18,7 @@ const ContactUs = () => {
             >
                 <Grid
                     textAlign="center"
-                    verticalAlign="middle"
+                    //verticalAlign="middle"
                     style={{
                         height: '100vh'
                     }}

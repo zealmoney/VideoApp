@@ -14,10 +14,9 @@ const NavbarMobile = () => {
                 <Menu.Item
                     as='a'
                     header
-                >
-                    <Link to={'/'}>
-                        VIDEO APP
-                    </Link>  
+                    onClick={() => navigate('/')}
+                >   
+                        VIDEO APP 
                 </Menu.Item>
                 <Dropdown
                     simple

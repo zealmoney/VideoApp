@@ -15,10 +15,9 @@ const DashboardNavbarMobile = () => {
                     as='a'
                     header
                     position="left"
+                    onClick={() => navigate('/')}
                 >
-                    <Link to={'/'}>
                         VIDEO APP
-                    </Link>  
                 </Menu.Item>
                 <Dropdown
                     simple

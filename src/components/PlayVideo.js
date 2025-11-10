@@ -13,18 +13,11 @@ import { MediaController,
   MediaMuteButton,
   MediaFullscreenButton } from "media-chrome/react"
 import ReactPlayer from 'react-player'
-import { use, useEffect, useState } from "react"
 import DashboardNavbar from "./DashboardNavbar"
-import DashboardNavbarMobile from "./DashboardNavbarMobile"
-import NavbarMobile from "./NavbarMobile"
 import { useNavigate, useParams } from "react-router-dom"
-import getVideos from "../api"
 import { useGetVideosQuery } from "../features/api/apiSlice"
-//import { useGetVideosQuery } from "../features/api/apiSlice"
 
 const PlayVideo = ({mobile}) => {
-
-    const [url, setUrl] = useState()
 
     const params = useParams()
 

@@ -1,6 +1,6 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Button, Embed, Header, Icon, Image, Segment } from 'semantic-ui-react';
+import { Button, Header, Icon, Segment } from 'semantic-ui-react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getMyList, getPopularMovies } from '../api';

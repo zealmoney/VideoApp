@@ -1,8 +1,7 @@
-import { Container, Grid, Header, List, Segment } from "semantic-ui-react"
+import { Grid, Header, Segment } from "semantic-ui-react"
 import Footer from "./Footer"
 import DashboardNavbar from "./DashboardNavbar"
 import DashboardNavbarMobile from "./DashboardNavbarMobile"
-import ActionList from "./ActionList"
 import ThrillerList from "./ThrillerList"
 
 const Thrillers = ({mobile}) => {

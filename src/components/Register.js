@@ -45,8 +45,6 @@ const Register = ({mobile}) => {
 
     const [msg, setMsg] = useState(false)
 
-    const navigate = useNavigate()
-
     const [addRegister, {isLoading}] = useAddRegisterMutation()
     const saveRegister = [firstname, email, gender, password].every(Boolean) && !isLoading
 
@@ -69,10 +67,7 @@ const Register = ({mobile}) => {
                     setGender("")
                     setPassword("")
                     setLoading(false)
-                    //dispatch({type: 'open', size: 'mini'})
-                    //alert("Register was successful")
                     setMsg(true)
-                    //navigate('/signin')
             }
         }
     }
@@ -110,7 +105,7 @@ const Register = ({mobile}) => {
                         {
                             msg ? <Message color="red">
                                 Registration Successful <br/>
-                                Please <Link to={'/signin'}>Sign In</Link> to continue
+                                Please <Link to={'/login'}>Sign In</Link> to continue
                             </Message> : ""
                         }
                         

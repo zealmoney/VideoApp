@@ -1,20 +1,7 @@
-import { Button, Dropdown, Form, Grid, Header, Image, Message, Segment } from "semantic-ui-react"
+import { Button, Form, Grid, Header, Message, Segment } from "semantic-ui-react"
 import DashboardNavbar from "./DashboardNavbar"
 import Footer from "./Footer"
 import { useState } from "react"
-
- const Gender = [
-    {
-        key: 1,
-        text: 'Male',
-        value: 'Male'     
-    },
-    {
-        key: 2,
-        text: 'Female',
-        value: 'Female'     
-    },
- ]
 
 
 const AccountSettings = ({mobile}) => {
@@ -23,8 +10,6 @@ const AccountSettings = ({mobile}) => {
     const [email, setEmail] = useState(localStorage.getItem("email"))
     const [gender, setGender] = useState(localStorage.getItem("gender"))
 
-    const [firstnameError, setFirstnameError] = useState(false)
-    const [emailError, setEmailError] = useState(false)
     const [genderError, setGenderError] = useState(false)
 
     const handleFirstname = e => setFirstname(e.target.value)
@@ -41,6 +26,9 @@ const AccountSettings = ({mobile}) => {
         }else if(email === ''){
             setErrorMessage("Please enter your email address")
             setMsg(true)
+        }else if(gender === ''){
+            setErrorMessage("Please select your gender")
+            setMsg(true)
         }
     }
 
@@ -53,7 +41,6 @@ const AccountSettings = ({mobile}) => {
             >
                 <Grid 
                     textAlign="center" 
-                    verticalAlign="middle"
                     style={{
                         height: '100vh'
                     }}
@@ -92,7 +79,6 @@ const AccountSettings = ({mobile}) => {
                                     height: 50,
                                     borderRadius: 10
                                 }}
-                                error={firstnameError}
                                 onChange={handleFirstname}
                                 onClick={() => setMsg(false)}
                             />
@@ -105,7 +91,6 @@ const AccountSettings = ({mobile}) => {
                                     height: 50,
                                     borderRadius: 10
                                 }}
-                                error={emailError}
                                 onChange={handleEmail}
                                 onClick={() => setMsg(false)}
                             />

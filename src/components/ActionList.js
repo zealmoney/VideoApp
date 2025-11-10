@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import Carousel from "react-multi-carousel"
-import { Button, Embed, Icon, Image, Reveal, RevealContent, Segment } from "semantic-ui-react"
+import { Button, Icon, Segment } from "semantic-ui-react"
 import { getActionMovies, getMyList } from "../api"
 import { useNavigate } from "react-router-dom"
 import '../css/style.css'
@@ -28,13 +28,6 @@ const ActionList = ({mobile}) => {
     }
 
     const [actionMovies, setActionMovies] = useState([])
-
-    const [title, setTitle] = useState("")
-    const [description, setDescription] = useState("")
-    const [image, setImage] = useState("")
-    const [videoUrl, setVideoUrl] = useState("")
-    const [details, setDetails] = useState("")
-    const [email, setEmail] = useState("")
 
     useEffect(() => {
         getAllActionMovies()

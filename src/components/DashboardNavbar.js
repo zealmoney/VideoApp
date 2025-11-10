@@ -1,9 +1,8 @@
 import _ from "lodash"
-import { useCallback, useEffect, useReducer, useRef, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import { Button, Container, Dropdown, Icon, Menu, Search, Segment } from "semantic-ui-react"
-import { useGetPopularMoviesQuery, useGetVideosQuery } from "../features/api/apiSlice"
-import getPopularMovies, { getPopularTvshow } from "../api"
+import { useCallback, useReducer, useRef } from "react"
+import { useNavigate } from "react-router-dom"
+import { Dropdown, Icon, Menu, Search, Segment } from "semantic-ui-react"
+import { useGetVideosQuery } from "../features/api/apiSlice"
 
 const intialState = {
         loading: false,
@@ -30,18 +29,6 @@ const intialState = {
 const DashboardNavbar = () => {
 
     let source = []
-
-    {/*useEffect(() => {
-        getAllVideos()
-    }, [])
-
-    const [source, setVideos] = useState([])
-
-    const getAllVideos = () => {
-        getPopularMovies().get("/")
-         .then((res) => setVideos(res.data))
-          .catch(console.log('An error has occured'))
-    }*/}
 
     const {data: videos, isSuccess} = useGetVideosQuery()
     if(isSuccess){

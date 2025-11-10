@@ -1,5 +1,5 @@
-import { Link, useNavigate } from "react-router-dom"
-import { Button, Container, Dropdown, Icon, Menu, Search, Segment } from "semantic-ui-react"
+import { useNavigate } from "react-router-dom"
+import { Dropdown, Menu } from "semantic-ui-react"
 
 const DashboardNavbarMobile = () => {
 

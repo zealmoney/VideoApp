@@ -18,9 +18,6 @@ const Footer = ({mobile}) => {
                 <Grid
                     stackable
                     divided
-                    //style={{
-                       // padding: mobile ? '20px 10px' : '20px 80px',
-                    //}}
                 >
                     
                     <Grid.Column width={4}>

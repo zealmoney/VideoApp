@@ -1,5 +1,5 @@
-import { Link, useNavigate } from "react-router-dom"
-import { Button, Container, Dropdown, Menu, Segment } from "semantic-ui-react"
+import { useNavigate } from "react-router-dom"
+import { Button, Dropdown, Menu, Segment } from "semantic-ui-react"
 
 const Navbar = () => {
 

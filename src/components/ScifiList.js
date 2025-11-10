@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Carousel from "react-multi-carousel"
-import { Button, Embed, Icon, Image, Segment } from "semantic-ui-react"
-import { getActionMovies, getMyList, getScifi } from "../api"
+import { Button, Icon, Segment } from "semantic-ui-react"
+import { getMyList, getScifi } from "../api"
 import { useNavigate } from "react-router-dom"
 
 

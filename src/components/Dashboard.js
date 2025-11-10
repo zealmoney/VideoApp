@@ -1,6 +1,5 @@
-import { Container, Grid, Header, List, Segment } from "semantic-ui-react"
+import { Grid, Header, Segment } from "semantic-ui-react"
 import Footer from "./Footer"
-import Navbar from "./Navbar"
 import MyList from "./MyList"
 import DashboardNavbar from "./DashboardNavbar"
 import DashboardNavbarMobile from "./DashboardNavbarMobile"

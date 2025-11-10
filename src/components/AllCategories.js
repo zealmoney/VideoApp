@@ -4,7 +4,6 @@ import DashboardNavbarMobile from "./DashboardNavbarMobile"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import NavbarMobile from "./NavbarMobile"
-import MyList from "./MyList"
 import { useNavigate } from "react-router-dom"
 
 const AllCategories = ({mobile}) => {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Button, Header, Icon, Image, Segment } from 'semantic-ui-react';
+import { Button, Header, Icon, Segment } from 'semantic-ui-react';
 import { getMyList, getPopularTvshow } from '../api';
 import { useNavigate } from 'react-router-dom';
 

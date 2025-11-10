@@ -1,4 +1,3 @@
-import CarouselComponent from "./CarouselComponent"
 import DashboardNavbar from "./DashboardNavbar"
 import DashboardNavbarMobile from "./DashboardNavbarMobile"
 import Footer from "./Footer"

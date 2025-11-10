@@ -1,10 +1,4 @@
 import Carousel from 'react-bootstrap/Carousel';
-import clash from '../images/clash.jpeg'
-import ghost from '../images/ghost.jpeg'
-import horrified from '../images/horrified.jpeg'
-import War2 from '../images/War2.jpeg'
-import love from '../images/love.jpeg'
-import lost from '../images/lost.jpeg'
 import { Image, Segment } from 'semantic-ui-react';
 import { useGetWallpaperQuery } from '../features/api/apiSlice';
 import { useNavigate } from 'react-router-dom';
@@ -43,7 +37,6 @@ function Wallpaper({mobile}) {
               style={{
                 padding: mobile ? 20 : 50,
                 opacity: 0.5
-                //backgroundColor: '#3B3B3B'
               }}
             >
             <p 

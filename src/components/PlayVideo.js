@@ -117,10 +117,10 @@ const PlayVideo = ({mobile}) => {
                     </GridRow>
                     <Divider inverted />
                     <GridRow>
-                        <GridColumn width={6}>
+                        <GridColumn width={4}>
                             <Image fluid src={imageUrl} />                
                         </GridColumn>
-                        <GridColumn width={10}>
+                        <GridColumn width={8}>
                             <Header inverted as='h2' content={titleUrl} />
                             <p 
                                 style={{

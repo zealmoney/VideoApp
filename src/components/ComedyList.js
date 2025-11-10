@@ -69,6 +69,7 @@ const ComedyList = ({mobile}) => {
                                     key={c.id}
                                 >                         
                                     <img
+                                        alt="comedyImage"
                                         class='image'
                                         id={c.id}
                                         src={c.image}

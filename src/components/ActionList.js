@@ -71,6 +71,7 @@ const ActionList = ({mobile}) => {
                                     key={a.id}
                                 >                         
                                     <img
+                                        alt="actionImage"
                                         class='image'
                                         id={a.id}
                                         src={a.image}

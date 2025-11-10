@@ -32,7 +32,7 @@ const DashboardNavbar = () => {
 
     const {data: videos, isSuccess} = useGetVideosQuery()
     if(isSuccess){
-        videos.map((p) => {
+        videos.map((p) => (
             source.push({
                 'id': p.id,
                 'title': p.title,
@@ -40,7 +40,7 @@ const DashboardNavbar = () => {
                 'image': p.image,
                 'videoUrl': p.videoUrl
             })
-        })
+        ))
     }
     
         const [state, dispatch] = useReducer(searchReducer, intialState)
@@ -67,7 +67,7 @@ const DashboardNavbar = () => {
                     results: _.filter(source, isMatch)
                 })
             }, 300)
-        }, [])
+        }, [source])
 
     const navigate = useNavigate()
 

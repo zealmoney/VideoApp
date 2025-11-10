@@ -3,7 +3,6 @@ import './App.css';
 import { createMedia } from '@artsy/fresnel';
 import Home from './components/Home';
 import Register from './components/Register';
-import SignIn from './components/SignIn';
 import PlayVideo from './components/PlayVideo';
 import Dashboard from './components/Dashboard';
 import AccountSettings from './components/AccountSettings';
@@ -41,7 +40,6 @@ function App() {
           <Routes>
             <Route index element={<Home mobile />} />
             <Route path='/register'  element={<Register mobile />} />
-            <Route path='/signin'  element={<SignIn mobile />} />
             <Route path='/play/:videoid'  element={<PlayVideo mobile />} />
             <Route path='/dashboard'  element={<Dashboard  mobile />} />
             <Route path='/accountsettings'  element={<AccountSettings />} />
@@ -64,7 +62,6 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path='register'  element={<Register />} />
-            <Route path='/signin'  element={<SignIn />} />
             <Route path='/play/:videoid'  element={<PlayVideo />} />
             <Route path='dashboard'  element={<Dashboard />} />
             <Route path='accountsettings'  element={<AccountSettings />} />

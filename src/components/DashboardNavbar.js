@@ -1,8 +1,9 @@
 import _ from "lodash"
-import { useCallback, useReducer, useRef } from "react"
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Dropdown, Icon, Menu, Search, Segment } from "semantic-ui-react"
 import { useGetVideosQuery } from "../features/api/apiSlice"
+import { getVideos } from "../api"
 
 const intialState = {
         loading: false,
@@ -28,7 +29,19 @@ const intialState = {
 
 const DashboardNavbar = () => {
 
-    let source = []
+    const [source, setSource] = useState([])
+
+    useEffect(() => {
+        getAllVideos()
+    }, [])
+
+    const getAllVideos = () => {
+        getVideos().get("/")
+         .then((res) => setSource(res.data))
+          .catch(error => console.log('An error has occured' + error))
+    }
+
+    {/*let source = []
 
     const {data: videos, isSuccess} = useGetVideosQuery()
     if(isSuccess){
@@ -41,7 +54,7 @@ const DashboardNavbar = () => {
                 'videoUrl': p.videoUrl
             })
         ))
-    }
+    }*/}
     
         const [state, dispatch] = useReducer(searchReducer, intialState)
         const {loading, results, value} = state

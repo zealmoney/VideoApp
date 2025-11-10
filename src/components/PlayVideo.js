@@ -24,10 +24,8 @@ const PlayVideo = ({mobile}) => {
     const navigate = useNavigate()
 
     const {data: videos , isSuccess} = useGetVideosQuery()
-    let videoUrl = ""
     let imageUrl = ""
     let titleUrl = ""
-    let descriptionUrl = ""
     let detailsUrl = ""
 
     let videoDetails
@@ -38,7 +36,6 @@ const PlayVideo = ({mobile}) => {
         if(video){
             titleUrl = video.title
             imageUrl = video.image
-            descriptionUrl = video.description
             detailsUrl = video.details
              videoDetails = <ReactPlayer 
                                     slot="media"

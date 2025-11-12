@@ -125,7 +125,7 @@ const PlayVideo = ({mobile}) => {
                     </Grid>
                     </Container>
                 </Segment>
-                <Footer />
+                <Footer mobile />
             </>
         )
     }else{

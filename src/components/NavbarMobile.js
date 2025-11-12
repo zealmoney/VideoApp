@@ -40,7 +40,6 @@ const NavbarMobile = () => {
                 <Menu.Item
                     as='a'
                     header
-                    position="right"
                 >
                     <Button
                         color="orange"

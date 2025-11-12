@@ -16,6 +16,8 @@ import ReactPlayer from 'react-player'
 import DashboardNavbar from "./DashboardNavbar"
 import { useNavigate, useParams } from "react-router-dom"
 import { useGetVideosQuery } from "../features/api/apiSlice"
+import NavbarMobile from "./NavbarMobile"
+import DashboardNavbarMobile from "./DashboardNavbarMobile"
 
 const PlayVideo = ({mobile}) => {
 
@@ -51,82 +53,160 @@ const PlayVideo = ({mobile}) => {
                             </ReactPlayer>
         }
     }
-  
-    return(
-        <>
-            {
-                localStorage.getItem("email") ?
-                <DashboardNavbar /> :
-                <Navbar />
-            }
-            <Segment 
-                vertical 
-                inverted
-            >
-                <Container>
-                <Grid>
-                    <GridRow>
-                        <GridColumn 
-                            width={16}
-                            style={{
-                                marginTop: 40
-                            }}
-                        >
-                            <Button
-                                color="orange"
-                                size={mobile ? "tiny" : "big"}
-                                floated="right"
+
+    if(mobile){
+        return(
+            <>
+                {
+                    localStorage.getItem("email") ?
+                    <DashboardNavbarMobile /> :
+                    <NavbarMobile />
+                }
+                <Segment 
+                    vertical 
+                    inverted
+                >
+                    <Container>
+                    <Grid>
+                        <GridRow>
+                            <GridColumn 
+                                width={16}
                                 style={{
-                                    marginBottom: 20
+                                    marginTop: 40
                                 }}
-                                onClick={() => navigate('/')}
                             >
-                                Back
-                            </Button>
-                            <MediaController
+                                <Button
+                                    color="orange"
+                                    size={mobile ? "tiny" : "big"}
+                                    floated="right"
                                     style={{
-                                        width: '100%',
-                                        aspectRatio: '16/9'
+                                        marginBottom: 20
+                                    }}
+                                    onClick={() => navigate('/')}
+                                >
+                                    Back
+                                </Button>
+                                <MediaController
+                                        style={{
+                                            width: '100%',
+                                            aspectRatio: '16/9'
+                                        }}
+                                    >
+                                        {videoDetails}
+                                        <MediaControlBar>
+                                            <MediaPlayButton />
+                                            <MediaSeekBackwardButton seekOffset={10} />
+                                            <MediaSeekForwardButton seekOffset={10} />
+                                            <MediaTimeRange />
+                                            <MediaTimeDisplay showDuration />
+                                            <MediaMuteButton />
+                                            <MediaVolumeRange />
+                                            <MediaPlaybackRateButton />
+                                            <MediaFullscreenButton />
+                                        </MediaControlBar>
+                                    </MediaController>
+                                        
+                            </GridColumn>
+                        </GridRow>
+                        <Divider inverted />
+                        <GridRow>
+                            <GridColumn width={4}>
+                                <Image fluid src={imageUrl} />                
+                            </GridColumn>
+                            <GridColumn width={8}>
+                                <Header inverted as='h2' content={titleUrl} />
+                                <p 
+                                    style={{
+                                        fontSize: '0.7em',
                                     }}
                                 >
-                                    {videoDetails}
-                                    <MediaControlBar>
-                                        <MediaPlayButton />
-                                        <MediaSeekBackwardButton seekOffset={10} />
-                                        <MediaSeekForwardButton seekOffset={10} />
-                                        <MediaTimeRange />
-                                        <MediaTimeDisplay showDuration />
-                                        <MediaMuteButton />
-                                        <MediaVolumeRange />
-                                        <MediaPlaybackRateButton />
-                                        <MediaFullscreenButton />
-                                    </MediaControlBar>
-                                </MediaController>
-                                    
-                        </GridColumn>
-                    </GridRow>
-                    <Divider inverted />
-                    <GridRow>
-                        <GridColumn width={4}>
-                            <Image fluid src={imageUrl} />                
-                        </GridColumn>
-                        <GridColumn width={8}>
-                            <Header inverted as='h2' content={titleUrl} />
-                            <p 
+                                    {detailsUrl}    
+                                </p>                 
+                            </GridColumn>
+                        </GridRow>
+                    </Grid>
+                    </Container>
+                </Segment>
+                <Footer />
+            </>
+        )
+    }else{
+        return(
+            <>
+                {
+                    localStorage.getItem("email") ?
+                    <DashboardNavbar /> :
+                    <Navbar />
+                }
+                <Segment 
+                    vertical 
+                    inverted
+                >
+                    <Container>
+                    <Grid>
+                        <GridRow>
+                            <GridColumn 
+                                width={16}
                                 style={{
-                                    fontSize: mobile ? '0.7em' : '1.5em',
+                                    marginTop: 40
                                 }}
                             >
-                                {detailsUrl}    
-                            </p>                 
-                        </GridColumn>
-                    </GridRow>
-                </Grid>
-                </Container>
-            </Segment>
-            <Footer />
-        </>
-    )
+                                <Button
+                                    color="orange"
+                                    size={mobile ? "tiny" : "big"}
+                                    floated="right"
+                                    style={{
+                                        marginBottom: 20
+                                    }}
+                                    onClick={() => navigate('/')}
+                                >
+                                    Back
+                                </Button>
+                                <MediaController
+                                        style={{
+                                            width: '100%',
+                                            aspectRatio: '16/9'
+                                        }}
+                                    >
+                                        {videoDetails}
+                                        <MediaControlBar>
+                                            <MediaPlayButton />
+                                            <MediaSeekBackwardButton seekOffset={10} />
+                                            <MediaSeekForwardButton seekOffset={10} />
+                                            <MediaTimeRange />
+                                            <MediaTimeDisplay showDuration />
+                                            <MediaMuteButton />
+                                            <MediaVolumeRange />
+                                            <MediaPlaybackRateButton />
+                                            <MediaFullscreenButton />
+                                        </MediaControlBar>
+                                    </MediaController>
+                                        
+                            </GridColumn>
+                        </GridRow>
+                        <Divider inverted />
+                        <GridRow>
+                            <GridColumn width={4}>
+                                <Image fluid src={imageUrl} />                
+                            </GridColumn>
+                            <GridColumn width={8}>
+                                <Header inverted as='h2' content={titleUrl} />
+                                <p 
+                                    style={{
+                                        fontSize: '1.5em',
+                                    }}
+                                >
+                                    {detailsUrl}    
+                                </p>                 
+                            </GridColumn>
+                        </GridRow>
+                    </Grid>
+                    </Container>
+                </Segment>
+                <Footer />
+            </>
+        )
+    }
     
 }
 

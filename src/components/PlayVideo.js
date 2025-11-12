@@ -86,11 +86,6 @@ const PlayVideo = ({mobile}) => {
                                 >
                                     Back
                                 </Button>
-                                 <div
-                                    style={{
-                                        overflowX: 'hidden' 
-                                    }}
-                                >
                                     <MediaController
                                         style={{
                                             width: '100%',
@@ -100,9 +95,7 @@ const PlayVideo = ({mobile}) => {
                                             {videoDetails}
                                         
                                         <MediaControlBar>
-                                            <MediaPlayButton />
-                                            <MediaSeekBackwardButton seekOffset={10} />
-                                            <MediaSeekForwardButton seekOffset={10} />
+                                            <MediaPlayButton />                                            
                                             <MediaTimeRange />
                                             <MediaTimeDisplay showDuration />
                                             <MediaMuteButton />
@@ -110,8 +103,7 @@ const PlayVideo = ({mobile}) => {
                                             <MediaPlaybackRateButton />
                                             <MediaFullscreenButton />
                                         </MediaControlBar>
-                                    </MediaController>
-                                </div>        
+                                    </MediaController>        
                             </GridColumn>
                         </GridRow>
                         <Divider inverted />

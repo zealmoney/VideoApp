@@ -72,7 +72,7 @@ const PlayVideo = ({mobile}) => {
                             <GridColumn 
                                 width={16}
                                 style={{
-                                    marginTop: 40
+                                    marginTop: 60
                                 }}
                             >
                                 <Button
@@ -92,7 +92,14 @@ const PlayVideo = ({mobile}) => {
                                             aspectRatio: '16/9'
                                         }}
                                     >
-                                        {videoDetails}
+                                        <div
+                                            style={{
+                                               overflowX: 'hidden' 
+                                            }}
+                                        >
+                                            {videoDetails}
+                                        </div>
+                                        
                                         <MediaControlBar>
                                             <MediaPlayButton />
                                             <MediaSeekBackwardButton seekOffset={10} />
@@ -110,14 +117,14 @@ const PlayVideo = ({mobile}) => {
                         </GridRow>
                         <Divider inverted />
                         <GridRow>
-                            <GridColumn width={4}>
+                            <GridColumn width={6}>
                                 <Image fluid src={imageUrl} />                
                             </GridColumn>
-                            <GridColumn width={8}>
+                            <GridColumn width={10}>
                                 <Header inverted as='h2' content={titleUrl} />
                                 <p 
                                     style={{
-                                        fontSize: '0.7em',
+                                        fontSize: '0.75em',
                                     }}
                                 >
                                     {detailsUrl}    

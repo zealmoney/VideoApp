@@ -14,13 +14,13 @@ const Footer = ({mobile}) => {
                     padding: 'auto',
                 }}
             >
-                <Container >
+                <Container>
                 
                     <Grid
                         divided
                     >
                         <Grid.Row>
-                        <Grid.Column width={8}>
+                        <Grid.Column textAlign="center" width={8}>
                             <Header 
                                 as='h5'
                                 inverted
@@ -54,7 +54,7 @@ const Footer = ({mobile}) => {
                             </List>
                         </Grid.Column>
                             
-                            <Grid.Column width={8}>
+                            <Grid.Column textAlign="center" width={8}>
                                 <Header 
                                     as='h5'
                                     inverted
@@ -84,7 +84,7 @@ const Footer = ({mobile}) => {
                         </Grid.Row>
 
                         <Grid.Row>
-                        <Grid.Column width={8}>
+                        <Grid.Column textAlign="center" width={8}>
                             <Header 
                                 as='h5'
                                 inverted
@@ -103,7 +103,7 @@ const Footer = ({mobile}) => {
                                 </List.Item>
                             </List>
                             </Grid.Column>
-                            <Grid.Column width={8}>
+                            <Grid.Column textAlign="center" width={8}>
                                 <Header 
                                     as='h5'
                                     inverted

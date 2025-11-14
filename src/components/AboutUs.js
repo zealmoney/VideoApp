@@ -18,7 +18,12 @@ const AboutUs = ({mobile}) => {
                 <Segment 
                     vertical 
                     inverted
-                    style={{padding: '100px 20px'}}
+                    style={{
+                        paddingTop: '100px',
+                        paddingBottom: '50px',
+                        paddingLeft: '20px',
+                        paddingRight: '20px'
+                    }}
                 >
                     <Header 
                         as='h2' 
@@ -36,7 +41,7 @@ const AboutUs = ({mobile}) => {
                            fontFamily: "Inter",
                            fontStyle: "normal",
                            fontSize: '16px',
-                           lineHeight: '1em', 
+                           lineSpacing: '5px', 
                         }} 
                     >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -53,7 +58,7 @@ const AboutUs = ({mobile}) => {
                            fontFamily: "Inter",
                            fontStyle: "normal",
                            fontSize: '16px',
-                           lineHeight: '1em', 
+                           lineSpacing: '5px' 
                         }} 
                     >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -70,7 +75,7 @@ const AboutUs = ({mobile}) => {
                            fontFamily: "Inter",
                            fontStyle: "normal",
                            fontSize: '16px',
-                           lineHeight: '1em', 
+                           lineSpacing: '5px'
                         }} 
                     >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

@@ -11,8 +11,7 @@ const Footer = ({mobile}) => {
                 inverted 
                 vertical
                 style={{
-                    paddingTop: '50px',
-                    paddingBottom: '50px',
+                    padding: '50px 20px',
                 }}
             >
                 <Container>

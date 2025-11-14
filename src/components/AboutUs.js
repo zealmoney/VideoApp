@@ -18,7 +18,7 @@ const AboutUs = ({mobile}) => {
                 <Segment 
                     vertical 
                     inverted
-                    style={{padding: mobile ? '20px 20px' : '50px 80px'}}
+                    style={{padding: '50px 20px'}}
                 >
                     <Header as='h2' textAlign="center" content="About Us" size="large" />
                     <p>
@@ -70,7 +70,7 @@ const AboutUs = ({mobile}) => {
                     inverted
                     color="orange"
                     style={{
-                        padding: mobile ? '20px 20px' : '50px 80px',
+                        padding: '50px 80px',
                         margin: '100px 100px',
                         borderRadius: '15px'
                     }}

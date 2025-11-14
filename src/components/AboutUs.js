@@ -18,10 +18,27 @@ const AboutUs = ({mobile}) => {
                 <Segment 
                     vertical 
                     inverted
-                    style={{padding: '50px 20px'}}
+                    style={{padding: '100px 20px'}}
                 >
-                    <Header as='h2' textAlign="center" content="About Us" size="large" />
-                    <p>
+                    <Header 
+                        as='h2' 
+                        textAlign="center" 
+                        content="About Us" 
+                        size="large" 
+                        style={{
+                           fontFamily: "Inter",
+                           fontStyle: "normal",
+                           fontSize: '24px' 
+                        }} 
+                    />
+                    <p
+                        style={{
+                           fontFamily: "Inter",
+                           fontStyle: "normal",
+                           fontSize: '16px',
+                           lineHeight: '1em', 
+                        }} 
+                    >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type 
@@ -31,7 +48,14 @@ const AboutUs = ({mobile}) => {
                         and more recently with desktop publishing software like Aldus PageMaker including 
                         versions of Lorem Ipsum.
                     </p>
-                    <p>
+                    <p
+                        style={{
+                           fontFamily: "Inter",
+                           fontStyle: "normal",
+                           fontSize: '16px',
+                           lineHeight: '1em', 
+                        }} 
+                    >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type 
@@ -41,7 +65,14 @@ const AboutUs = ({mobile}) => {
                         and more recently with desktop publishing software like Aldus PageMaker including 
                         versions of Lorem Ipsum.
                     </p>
-                    <p>
+                    <p
+                        style={{
+                           fontFamily: "Inter",
+                           fontStyle: "normal",
+                           fontSize: '16px',
+                           lineHeight: '1em', 
+                        }} 
+                    >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type 

@@ -30,7 +30,7 @@ const ContactUs = ({mobile}) => {
             setMessageError({content: 'Please enter your message', pointing: 'below'})
         }
     }
-    
+
     if(mobile){
         return(
             <>
@@ -42,6 +42,12 @@ const ContactUs = ({mobile}) => {
                 <Segment
                     vertical
                     inverted
+                    style={{
+                        paddingTop: '100px',
+                        paddingBottom: '50px',
+                        paddingLeft: '20px',
+                        paddingRight: '20px'
+                    }}
                 >
                     <Container>
                         <Grid
@@ -112,7 +118,7 @@ const ContactUs = ({mobile}) => {
                         </Grid>
                     </Container>
                 </Segment>      
-                <Footer />
+                <Footer mobile />
             </>
         )
     }else{

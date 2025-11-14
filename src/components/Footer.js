@@ -14,7 +14,7 @@ const Footer = ({mobile}) => {
                     padding: '50px auto',
                 }}
             >
-                <Container fluid>
+                <Container>
                 
                     <Grid
                         divided

@@ -40,8 +40,8 @@ const AboutUs = ({mobile}) => {
                         style={{
                            fontFamily: "Inter",
                            fontStyle: "normal",
-                           fontSize: '16px',
-                           lineSpacing: '5px', 
+                           fontSize: '14px',
+                           lineSpacing: '10px', 
                         }} 
                     >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -57,8 +57,8 @@ const AboutUs = ({mobile}) => {
                         style={{
                            fontFamily: "Inter",
                            fontStyle: "normal",
-                           fontSize: '16px',
-                           lineSpacing: '5px' 
+                           fontSize: '14px',
+                           lineSpacing: '10px' 
                         }} 
                     >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -74,8 +74,8 @@ const AboutUs = ({mobile}) => {
                         style={{
                            fontFamily: "Inter",
                            fontStyle: "normal",
-                           fontSize: '16px',
-                           lineSpacing: '5px'
+                           fontSize: '14px',
+                           lineSpacing: '10px'
                         }} 
                     >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

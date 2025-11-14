@@ -11,7 +11,7 @@ const Footer = ({mobile}) => {
                 inverted 
                 vertical
                 style={{
-                    padding: 'auto',
+                    padding: '50px 50px',
                 }}
             >
                 <Container>
@@ -20,7 +20,7 @@ const Footer = ({mobile}) => {
                         divided
                     >
                         <Grid.Row>
-                        <Grid.Column textAlign="center" width={8}>
+                        <Grid.Column width={8}>
                             <Header 
                                 as='h5'
                                 inverted
@@ -54,7 +54,7 @@ const Footer = ({mobile}) => {
                             </List>
                         </Grid.Column>
                             
-                            <Grid.Column textAlign="center" width={8}>
+                            <Grid.Column width={8}>
                                 <Header 
                                     as='h5'
                                     inverted
@@ -84,7 +84,7 @@ const Footer = ({mobile}) => {
                         </Grid.Row>
 
                         <Grid.Row>
-                        <Grid.Column textAlign="center" width={8}>
+                        <Grid.Column width={8}>
                             <Header 
                                 as='h5'
                                 inverted
@@ -103,7 +103,7 @@ const Footer = ({mobile}) => {
                                 </List.Item>
                             </List>
                             </Grid.Column>
-                            <Grid.Column textAlign="center" width={8}>
+                            <Grid.Column width={8}>
                                 <Header 
                                     as='h5'
                                     inverted

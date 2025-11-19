@@ -19,7 +19,6 @@ const DashboardNavbarMobile = () => {
             <Menu
                 fixed="Top"
                 inverted
-                secondary
             >
                 <Menu.Item
                     as='a'

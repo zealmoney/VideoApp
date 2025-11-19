@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import DashboardNavbarMobile from "./DashboardNavbarMobile";
 import NavbarMobile from "./NavbarMobile";
 import { useState } from "react";
+import NavbarUser from "./NavbarUser";
 
 
 const ContactUs = ({mobile}) => {
@@ -34,11 +35,10 @@ const ContactUs = ({mobile}) => {
     if(mobile){
         return(
             <>
-                {
-                    localStorage.getItem("email") ?
-                    <DashboardNavbarMobile /> :
-                    <NavbarMobile />
-                }
+                <NavbarUser 
+                    link_name="Register" 
+                    link_route="/register"
+                />
                 <Segment
                     vertical
                     inverted

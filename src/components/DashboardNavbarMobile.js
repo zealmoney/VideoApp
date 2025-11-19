@@ -45,6 +45,11 @@ const DashboardNavbarMobile = () => {
                             >
                                 TV Shows
                             </Dropdown.Item>
+                            <Dropdown.Item
+                                onClick={() => navigate('/allcategories')}
+                            >
+                                All Categories
+                            </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </Menu.Item>

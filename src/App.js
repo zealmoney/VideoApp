@@ -45,7 +45,7 @@ function App() {
             <Route path='/accountsettings'  element={<AccountSettings />} />
             <Route path='/action'  element={<Action />} />
             <Route path='/drama'  element={<Drama />} />
-            <Route path='/allcategories'  element={<AllCategories />} />
+            <Route path='/allcategories'  element={<AllCategories mobile />} />
             <Route path='movies'  element={<Movies mobile />} />
             <Route path='tvshow'  element={<TvShows mobile />} />
             <Route path='aboutus'  element={<AboutUs mobile />} />

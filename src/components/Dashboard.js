@@ -14,7 +14,7 @@ const Dashboard = ({mobile}) => {
                         <Segment
                             vertical
                             inverted
-                            style={{padding: mobile ? '20px 20px' : '50px 80px'}}
+                            style={{padding: '20px 20px'}}
                         >
                                 <Grid>
                                     <Grid.Column>
@@ -49,7 +49,7 @@ const Dashboard = ({mobile}) => {
                         <Segment
                             vertical
                             inverted
-                            style={{padding: mobile ? '20px 20px' : '50px 80px'}}
+                            style={{padding: '50px 80px'}}
                         >
                                 <Grid>
                                     <Grid.Column>

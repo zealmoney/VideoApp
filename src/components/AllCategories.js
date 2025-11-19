@@ -17,7 +17,7 @@ const AllCategories = ({mobile}) => {
                     localStorage.getItem("email") ?
                     <DashboardNavbarMobile /> :
                     <NavbarMobile />
-            } 
+                } 
                 <Segment
                     vertical
                     inverted

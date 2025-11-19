@@ -3,6 +3,7 @@ import Footer from "./Footer"
 import DashboardNavbar from "./DashboardNavbar"
 import DashboardNavbarMobile from "./DashboardNavbarMobile"
 import ActionList from "./ActionList"
+import NavbarMobile from "./NavbarMobile"
 
 const Action = ({mobile}) => {
         
@@ -10,11 +11,15 @@ const Action = ({mobile}) => {
 
                 return(
                     <>
-                        <DashboardNavbarMobile /> 
+                        {
+                            localStorage.getItem("email") ?
+                            <DashboardNavbarMobile /> :
+                            <NavbarMobile />
+                        } 
                         <Segment
                             vertical
                             inverted
-                            style={{padding: mobile ? '20px 20px' : '50px 80px'}}
+                            style={{padding: '20px 20px'}}
                         >
                                 <Grid>
                                     <Grid.Column>
@@ -49,7 +54,7 @@ const Action = ({mobile}) => {
                         <Segment
                             vertical
                             inverted
-                            style={{padding: mobile ? '20px 20px' : '50px 80px'}}
+                            style={{padding: '50px 80px'}}
                         >
                                 <Grid>
                                     <Grid.Column>

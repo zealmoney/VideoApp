@@ -42,10 +42,16 @@ function App() {
             <Route path='/register'  element={<Register mobile />} />
             <Route path='/play/:videoid'  element={<PlayVideo mobile />} />
             <Route path='/dashboard'  element={<Dashboard  mobile />} />
-            <Route path='/accountsettings'  element={<AccountSettings />} />
-            <Route path='/action'  element={<Action />} />
-            <Route path='/drama'  element={<Drama />} />
+            <Route path='/accountsettings'  element={<AccountSettings mobile />} />
+            <Route path='/action'  element={<Action mobile />} />
+            <Route path='/drama'  element={<Drama mobile />} />
+            <Route path='comedy'  element={<Comedy mobile />} />
             <Route path='/allcategories'  element={<AllCategories mobile />} />
+            <Route path='horror'  element={<Horror mobile />} />
+            <Route path='romance'  element={<Romance mobile />} />
+            <Route path='scifi'  element={<Scifi mobile />} />
+            <Route path='documentary'  element={<Documentary mobile />} />
+            <Route path='thrillers'  element={<Thrillers mobile />} />
             <Route path='movies'  element={<Movies mobile />} />
             <Route path='tvshow'  element={<TvShows mobile />} />
             <Route path='aboutus'  element={<AboutUs mobile />} />

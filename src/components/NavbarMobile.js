@@ -10,6 +10,7 @@ const NavbarMobile = () => {
             <Menu
                 fixed="Top"
                 inverted
+                secondary
             >
                 <Menu.Item
                     as='a'

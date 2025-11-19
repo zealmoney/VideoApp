@@ -82,6 +82,7 @@ const DashboardNavbar = () => {
             <Menu
                 inverted
                 size="huge"
+                secondary
             >
                 
                     <Menu.Item

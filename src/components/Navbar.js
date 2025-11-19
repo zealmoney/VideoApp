@@ -13,6 +13,7 @@ const Navbar = () => {
             <Menu
                 inverted
                 size="huge"
+                secondary
             >
                 
                     <Menu.Item

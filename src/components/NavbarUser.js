@@ -9,6 +9,7 @@ const NavbarUser = ({link_name, link_route}) => {
         <div>
             <Menu
                 inverted
+                secondary
             >
                 <Container>
                     <Menu.Item

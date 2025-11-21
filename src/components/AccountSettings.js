@@ -43,9 +43,6 @@ const AccountSettings = ({mobile}) => {
                 >
                     <Grid 
                         textAlign="center" 
-                        style={{
-                            height: '100vh'
-                        }}
                     >
                         <Grid.Column
                             style={{maxWidth: 450}}

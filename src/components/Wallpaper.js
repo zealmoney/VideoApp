@@ -15,7 +15,7 @@ function Wallpaper({mobile}) {
           <Image 
             style={{
               height: mobile ? 400 : '',
-              marginTop: mobile ? 30 : '',
+              marginTop: mobile ? '' : '',
             }} 
             fluid  
             src={w.image}  

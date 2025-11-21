@@ -19,7 +19,7 @@ const NavbarMobile = () => {
                         VIDEO APP 
                 </Menu.Item>
                 <Dropdown
-                    simple
+                    basic
                     item
                     text="Watch Movies"
                 >

@@ -27,7 +27,7 @@ const DashboardNavbarMobile = () => {
                 </Menu.Item>
                 <Menu.Item>
                     <Dropdown
-                        simple
+                        basic
                         item
                         text="Watch Movies"
                     >

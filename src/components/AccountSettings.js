@@ -1,4 +1,4 @@
-import { Button, Form, Grid, Header, Message, Segment } from "semantic-ui-react"
+import { Button, Container, Form, Grid, Header, Message, Segment } from "semantic-ui-react"
 import DashboardNavbar from "./DashboardNavbar"
 import Footer from "./Footer"
 import { useState } from "react"
@@ -35,12 +35,13 @@ const AccountSettings = ({mobile}) => {
 
     if(mobile){
         return(
-            <>
+            <div>
                 <DashboardNavbarMobile />
                 <Segment
                     vertical
                     inverted
                 >
+                    <Container>
                     <Grid 
                         textAlign="center" 
                     >
@@ -123,9 +124,10 @@ const AccountSettings = ({mobile}) => {
                             </Form>
                         </Grid.Column>
                     </Grid>
+                    </Container>
                 </Segment>                   
                 <Footer mobile />
-            </>
+            </div>
         )
     }else{
         return(

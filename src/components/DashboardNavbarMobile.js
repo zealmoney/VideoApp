@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { Dropdown, Icon, Menu } from "semantic-ui-react"
+import { Dropdown, Icon, Menu, Segment } from "semantic-ui-react"
 
 const DashboardNavbarMobile = () => {
 
@@ -13,10 +13,8 @@ const DashboardNavbarMobile = () => {
 
     return(
 
-       <div>
+       <Segment inverted vertical>
             <Menu
-                fixed="Top"
-                inverted
                 secondary
             >
                 <Menu.Item
@@ -79,7 +77,7 @@ const DashboardNavbarMobile = () => {
                         
                     </Menu.Item>
             </Menu>
-        </div>
+        </Segment>
     )
 }
 

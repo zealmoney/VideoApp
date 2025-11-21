@@ -14,8 +14,6 @@ const DashboardNavbarMobile = () => {
     return(
 
        <div>
-
-
             <Menu
                 fixed="Top"
                 inverted

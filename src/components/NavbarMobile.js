@@ -8,7 +8,6 @@ const NavbarMobile = () => {
     return(
         <div>
             <Menu
-                fixed="Top"
                 inverted
                 secondary
             >

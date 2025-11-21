@@ -2,6 +2,7 @@ import { Button, Form, Grid, Header, Message, Segment } from "semantic-ui-react"
 import DashboardNavbar from "./DashboardNavbar"
 import Footer from "./Footer"
 import { useState } from "react"
+import DashboardNavbarMobile from "./DashboardNavbarMobile"
 
 
 const AccountSettings = ({mobile}) => {
@@ -32,102 +33,201 @@ const AccountSettings = ({mobile}) => {
         }
     }
 
-    return(
-        <>
-            <DashboardNavbar />
-            <Segment
-                vertical
-                inverted
-            >
-                <Grid 
-                    textAlign="center" 
-                    style={{
-                        height: '100vh'
-                    }}
+    if(mobile){
+        return(
+            <>
+                <DashboardNavbarMobile />
+                <Segment
+                    vertical
+                    inverted
                 >
-                    <Grid.Column
-                        style={{maxWidth: 450}}
+                    <Grid 
+                        textAlign="center" 
+                        style={{
+                            height: '100vh'
+                        }}
                     >
-                        <Header
-                            as='h2'
-                            inverted
-                            style={{
-                                fontSize: '2em'
-                            }}
+                        <Grid.Column
+                            style={{maxWidth: 450}}
                         >
-                            Account Settings
-                            <Header.Subheader>
-                                Manage your account information
-                            </Header.Subheader>
-                        </Header>
-                        <Form
-                            size="huge"
-                        >
-                            <Segment inverted>
-                                {
-                                    msg ?
-                                    <Message negative>
-                                        <Message.Content>{errorMessage}</Message.Content>
-                                    </Message>: ""
-                                }
-                            </Segment>
-                            <Segment stacked inverted>
-                            <Form.Input 
-                                value={firstname}
+                            <Header
+                                as='h2'
                                 inverted
                                 style={{
-                                    height: 50,
-                                    borderRadius: 10
-                                }}
-                                onChange={handleFirstname}
-                                onClick={() => setMsg(false)}
-                            />
-                            </Segment>
-                            <Segment stacked inverted>
-                            <Form.Input 
-                                value={email}
-                                inverted
-                                style={{
-                                    height: 50,
-                                    borderRadius: 10
-                                }}
-                                onChange={handleEmail}
-                                onClick={() => setMsg(false)}
-                            />
-                            </Segment>
-                            <Segment stacked inverted>
-                            <Form.Input 
-                                value="male"
-                                inverted
-                                style={{
-                                    height: 50,
-                                    borderRadius: 10
-                                }}
-                                error={genderError}
-                                onChange={handleGender}
-                                onClick={() => setGenderError(false)}
-                            />
-                            </Segment>
-                            <Segment stacked inverted>
-                            <Button 
-                                fluid 
-                                color="orange"
-                                onClick={saveClick}
-                                style={{
-                                    height: 50,
-                                    borderRadius: 10
+                                    fontSize: '2em'
                                 }}
                             >
-                                Save
-                            </Button>
-                            </Segment>
-                        </Form>
-                    </Grid.Column>
-                </Grid>
-            </Segment>                   
-            <Footer />
-        </>
-    )
+                                Account Settings
+                                <Header.Subheader>
+                                    Manage your account information
+                                </Header.Subheader>
+                            </Header>
+                            <Form
+                                size="huge"
+                            >
+                                <Segment inverted>
+                                    {
+                                        msg ?
+                                        <Message negative>
+                                            <Message.Content>{errorMessage}</Message.Content>
+                                        </Message>: ""
+                                    }
+                                </Segment>
+                                <Segment stacked inverted>
+                                <Form.Input 
+                                    value={firstname}
+                                    inverted
+                                    style={{
+                                        height: 50,
+                                        borderRadius: 10
+                                    }}
+                                    onChange={handleFirstname}
+                                    onClick={() => setMsg(false)}
+                                />
+                                </Segment>
+                                <Segment stacked inverted>
+                                <Form.Input 
+                                    value={email}
+                                    inverted
+                                    style={{
+                                        height: 50,
+                                        borderRadius: 10
+                                    }}
+                                    onChange={handleEmail}
+                                    onClick={() => setMsg(false)}
+                                />
+                                </Segment>
+                                <Segment stacked inverted>
+                                <Form.Input 
+                                    value="male"
+                                    inverted
+                                    style={{
+                                        height: 50,
+                                        borderRadius: 10
+                                    }}
+                                    error={genderError}
+                                    onChange={handleGender}
+                                    onClick={() => setGenderError(false)}
+                                />
+                                </Segment>
+                                <Segment stacked inverted>
+                                <Button 
+                                    fluid 
+                                    color="orange"
+                                    onClick={saveClick}
+                                    style={{
+                                        height: 50,
+                                        borderRadius: 10
+                                    }}
+                                >
+                                    Save
+                                </Button>
+                                </Segment>
+                            </Form>
+                        </Grid.Column>
+                    </Grid>
+                </Segment>                   
+                <Footer mobile />
+            </>
+        )
+    }else{
+        return(
+            <>
+                <DashboardNavbar />
+                <Segment
+                    vertical
+                    inverted
+                >
+                    <Grid 
+                        textAlign="center" 
+                        style={{
+                            height: '100vh'
+                        }}
+                    >
+                        <Grid.Column
+                            style={{maxWidth: 450}}
+                        >
+                            <Header
+                                as='h2'
+                                inverted
+                                style={{
+                                    fontSize: '2em'
+                                }}
+                            >
+                                Account Settings
+                                <Header.Subheader>
+                                    Manage your account information
+                                </Header.Subheader>
+                            </Header>
+                            <Form
+                                size="huge"
+                            >
+                                <Segment inverted>
+                                    {
+                                        msg ?
+                                        <Message negative>
+                                            <Message.Content>{errorMessage}</Message.Content>
+                                        </Message>: ""
+                                    }
+                                </Segment>
+                                <Segment stacked inverted>
+                                <Form.Input 
+                                    value={firstname}
+                                    inverted
+                                    style={{
+                                        height: 50,
+                                        borderRadius: 10
+                                    }}
+                                    onChange={handleFirstname}
+                                    onClick={() => setMsg(false)}
+                                />
+                                </Segment>
+                                <Segment stacked inverted>
+                                <Form.Input 
+                                    value={email}
+                                    inverted
+                                    style={{
+                                        height: 50,
+                                        borderRadius: 10
+                                    }}
+                                    onChange={handleEmail}
+                                    onClick={() => setMsg(false)}
+                                />
+                                </Segment>
+                                <Segment stacked inverted>
+                                <Form.Input 
+                                    value="male"
+                                    inverted
+                                    style={{
+                                        height: 50,
+                                        borderRadius: 10
+                                    }}
+                                    error={genderError}
+                                    onChange={handleGender}
+                                    onClick={() => setGenderError(false)}
+                                />
+                                </Segment>
+                                <Segment stacked inverted>
+                                <Button 
+                                    fluid 
+                                    color="orange"
+                                    onClick={saveClick}
+                                    style={{
+                                        height: 50,
+                                        borderRadius: 10
+                                    }}
+                                >
+                                    Save
+                                </Button>
+                                </Segment>
+                            </Form>
+                        </Grid.Column>
+                    </Grid>
+                </Segment>                   
+                <Footer />
+            </>
+        )
+    }
 }
 
 export default AccountSettings

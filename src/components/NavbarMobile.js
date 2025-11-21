@@ -10,6 +10,7 @@ const NavbarMobile = () => {
             <Menu
                 inverted
                 secondary
+                pointing
             >
                 <Menu.Item
                     as='a'

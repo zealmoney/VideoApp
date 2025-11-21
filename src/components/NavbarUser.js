@@ -10,6 +10,7 @@ const NavbarUser = ({link_name, link_route}) => {
             <Menu
                 inverted
                 secondary
+                pointing
             >
                 <Container>
                     <Menu.Item

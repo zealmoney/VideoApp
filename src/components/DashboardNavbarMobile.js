@@ -14,8 +14,9 @@ const DashboardNavbarMobile = () => {
     return(
        <div>
             <Menu
+                inverted
                 secondary
-                color="black"
+                pointing
             >
                 <Menu.Item
                     as='a'

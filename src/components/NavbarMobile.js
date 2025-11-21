@@ -9,7 +9,6 @@ const NavbarMobile = () => {
         <div>
             <Menu
                 inverted
-                secondary
                 pointing
             >
                 <Menu.Item

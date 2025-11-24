@@ -40,6 +40,11 @@ const AccountSettings = ({mobile}) => {
                 <Segment
                     vertical
                     inverted
+                    style={{
+                        paddingTop: '100px',
+                        paddingLeft: '20px',
+                        paddingRight: '20px'
+                    }}
                 >
                     <Container>
                     <Grid 

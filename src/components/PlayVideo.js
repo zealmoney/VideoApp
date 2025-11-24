@@ -72,7 +72,7 @@ const PlayVideo = ({mobile}) => {
                             <GridColumn 
                                 width={16}
                                 style={{
-                                    marginTop: 60
+                                    marginTop: 30
                                 }}
                             >
                                 <Button
@@ -82,6 +82,7 @@ const PlayVideo = ({mobile}) => {
                                     style={{
                                         marginBottom: 20
                                     }}
+                                    icon="arrow left"
                                     onClick={() => navigate('/')}
                                 >
                                     Back

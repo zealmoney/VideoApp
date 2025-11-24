@@ -1,4 +1,4 @@
-import { Button, Container, Divider, Grid, GridColumn, GridRow, Header, Image, Segment } from "semantic-ui-react"
+import { Button, Container, Divider, Grid, GridColumn, GridRow, Header, Icon, Image, Segment } from "semantic-ui-react"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import { MediaController,
@@ -82,9 +82,10 @@ const PlayVideo = ({mobile}) => {
                                     style={{
                                         marginBottom: 20
                                     }}
-                                    icon="arrow left"
+                                    icon
                                     onClick={() => navigate('/')}
                                 >
+                                    <Icon name="arrow left" />
                                     Back
                                 </Button>
                                     <MediaController
@@ -157,8 +158,10 @@ const PlayVideo = ({mobile}) => {
                                     style={{
                                         marginBottom: 20
                                     }}
+                                    icon
                                     onClick={() => navigate('/')}
                                 >
+                                    <Icon name="arrow left" />
                                     Back
                                 </Button>
                                 <MediaController

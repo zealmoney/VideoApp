@@ -2,8 +2,6 @@ import { Button, Container, Form, Grid, Header, Segment } from "semantic-ui-reac
 import DashboardNavbar from "./DashboardNavbar";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import DashboardNavbarMobile from "./DashboardNavbarMobile";
-import NavbarMobile from "./NavbarMobile";
 import { useState } from "react";
 import NavbarUser from "./NavbarUser";
 
@@ -44,7 +42,6 @@ const ContactUs = ({mobile}) => {
                     inverted
                     style={{
                         paddingTop: '100px',
-                        paddingBottom: '50px',
                         paddingLeft: '20px',
                         paddingRight: '20px'
                     }}
@@ -52,9 +49,6 @@ const ContactUs = ({mobile}) => {
                     <Container>
                         <Grid
                             textAlign="center"
-                            style={{
-                                height: '100vh'
-                            }}
                         >
                             <Grid.Column
                                 style={{

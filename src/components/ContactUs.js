@@ -126,10 +126,13 @@ const ContactUs = ({mobile}) => {
                 <Segment
                     vertical
                     inverted
+                    style={{
+                        paddingTop: '100px'
+                    }}
                 >
                     <Grid
                         textAlign="center"
-                        //verticalAlign="middle"
+                        verticalAlign="middle"
                         style={{
                             height: '100vh'
                         }}

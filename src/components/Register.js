@@ -180,7 +180,7 @@ const Register = ({mobile}) => {
                 </Grid>
                 </Container>
             </Segment>      
-            <Footer mobile />
+            <Footer />
             <Modal
                 open={open}
                 size={size}

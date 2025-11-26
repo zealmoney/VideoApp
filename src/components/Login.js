@@ -117,7 +117,7 @@ const Login = ({mobile}) => {
                 </Grid>
                 </Container>
             </Segment>
-            <Footer mobile />
+            <Footer />
         </div>
     )
 }

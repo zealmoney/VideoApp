@@ -131,7 +131,6 @@ const PartnerWithUs = ({mobile}) => {
                 >
                     <Grid
                         textAlign="center"
-                        verticalAlign="middle"
                         style={{
                             height: '100vh'
                         }}

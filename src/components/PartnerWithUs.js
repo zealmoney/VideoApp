@@ -128,6 +128,9 @@ const PartnerWithUs = ({mobile}) => {
                 <Segment
                     vertical
                     inverted
+                    style={{
+                        paddingTop: '100px'
+                    }}
                 >
                     <Grid
                         textAlign="center"
@@ -160,9 +163,9 @@ const PartnerWithUs = ({mobile}) => {
                                         icon="user"
                                         iconPosition="left"
                                         type="text"
-                                        error={""}
-                                        onChange={""}
-                                        onClick={""}
+                                        error={companyNameError}
+                                        onChange={handleCompanyName}
+                                        onClick={() => setCompanyNameError(false)}
                                     />
                                     <Form.Input 
                                         placeholder='Business Email Address'
@@ -170,23 +173,23 @@ const PartnerWithUs = ({mobile}) => {
                                         icon="mail"
                                         iconPosition="left"
                                         type="email"
-                                        error={""}
-                                        onChange={""}
-                                        onClick={""}
+                                        error={businessEmailError}
+                                        onChange={handleBusinessEmail}
+                                        onClick={() => setBusinessEmailError(false)}
                                     />
                                     <Form.TextArea 
                                         placeholder='Message'
                                         fluid
                                         type="text"
-                                        error={""}
-                                        onChange={""}
-                                        onClick={""}
+                                        error={messageError}
+                                        onChange={handleMessage}
+                                        onClick={() => setMessageError(false)}
                                     />
                                     <Button
                                         fluid
                                         size="large"
                                         color="orange"
-                                        onClick={""}
+                                        onClick={submitClick}
                                     >
                                         Sunmit
                                     </Button>

@@ -127,7 +127,7 @@ const ContactUs = ({mobile}) => {
                     vertical
                     inverted
                     style={{
-                        paddingTop: '100px'
+                        paddingTop: '200px'
                     }}
                 >
                     <Grid

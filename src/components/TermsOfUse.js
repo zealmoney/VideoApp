@@ -18,7 +18,7 @@ const TermsOfUse = ({mobile}) => {
                 <Segment 
                     vertical 
                     inverted
-                    style={{padding: mobile ? '20px 20px' : '50px 80px'}}
+                    style={{padding: '20px 20px'}}
                 >
                     <Header as='h2' textAlign="center" content="Terms Of Use" size="large" />
                     <p>
@@ -66,7 +66,13 @@ const TermsOfUse = ({mobile}) => {
                 <Segment 
                     vertical 
                     inverted
-                    style={{padding: mobile ? '20px 20px' : '50px 80px'}}
+                    style={{
+                        paddingTop: '150px',
+                        paddingBottom: '50px',
+                        paddingLeft: '80px',
+                        paddingRight: '80px'
+
+                    }}
                 >
                     <Header as='h2' textAlign="center" content="Terms Of Use" size="large" />
                     <p>

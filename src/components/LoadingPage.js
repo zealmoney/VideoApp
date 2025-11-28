@@ -12,6 +12,7 @@ const LoadingPage = () => {
                 inverted
                 style={{
                     height: '100vh',
+                    width: '100%'
                 }}
             >
                 <Dimmer active>

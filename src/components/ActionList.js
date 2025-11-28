@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import Carousel from "react-multi-carousel"
-import { Button, Icon, Segment } from "semantic-ui-react"
+import { Button, Icon, Placeholder, Segment } from "semantic-ui-react"
 import { getActionMovies, getMyList } from "../api"
 import { useNavigate } from "react-router-dom"
 import '../css/style.css'
@@ -57,7 +57,20 @@ const ActionList = ({mobile}) => {
                     padding: mobile ? '20px 0px' : '50px 80px'
                 }}
             >
-            
+                
+                {
+                    actionMovies.length === 0 
+                    ?
+                    <Placeholder
+                        style={{
+                            width: '100%', 
+                            height: 400
+                        }}
+                    >
+                        <Placeholder.Image />
+                    </Placeholder>
+                    :
+                
                 
                 <Carousel
                     responsive={responsive}
@@ -105,7 +118,8 @@ const ActionList = ({mobile}) => {
                         })
                     }
 
-                </Carousel>            
+                </Carousel>  
+                }          
             </Segment>
         </>
     )

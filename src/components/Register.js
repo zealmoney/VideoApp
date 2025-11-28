@@ -72,132 +72,261 @@ const Register = ({mobile}) => {
         }
     }
 
-    return(
-        <>
-            <NavbarUser 
-                link_name="Sign In" 
-                link_route="/login"
-            />
-            <Segment
-                vertical
-                inverted
-            >
-                <Container>
-                <Grid
-                    textAlign="center"
-
+    if(mobile){
+        return(
+            <>
+                <NavbarUser 
+                    link_name="Sign In" 
+                    link_route="/login"
+                />
+                <Segment
+                    vertical
+                    inverted
                 >
-                    <Grid.Column
-                        style={{
-                            maxWidth: 450
-                        }}
-                    >
-                        <Header 
-                            as='h3'
-                            textAlign="center"
-                            content='Create An Account'
-                            inverted
-                            style={{
-                                marginTop: mobile ? 60 : 180,
-                                marginBottom: 20
-                            }}
-                        />
-                        {
-                            msg ? <Message color="red">
-                                Registration Successful <br/>
-                                Please <Link to={'/login'}>Sign In</Link> to continue
-                            </Message> : ""
-                        }
-                        
-                        <Form
-                            size="large"
-                        >
-                            <Segment
-                                stacked
-                                vertical
-                            >
-                                <Form.Input 
-                                    placeholder='First Name'
-                                    fluid
-                                    icon="user"
-                                    iconPosition="left"
-                                    type="text"
-                                    error={firstnameError}
-                                    onChange={handleFirstname}
-                                    onClick={() => setFirstnameError(false)}
-                                />
-                                <Form.Input 
-                                    placeholder='Email Address'
-                                    fluid
-                                    icon="mail"
-                                    iconPosition="left"
-                                    type="email"
-                                    error={emailError}
-                                    onChange={handleEmail}
-                                    onClick={() => setEmailError(false)}
-                                />
-                                <Form.Input 
-                                    placeholder='Gender'
-                                    fluid
-                                    icon="male"
-                                    iconPosition="left"
-                                    type="text"
-                                    error={genderError}
-                                    onChange={handleGender}
-                                    onClick={() => setGenderError(false)}
-                                />
-                                <Form.Input 
-                                    placeholder='Password'
-                                    fluid
-                                    icon="lock"
-                                    iconPosition="left"
-                                    type="password"
-                                    error={passwordError}
-                                    onChange={handlePassword}
-                                    onClick={() => setPasswordError(false)}
-                                />
-                                <Button
-                                    fluid
-                                    size="large"
-                                    color="orange"
-                                    onClick={registerClick}
-                                    loading={loading}
-                                >
-                                    Register
-                                </Button>
-                            </Segment>
-                        </Form>
-                        <Message
-                            style={{
-                                marginBottom: 70
-                            }}
-                        >
-                            Already have an account? &nbsp; 
-                            <Link to={'/login'}>Sign In</Link>
-                        </Message>
-                        
-                    </Grid.Column>
-                </Grid>
-                </Container>
-            </Segment>      
-            <Footer />
-            <Modal
-                open={open}
-                size={size}
-                onClose={() => dispatch({type: 'close'})}
-            >
-                <Modal.Content style={{textAlign: 'center'}}>
-                    <Icon name="check circle outline" color="green" />
-                    <Header 
-                        content='Success!'
-                        size="huge"
-                    />
-                        Your registration is successful
-                </Modal.Content>
+                    <Container>
+                    <Grid
+                        textAlign="center"
 
-            </Modal>
-        </>
-    )
+                    >
+                        <Grid.Column
+                            style={{
+                                maxWidth: 450
+                            }}
+                        >
+                            <Header 
+                                as='h3'
+                                textAlign="center"
+                                content='Create An Account'
+                                inverted
+                                style={{
+                                    marginTop: 60,
+                                    marginBottom: 20
+                                }}
+                            />
+                            {
+                                msg ? <Message color="red">
+                                    Registration Successful <br/>
+                                    Please <Link to={'/login'}>Sign In</Link> to continue
+                                </Message> : ""
+                            }
+                            
+                            <Form
+                                size="large"
+                            >
+                                <Segment
+                                    stacked
+                                    vertical
+                                >
+                                    <Form.Input 
+                                        placeholder='First Name'
+                                        fluid
+                                        icon="user"
+                                        iconPosition="left"
+                                        type="text"
+                                        error={firstnameError}
+                                        onChange={handleFirstname}
+                                        onClick={() => setFirstnameError(false)}
+                                    />
+                                    <Form.Input 
+                                        placeholder='Email Address'
+                                        fluid
+                                        icon="mail"
+                                        iconPosition="left"
+                                        type="email"
+                                        error={emailError}
+                                        onChange={handleEmail}
+                                        onClick={() => setEmailError(false)}
+                                    />
+                                    <Form.Input 
+                                        placeholder='Gender'
+                                        fluid
+                                        icon="male"
+                                        iconPosition="left"
+                                        type="text"
+                                        error={genderError}
+                                        onChange={handleGender}
+                                        onClick={() => setGenderError(false)}
+                                    />
+                                    <Form.Input 
+                                        placeholder='Password'
+                                        fluid
+                                        icon="lock"
+                                        iconPosition="left"
+                                        type="password"
+                                        error={passwordError}
+                                        onChange={handlePassword}
+                                        onClick={() => setPasswordError(false)}
+                                    />
+                                    <Button
+                                        fluid
+                                        size="large"
+                                        color="orange"
+                                        onClick={registerClick}
+                                        loading={loading}
+                                    >
+                                        Register
+                                    </Button>
+                                </Segment>
+                            </Form>
+                            <Message
+                                style={{
+                                    marginBottom: 70
+                                }}
+                            >
+                                Already have an account? &nbsp; 
+                                <Link to={'/login'}>Sign In</Link>
+                            </Message>
+                            
+                        </Grid.Column>
+                    </Grid>
+                    </Container>
+                </Segment>      
+                <Footer mobile />
+                <Modal
+                    open={open}
+                    size={size}
+                    onClose={() => dispatch({type: 'close'})}
+                >
+                    <Modal.Content style={{textAlign: 'center'}}>
+                        <Icon name="check circle outline" color="green" />
+                        <Header 
+                            content='Success!'
+                            size="huge"
+                        />
+                            Your registration is successful
+                    </Modal.Content>
+
+                </Modal>
+            </>
+        )
+    }else{
+            return(
+            <>
+                <NavbarUser 
+                    link_name="Sign In" 
+                    link_route="/login"
+                />
+                <Segment
+                    vertical
+                    inverted
+                >
+                    <Container>
+                    <Grid
+                        textAlign="center"
+
+                    >
+                        <Grid.Column
+                            style={{
+                                maxWidth: 450
+                            }}
+                        >
+                            <Header 
+                                as='h3'
+                                textAlign="center"
+                                content='Create An Account'
+                                inverted
+                                style={{
+                                    marginTop: 180,
+                                    marginBottom: 20
+                                }}
+                            />
+                            {
+                                msg ? <Message color="red">
+                                    Registration Successful <br/>
+                                    Please <Link to={'/login'}>Sign In</Link> to continue
+                                </Message> : ""
+                            }
+                            
+                            <Form
+                                size="large"
+                            >
+                                <Segment
+                                    stacked
+                                    vertical
+                                >
+                                    <Form.Input 
+                                        placeholder='First Name'
+                                        fluid
+                                        icon="user"
+                                        iconPosition="left"
+                                        type="text"
+                                        error={firstnameError}
+                                        onChange={handleFirstname}
+                                        onClick={() => setFirstnameError(false)}
+                                    />
+                                    <Form.Input 
+                                        placeholder='Email Address'
+                                        fluid
+                                        icon="mail"
+                                        iconPosition="left"
+                                        type="email"
+                                        error={emailError}
+                                        onChange={handleEmail}
+                                        onClick={() => setEmailError(false)}
+                                    />
+                                    <Form.Input 
+                                        placeholder='Gender'
+                                        fluid
+                                        icon="male"
+                                        iconPosition="left"
+                                        type="text"
+                                        error={genderError}
+                                        onChange={handleGender}
+                                        onClick={() => setGenderError(false)}
+                                    />
+                                    <Form.Input 
+                                        placeholder='Password'
+                                        fluid
+                                        icon="lock"
+                                        iconPosition="left"
+                                        type="password"
+                                        error={passwordError}
+                                        onChange={handlePassword}
+                                        onClick={() => setPasswordError(false)}
+                                    />
+                                    <Button
+                                        fluid
+                                        size="large"
+                                        color="orange"
+                                        onClick={registerClick}
+                                        loading={loading}
+                                    >
+                                        Register
+                                    </Button>
+                                </Segment>
+                            </Form>
+                            <Message
+                                style={{
+                                    marginBottom: 70
+                                }}
+                            >
+                                Already have an account? &nbsp; 
+                                <Link to={'/login'}>Sign In</Link>
+                            </Message>
+                            
+                        </Grid.Column>
+                    </Grid>
+                    </Container>
+                </Segment>      
+                <Footer />
+                <Modal
+                    open={open}
+                    size={size}
+                    onClose={() => dispatch({type: 'close'})}
+                >
+                    <Modal.Content style={{textAlign: 'center'}}>
+                        <Icon name="check circle outline" color="green" />
+                        <Header 
+                            content='Success!'
+                            size="huge"
+                        />
+                            Your registration is successful
+                    </Modal.Content>
+
+                </Modal>
+            </>
+        )
+    }
 }
 
 export default Register

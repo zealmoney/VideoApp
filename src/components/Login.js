@@ -50,76 +50,149 @@ const Login = ({mobile}) => {
         }
     }
 
-    return(
-        <div>
-             <NavbarUser 
-                link_name="Register" 
-                link_route="/register"
-            />
-            <Segment
-                inverted
-                vertical
-            >
-                <Container>
-                <Grid
-                    textAlign="center"
+    if(mobile){
+        return(
+            <div>
+                <NavbarUser 
+                    link_name="Register" 
+                    link_route="/register"
+                />
+                <Segment
+                    inverted
+                    vertical
                 >
-                    <GridColumn style={{maxWidth: 450}}>
-                        <Header 
-                            inverted 
-                            style={{
-                                marginTop: mobile ? 60 : 180,
-                                marginBottom: 20
-                            }}
-                        >
-                            Sign In To Your Account
-                        </Header>
-                        <Form 
-                            size="large"
-                        >
-                            <FormInput 
-                                placeholder='Email Address'
-                                icon='mail'
-                                iconPosition="left"
-                                type="email"
-                                onChange={handleEmail}
-                                error={emailError}
-                                onClick={() => setEmailError(false)}
-                            />
-                            <FormInput 
-                                placeholder='Password'
-                                icon='lock'
-                                iconPosition="left"
-                                type="password"
-                                onChange={handlePassword}
-                                error={passwordError}
-                                onClick={() => setPasswordError(false)}
-                            />
-                            <Button
-                                fluid
-                                size="large"
-                                color="orange"
-                                onClick={loginClick}
-                                loading={loading}
+                    <Container>
+                    <Grid
+                        textAlign="center"
+                    >
+                        <GridColumn style={{maxWidth: 450}}>
+                            <Header 
+                                inverted 
+                                style={{
+                                    marginTop: 60,
+                                    marginBottom: 20
+                                }}
                             >
-                                Sign In
-                            </Button>
-                        </Form>
-                        <Message
-                            style={{
-                                marginBottom: 70
-                            }}
-                        >
-                            Don't have an account? &nbsp;
-                            <Link to={'/register'}>Register</Link>
-                        </Message>
-                    </GridColumn>
-                </Grid>
-                </Container>
-            </Segment>
-            <Footer />
-        </div>
-    )
+                                Sign In To Your Account
+                            </Header>
+                            <Form 
+                                size="large"
+                            >
+                                <FormInput 
+                                    placeholder='Email Address'
+                                    icon='mail'
+                                    iconPosition="left"
+                                    type="email"
+                                    onChange={handleEmail}
+                                    error={emailError}
+                                    onClick={() => setEmailError(false)}
+                                />
+                                <FormInput 
+                                    placeholder='Password'
+                                    icon='lock'
+                                    iconPosition="left"
+                                    type="password"
+                                    onChange={handlePassword}
+                                    error={passwordError}
+                                    onClick={() => setPasswordError(false)}
+                                />
+                                <Button
+                                    fluid
+                                    size="large"
+                                    color="orange"
+                                    onClick={loginClick}
+                                    loading={loading}
+                                >
+                                    Sign In
+                                </Button>
+                            </Form>
+                            <Message
+                                style={{
+                                    marginBottom: 70
+                                }}
+                            >
+                                Don't have an account? &nbsp;
+                                <Link to={'/register'}>Register</Link>
+                            </Message>
+                        </GridColumn>
+                    </Grid>
+                    </Container>
+                </Segment>
+                <Footer mobile />
+            </div>
+        )
+    }else{
+        return(
+            <div>
+                <NavbarUser 
+                    link_name="Register" 
+                    link_route="/register"
+                />
+                <Segment
+                    inverted
+                    vertical
+                >
+                    <Container>
+                    <Grid
+                        textAlign="center"
+                    >
+                        <GridColumn style={{maxWidth: 450}}>
+                            <Header 
+                                inverted 
+                                style={{
+                                    marginTop: 180,
+                                    marginBottom: 20
+                                }}
+                            >
+                                Sign In To Your Account
+                            </Header>
+                            <Form 
+                                size="large"
+                            >
+                                <FormInput 
+                                    placeholder='Email Address'
+                                    icon='mail'
+                                    iconPosition="left"
+                                    type="email"
+                                    onChange={handleEmail}
+                                    error={emailError}
+                                    onClick={() => setEmailError(false)}
+                                />
+                                <FormInput 
+                                    placeholder='Password'
+                                    icon='lock'
+                                    iconPosition="left"
+                                    type="password"
+                                    onChange={handlePassword}
+                                    error={passwordError}
+                                    onClick={() => setPasswordError(false)}
+                                />
+                                <Button
+                                    fluid
+                                    size="large"
+                                    color="orange"
+                                    onClick={loginClick}
+                                    loading={loading}
+                                >
+                                    Sign In
+                                </Button>
+                            </Form>
+                            <Message
+                                style={{
+                                    marginBottom: 70
+                                }}
+                            >
+                                Don't have an account? &nbsp;
+                                <Link to={'/register'}>Register</Link>
+                            </Message>
+                        </GridColumn>
+                    </Grid>
+                    </Container>
+                </Segment>
+                <Footer />
+            </div>
+        )
+    }
 }
 
 export default Login

@@ -2,6 +2,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import { Image, Segment } from 'semantic-ui-react';
 import { useGetWallpaperQuery } from '../features/api/apiSlice';
 import { useNavigate } from 'react-router-dom';
+import PopularMovies from './PopularMovies';
+import PopularTvShows from './PopularTvShows';
+import LoadingPage from './LoadingPage';
 
 function Wallpaper({mobile}) {
 
@@ -58,11 +61,21 @@ function Wallpaper({mobile}) {
   }
 
   return (
-    <div>
-      <Carousel>        
-        {wallpaperDetails}
-      </Carousel>
-    </div>
+    <>
+      {wallpaperDetails ? 
+      <>
+        <div>
+          <Carousel>        
+            {wallpaperDetails}
+          </Carousel>
+        </div>
+        <PopularMovies />
+        <PopularTvShows />
+      </>
+      : 
+      <LoadingPage />
+      }
+    </>
   );
 }
 

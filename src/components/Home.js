@@ -1,6 +1,7 @@
 import DashboardNavbar from "./DashboardNavbar"
 import DashboardNavbarMobile from "./DashboardNavbarMobile"
 import Footer from "./Footer"
+import LoadingPage from "./LoadingPage"
 import Navbar from "./Navbar"
 import NavbarMobile from "./NavbarMobile"
 import PopularMovies from "./PopularMovies"
@@ -32,8 +33,6 @@ const Home = ({mobile}) => {
                     <Navbar />
                 }
                 <Wallpaper />
-                <PopularMovies />
-                <PopularTvShows />
                 <Footer />
             </> 
         )       

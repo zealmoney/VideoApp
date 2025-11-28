@@ -15,7 +15,7 @@ const LoadingPage = () => {
                 }}
             >
                 <Dimmer active>
-                    <Loader size="massive">
+                    <Loader size="huge">
                         Loading...
                     </Loader>
                 </Dimmer>

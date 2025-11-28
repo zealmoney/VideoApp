@@ -61,19 +61,16 @@ function Wallpaper({mobile}) {
   }
 
   return (
-    <>
-      {wallpaperDetails ? 
-
-        <div>
+    <div>
+      {
+        wallpaperDetails ? 
           <Carousel>        
             {wallpaperDetails}
-          </Carousel>
-        </div>
-        
-      : 
-      <LoadingPage />
+          </Carousel>       
+        : 
+        <LoadingPage />
       }
-    </>
+    </div>
   );
 }
 

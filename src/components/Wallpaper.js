@@ -63,15 +63,13 @@ function Wallpaper({mobile}) {
   return (
     <>
       {wallpaperDetails ? 
-      <>
+
         <div>
           <Carousel>        
             {wallpaperDetails}
           </Carousel>
         </div>
-        <PopularMovies />
-        <PopularTvShows />
-      </>
+        
       : 
       <LoadingPage />
       }

@@ -18,6 +18,8 @@ const Home = ({mobile}) => {
                     <NavbarMobile />
                 }
                 <Wallpaper mobile />
+                <PopularMovies mobile />
+                <PopularTvShows mobile />
                 <Footer mobile />
             </>
             
@@ -31,6 +33,8 @@ const Home = ({mobile}) => {
                     <Navbar />
                 }
                 <Wallpaper />
+                <PopularMovies />
+                <PopularTvShows />
                 <Footer />
             </> 
         )       

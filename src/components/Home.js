@@ -18,8 +18,6 @@ const Home = ({mobile}) => {
                     <NavbarMobile />
                 }
                 <Wallpaper mobile />
-                <PopularMovies mobile />
-                <PopularTvShows mobile />
                 <Footer mobile />
             </>
             

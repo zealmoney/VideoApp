@@ -61,7 +61,7 @@ function Wallpaper({mobile}) {
   }
 
   return (
-    <div>
+    <>
       {
         wallpaperDetails ? 
           <Carousel>        
@@ -70,7 +70,7 @@ function Wallpaper({mobile}) {
         : 
         <LoadingPage />
       }
-    </div>
+    </>
   );
 }
 
